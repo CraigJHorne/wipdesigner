@@ -21,15 +21,34 @@
 
 	<main>
 		
-		<div class="modal">
-			<div id="design-edit">
-			</div>
-			<div>
-				<h5 class="design-button" ref="0">Design 1</h5>
-				<h5 class="design-button" ref="1">Design 2</h5>
-				<h5 class="design-button" ref="2">Design 3</h5>
-				<h5 class="design-button" ref="3">Design 4</h5>
-				<h5 class="reset-button">Reset</h5>
+		<div id="modal">
+			<div class="modal-content">
+				<div id="design-edit">
+				</div>
+				<div id="options">
+					<h5 class="button design-button" ref="0">Design 1</h5>
+					<h5 class="button design-button" ref="1">Design 2</h5>
+					<h5 class="button design-button" ref="2">Design 3</h5>
+					<h5 class="button design-button" ref="3">Design 4</h5>
+				</div>
+				<div id="options">
+					<h5 class="button color-button" ref="0" option="colorBackground">Color 1</h5>
+					<h5 class="button color-button" ref="1" option="colorBackground">Color 2</h5>
+					<h5 class="button color-button" ref="2" option="colorBackground">Color 3</h5>
+					<h5 class="button color-button" ref="3" option="colorBackground">Color 4</h5>
+				</div>
+				<div id="options">
+					<h5 class="button color-button" ref="0" option="color1">Color 1</h5>
+					<h5 class="button color-button" ref="1" option="color1">Color 2</h5>
+					<h5 class="button color-button" ref="2" option="color1">Color 3</h5>
+					<h5 class="button color-button" ref="3" option="color1">Color 4</h5>
+				</div>
+				<div id="options">
+					<h5 class="button color-button" ref="0" option="color2">Color 1</h5>
+					<h5 class="button color-button" ref="1" option="color2">Color 2</h5>
+					<h5 class="button color-button" ref="2" option="color2">Color 3</h5>
+					<h5 class="button color-button" ref="3" option="color2">Color 4</h5>
+				</div>
 				<button class="save" ref="${customisedGarments[selectedDesign].ref}">SAVE</button>
 			</div>
 		</div>
@@ -43,6 +62,7 @@
 <script type="text/javascript" src="javascript/script.js"></script>
 <script type="text/javascript" src="javascript/databases/svgbackgrounds.js"></script>
 <script type="text/javascript" src="javascript/databases/svgdesigns.js"></script>
+<script type="text/javascript" src="javascript/databases/svgcolors.js"></script>
 <script type="text/javascript" src="javascript/databases/customisedgarments.js"></script>
 <script type="text/javascript" src="javascript/svg.js"></script>
 </body>

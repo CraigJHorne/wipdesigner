@@ -1,6 +1,5 @@
 let designs = [
 	{
-	"ref": "0001",
 	"garment":"prorugbyshirt", 
 	"sleeves":"raglan",
 	"pathBackground": backgrounds[0].pathBackground,
@@ -11,7 +10,6 @@ let designs = [
 	"path2Break":"", 
 	},
 	{
-	"ref": "0002",
 	"garment":"prorugbyshirt", 
 	"sleeves":"raglan",
 	"pathBackground": backgrounds[0].pathBackground,
@@ -22,7 +20,6 @@ let designs = [
 	"path2Break":"",
 	},
 	{
-	"ref": "0003",
 	"garment":"prorugbyshirt", 
 	"sleeves":"raglan",
 	"pathBackground": backgrounds[0].pathBackground,
@@ -33,7 +30,6 @@ let designs = [
 	"path2Break":"M358,80.78,344.32,137.7,310.89,131l14.38-59.85Zm-40.73-12-14.55,60.56,4.42.89L321.61,70Zm30.85,69.71,4.43.89,13.51-56.21-4.34-1.28ZM46.36,81.07,60,137.87l33.43-6.73L79.09,71.42Zm36.4-10.74,14.43,60.05,4.43-.89L87.09,69.05ZM39.3,83.16l11.51,52.32,1,4.05,4.43-.89L42.64,82.17Zm632-11.63L657,131.25,690.42,138l13.65-56.79Zm-8-2.36L648.81,129.6l4.43.89,14.43-60Zm44.44,13.11-13.57,56.47,4.11.83,12.43-56.42Zm-316-1.42,13.67,56.86L438.87,131,424.5,71.2Zm36.4-10.74,14.44,60.11,4.43-.9L432.5,68.84ZM384,83.16l3,13.67,10.22,42.54,4.43-.89L388.05,82Z", 
 	},
 	{
-	"ref": "0004",
 	"garment":"prorugbyshirt", 
 	"sleeves":"raglan",
 	"pathBackground": backgrounds[0].pathBackground,
