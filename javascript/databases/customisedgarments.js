@@ -69,6 +69,6 @@ let customisedGarments = [
     color1: "#ca003d",
     color2: "#0d4272",
     toneBackground: "dark",
-    tone1: "light",
+    tone1: "dark",
     },
 ];
