@@ -72,9 +72,14 @@
 
 #options {
 	display: flex;
-	flex-direction: row;
+	flex-direction: row!important;
 }
 
 .button {
 	margin: 5px 10px;
+}
+
+.options {
+	display: flex;
+	flex-direction: row!important;
 }

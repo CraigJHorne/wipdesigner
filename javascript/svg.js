@@ -1,11 +1,46 @@
+garmentEditing = designs[0].designs;
 
-let selectedClub = "leedsrhinos"; //set club selected
-let noClub = "noclub"; //set no club
+
+/* Map Garment Options to modal */
+
+function mapGarmentOptions() {
+	document.getElementById("edit-garment").innerHTML = designs.map(designs => 
+    `<h5 class="button garment-button" ref="${designs.ref}">${designs.name}</h5>`
+).join('');
+}
+
+mapGarmentOptions() // map colors on load
+
+/* MapDesign Options to modal */
+
+function mapDesignOptions() {
+	document.getElementById("edit-design").innerHTML = garmentEditing.map(garmentEditing => 
+    `<h5 class="button design-button" ref="${garmentEditing.design}">Design ${garmentEditing.design + 1}</h5>`
+).join('');
+}
+
+mapDesignOptions() // map design options on load
+
+/* Map Color Options to modal */
+
+function mapColorOptions() {
+	document.getElementById("edit-colorBackground").innerHTML = colors.map(colors => 
+    `<h5 class="button color-button" ref="${colors.ref}" option="colorBackground">BG Color ${colors.ref + 1}</h5>`
+).join('');
+	document.getElementById("edit-color1").innerHTML = colors.map(colors => 
+    `<h5 class="button color-button" ref="${colors.ref}" option="color1">A Color ${colors.ref + 1}</h5>`
+).join('');
+	document.getElementById("edit-color2").innerHTML = colors.map(colors => 
+    `<h5 class="button color-button" ref="${colors.ref}" option="color2">B Color ${colors.ref + 1}</h5>`
+).join('')
+}
+
+mapColorOptions() // map colors on load
 
 
 /* Map Customised Garments to "design-pack Html element */
 
-function mapGarments() {
+function mapCustomisedGarments() {
 	document.getElementById("design-pack").innerHTML = customisedGarments.map(customisedGarments => 
     `<h5 class="edit-garment" ref="${customisedGarments.ref}">${customisedGarments.garmentType}</h5>
     <section>
@@ -25,7 +60,7 @@ function mapGarments() {
 ).join('')
 }
 
-mapGarments() // map on load
+mapCustomisedGarments() // map on load
 
 
 /* Map Garments to edit to "design-edit" Html element */
@@ -89,31 +124,72 @@ function garmentEditLoad(e) {
 
 
 
-/* Edit paths based on sponsors Version  */
-
-function sponsorsPathUpdate(chosenOption, selectedDesignRef) {
-	let chosenDesign = customisedGarments[selectedDesignRef].design; //identify the current chosen design
-
-	if (chosenOption === "sponsors") {
-		if (designs[chosenDesign].path1Break === "") { //do nothing if there isn;t an alternative broken path version
-		} else {
-			customisedGarments[selectedDesignRef].path1 = designs[chosenDesign].path1Break; // use broken path version
-			customisedGarments[selectedDesignRef].path2 = designs[chosenDesign].path2Break; // use broken path version
-		}
-	} else if (chosenOption === "logos" || 'none') {
-		customisedGarments[selectedDesignRef].path1 = designs[chosenDesign].path1; // use unbroken path version
-			customisedGarments[selectedDesignRef].path2 = designs[chosenDesign].path2; // use unbroken path version
-		}
-}
-
-
-
-
 /* Notice when Design Button is Clicked  */
 
+function editDesignOptions() {
 let htmlDesignButton = document.getElementsByClassName("design-button"); //access design-button element
 for (let i = 0; i < htmlDesignButton.length; i++) { //so that it operates for all design-button elements
 	htmlDesignButton[i].onclick = changeDesign; //operate 'changeDesign' function on any design-button element press
+	}
+}
+
+editDesignOptions() // run on load
+
+
+
+/* Edit paths based on sponsors Version  */
+
+function sponsorsPathUpdate(chosenOption, selectedDesignRef) {
+	let garmentTypeRef = customisedGarments[selectedDesignRef].garmentTypeRef; //identify the current chosen design
+	let chosenDesign = customisedGarments[selectedDesignRef].design; //identify the current chosen design\
+
+	if (chosenOption === "sponsors") {
+		if (designs[garmentTypeRef].designs[chosenDesign].path1Break === "") { //do nothing if there isn;t an alternative broken path version
+		} else {
+			customisedGarments[selectedDesignRef].path1 = designs[garmentTypeRef].designs[chosenDesign].path1Break; // use broken path version
+			customisedGarments[selectedDesignRef].path2 = designs[garmentTypeRef].designs[chosenDesign].path2Break; // use broken path version
+		}
+	} else if (chosenOption === "logos" || 'none') {
+		customisedGarments[selectedDesignRef].path1 = designs[garmentTypeRef].designs[chosenDesign].path1; // use unbroken path version
+			customisedGarments[selectedDesignRef].path2 = designs[garmentTypeRef].designs[chosenDesign].path2; // use unbroken path version
+		}
+}
+
+/* Notice when Garment Button is Clicked  */
+
+let htmlGarmentButton = document.getElementsByClassName("garment-button"); //access garment-button element
+for (let i = 0; i < htmlGarmentButton.length; i++) { //so that it operates for all garment-button elements
+	htmlGarmentButton[i].onclick = changeGarment; //operate 'changeGarment' function on any garment-button element press
+}
+
+/* Function to Operate when garment Button is clicked  */
+
+function changeGarment(e) {
+	let chosenGarmentTypeRef = e.target.getAttribute("ref"); //identify the ref of the garment-button clicked
+	let selectedDesign = document.getElementById("edit-ref"); //identify the garment loaded
+	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the item selected clicked
+	let sleevesRef = designs[chosenGarmentTypeRef].designs[0].sleevesRef; //identify the sleeves ref for the type of garment we are editing
+	customisedGarments[selectedDesignRef].garmentTypeRef = chosenGarmentTypeRef; // amend the garment ref to the new one
+	customisedGarments[selectedDesignRef].garmentType = designs[chosenGarmentTypeRef].garment; // amend the garment to the new one
+	customisedGarments[selectedDesignRef].sponsorsVersion = "logos" // make sponsor version "logos"
+	customisedGarments[selectedDesignRef].sponsorsType = designs[chosenGarmentTypeRef].designs[0].sponsorsType; // amend the sponsor type to the new one
+	customisedGarments[selectedDesignRef].design = designs[chosenGarmentTypeRef].designs[0].design; // amend the design to the new one
+	customisedGarments[selectedDesignRef].path1 = designs[chosenGarmentTypeRef].designs[0].path1; // amend path1 to the new one
+	customisedGarments[selectedDesignRef].path2 = designs[chosenGarmentTypeRef].designs[0].path2; // amend path1 to the new one
+	customisedGarments[selectedDesignRef].pattern = "" // remove any patterns
+	customisedGarments[selectedDesignRef].pathBackground = designs[chosenGarmentTypeRef].pathBackground[sleevesRef]; // amend pathBackground to the new one
+	customisedGarments[selectedDesignRef].baseImage = designs[chosenGarmentTypeRef].baseImage[sleevesRef]; // amend pathBackground to the new one
+
+
+	let chosenOption = customisedGarments[selectedDesignRef].sponsorsVersion; //make the sponsorVersion used in the sponsorPathUpdate function the current one
+	garmentEditing = designs[chosenGarmentTypeRef].designs;
+
+	console.log(customisedGarments[selectedDesignRef]);
+
+	sponsorsPathUpdate(chosenOption, selectedDesignRef);
+	mapDesignOptions();
+	editDesignOptions()
+	mapEdit(selectedDesignRef);
 }
 
 /* Function to Operate when design Button is clicked  */
@@ -121,14 +197,16 @@ for (let i = 0; i < htmlDesignButton.length; i++) { //so that it operates for al
 function changeDesign(e) {
 	let chosenDesign = e.target.getAttribute("ref"); //identify the ref of the design-button clicked
 	let selectedDesign = document.getElementById("edit-ref"); //identify the design loaded
-	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the design-button clicked
-	customisedGarments[selectedDesignRef].baseImage = designs[chosenDesign].baseImage; //change baseimage to the one from the selected design
-	customisedGarments[selectedDesignRef].pathBackground = designs[chosenDesign].pathBackground; //change baackground path to the one from the selected design
-	customisedGarments[selectedDesignRef].path1 = designs[chosenDesign].path1; //change path 1 to the one from the selected design
-	customisedGarments[selectedDesignRef].path2 = designs[chosenDesign].path2; //change path 2 to the one from the selected design
-	customisedGarments[selectedDesignRef].design = designs[chosenDesign].design; //change design to the one from the selected design
-	customisedGarments[selectedDesignRef].sponsorsType = designs[chosenDesign].sponsorsType //change sponsorType to the one from the selected design
-	
+	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the design clicked
+	let garmentTypeRef = customisedGarments[selectedDesignRef].garmentTypeRef; //identify the garment ref for the type of garment we are editing
+	let sleevesRef = designs[garmentTypeRef].designs[chosenDesign].sleevesRef; //identify the sleeves ref for the type of garment we are editing
+	customisedGarments[selectedDesignRef].baseImage = designs[garmentTypeRef].baseImage[sleevesRef]; //change baseimage to the one from the selected design
+	customisedGarments[selectedDesignRef].pathBackground = designs[garmentTypeRef].pathBackground[sleevesRef]; //change baackground path to the one from the selected design
+	customisedGarments[selectedDesignRef].path1 = designs[garmentTypeRef].designs[chosenDesign].path1; //change path 1 to the one from the selected design
+	customisedGarments[selectedDesignRef].path2 = designs[garmentTypeRef].designs[chosenDesign].path2; //change path 2 to the one from the selected design
+	customisedGarments[selectedDesignRef].design = designs[garmentTypeRef].designs[chosenDesign].design; //change design to the one from the selected design
+	customisedGarments[selectedDesignRef].sponsorsType = designs[garmentTypeRef].designs[chosenDesign].sponsorsType //change sponsorType to the one from the selected design
+
 	let chosenOption = customisedGarments[selectedDesignRef].sponsorsVersion; //make the sponsorVersion used in the sponsorPathUpdate function the current one
 
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
@@ -191,6 +269,10 @@ function changeSponsors(e) {
 	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the design-button clicked
 	customisedGarments[selectedDesignRef].sponsorsVersion = chosenOption; //change sponors version to the one from the selected sponors-button
 
+
+	let selectedClub = "leedsrhinos"; //set club selected
+	let noClub = "noclub"; //set no club
+
 	if (chosenOption === "none") {
 		customisedGarments[selectedDesignRef].club = noClub;
 		chosenOption = "logos";
@@ -213,7 +295,7 @@ for (let i = 0; i < saveButton.length; i++) { //workout which reset-button was s
 /* Function to Operate when design Button is clicked  */
 
 function saveGarments(e) {
-	mapGarments();
+	mapCustomisedGarments();
 	deleteEdit();
 	editButton();
 	var modal = document.getElementById("modal"); //access modal element
