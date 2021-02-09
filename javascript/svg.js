@@ -42,7 +42,7 @@ mapColorOptions() // map colors on load
 
 function mapCustomisedGarments() {
 	document.getElementById("design-pack").innerHTML = customisedGarments.map(customisedGarments => 
-    `<h5 class="edit-garment" ref="${customisedGarments.ref}">${customisedGarments.garmentType}</h5>
+    `<h4 class="edit-garment" ref="${customisedGarments.ref}">${customisedGarments.garmentType}</h4>
     <section>
 	    <aside id="svg">
 			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + customisedGarments.sponsorsType +  customisedGarments.toneBackground  + customisedGarments.tone1 + ".svg")}">
@@ -68,7 +68,7 @@ mapCustomisedGarments() // map on load
 
 function mapEdit(selectedDesign) {
 	document.getElementById("design-edit").innerHTML = 
-    `<h5>${customisedGarments[selectedDesign].garmentType}</h5>
+    `<h4>${customisedGarments[selectedDesign].garmentType}</h4>
     <section>
 	    <aside id="svg">
 			<img id="svg__sponsors" src="${("assets/" + customisedGarments[selectedDesign].sponsorsVersion + "/" + customisedGarments[selectedDesign].garmentType + "/" + customisedGarments[selectedDesign].club + "/" + customisedGarments[selectedDesign].sponsorsType +  customisedGarments[selectedDesign].toneBackground  + customisedGarments[selectedDesign].tone1 + ".svg")}">

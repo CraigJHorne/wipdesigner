@@ -62,7 +62,7 @@
 
 .modal-content {
   background: #FFF;
-  margin: 4% auto;
+  margin: 2% auto;
   width: 90%;
   height: 90%;
   display: flex;
@@ -77,9 +77,18 @@
 
 .button {
 	margin: 5px 10px;
+		cursor: pointer;
 }
 
 .options {
 	display: flex;
 	flex-direction: row!important;
+}
+
+
+
+/* Temp text */
+
+h5 {
+	font-size: 0.7em;
 }
