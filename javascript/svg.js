@@ -287,12 +287,12 @@ function changeSponsors(e) {
 
 /* Notice when Save Button is Clicked  */
 
-let saveButton = document.getElementsByClassName("save"); //access reset-button element button
-for (let i = 0; i < saveButton.length; i++) { //workout which reset-button was selected
-		saveButton[i].onclick = saveGarments; //operate 'resetSvg' function on reset-button press
+let saveButton = document.getElementsByClassName("save"); //access save-button element button
+for (let i = 0; i < saveButton.length; i++) { //workout which save-button was selected
+		saveButton[i].onclick = saveGarments; //operate 'saveGarments' function on reset-button press
 	}
 
-/* Function to Operate when design Button is clicked  */
+/* Function to Operate when save Button is clicked  */
 
 function saveGarments(e) {
 	mapCustomisedGarments();
@@ -300,6 +300,43 @@ function saveGarments(e) {
 	editButton();
 	var modal = document.getElementById("modal"); //access modal element
 	modal.style.display = "none"; //make modal invisible
+}
+
+
+/* Notice when Add Button is Clicked  */
+
+let addButton = document.getElementsByClassName("add"); //access add-button element button
+for (let i = 0; i < addButton.length; i++) { //workout which add-button was selected
+		addButton[i].onclick = addGarment; //operate 'addGarment' function on reset-button press
+	}
+
+/* Function to Operate when add Button is clicked  */
+
+function addGarment(e) {
+	let refNumber = customisedGarments.length;
+	customisedGarments.push(
+		{
+	    ref: refNumber,
+	    garmentTypeRef: 0,
+	    garmentType: designs[0].garment,
+	    club: "leedsrhinos",
+	    sponsorsVersion:"sponsors",
+	    sponsorsType: designs[0].designs[0].sponsorsType,
+	    design: designs[0].designs[0].design,
+	    path1: designs[0].designs[0].path1,
+	    path2: designs[0].designs[0].path2,
+	    pattern:"",
+	    pathBackground: designs[0].pathBackground[0],
+	    baseImage: designs[0].baseImage[0],
+	    colorBackground: "#08253d",
+	    color1: "#ffc629",
+	    color2: "#505e28",
+	    toneBackground: "dark",
+	    tone1: "light",
+		});
+	mapCustomisedGarments();
+	editButton();
+	console.log(customisedGarments);
 }
 
 
