@@ -40,9 +40,11 @@ mapColorOptions() // map colors on load
 
 /* Map Customised Garments to "design-pack Html element */
 
+
 function mapCustomisedGarments() {
+	let i = 0;
 	document.getElementById("design-pack").innerHTML = customisedGarments.map(customisedGarments => 
-    `<h4 class="edit-garment" ref="${customisedGarments.ref}">${customisedGarments.garmentType}</h4>
+    `<h4 class="edit-garment" ref="${i}" ${customisedGarments.ref = i} ${i++}>${customisedGarments.garmentType}</h4><button class="delete" ref="${customisedGarments.ref}">DELETE GARMENT</button>
     <section>
 	    <aside id="svg">
 			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + customisedGarments.sponsorsType +  customisedGarments.toneBackground  + customisedGarments.tone1 + ".svg")}">
@@ -184,7 +186,6 @@ function changeGarment(e) {
 	let chosenOption = customisedGarments[selectedDesignRef].sponsorsVersion; //make the sponsorVersion used in the sponsorPathUpdate function the current one
 	garmentEditing = designs[chosenGarmentTypeRef].designs;
 
-	console.log(customisedGarments[selectedDesignRef]);
 
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	mapDesignOptions();
@@ -298,6 +299,7 @@ function saveGarments(e) {
 	mapCustomisedGarments();
 	deleteEdit();
 	editButton();
+	deleteButton();
 	var modal = document.getElementById("modal"); //access modal element
 	modal.style.display = "none"; //make modal invisible
 }
@@ -336,7 +338,30 @@ function addGarment(e) {
 		});
 	mapCustomisedGarments();
 	editButton();
-	console.log(customisedGarments);
+	deleteButton();
 }
 
+/* Notice when Delete Button is Clicked  */
 
+function deleteButton() {
+let garmentDelete = document.getElementsByClassName("delete"); //access delete-button element button
+for (let i = 0; i < garmentDelete.length; i++) { //workout which delete-button was selected
+		garmentDelete[i].onclick = deleteGarment; //operate 'deleteGarment' function on reset-button press
+	}
+}
+
+deleteButton() //run deleteButton function on page load
+
+/* Function to Operate when delete Button is clicked  */
+
+function deleteGarment(e) {
+	let selectedDesign = e.target.getAttribute("ref"); //identify the ref of the garment clicked
+
+	selectedDesign > -1 ? customisedGarments.splice(selectedDesign, 1) : false;
+
+	console.log(customisedGarments);
+
+	mapCustomisedGarments();
+	deleteButton();
+	editButton();
+}
