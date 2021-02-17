@@ -44,7 +44,8 @@ mapColorOptions() // map colors on load
 function mapCustomisedGarments() {
 	let i = 0;
 	document.getElementById("design-pack").innerHTML = customisedGarments.map(customisedGarments => 
-    `<h4 class="edit-garment" ref="${i}" ${customisedGarments.ref = i} ${i++}>${customisedGarments.garmentType}</h4><button class="delete" ref="${customisedGarments.ref}">DELETE GARMENT</button>
+    `<h4 class="edit-garment" ref="${i}" ${customisedGarments.ref = i} ${i++}>${customisedGarments.garmentType}</h4>
+    <button class="delete" ref="${customisedGarments.ref}">DELETE GARMENT</button><button class="duplicate" ref="${customisedGarments.ref}">DUPLICATE GARMENT</button>
     <section>
 	    <aside id="svg">
 			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + customisedGarments.sponsorsType +  customisedGarments.toneBackground  + customisedGarments.tone1 + ".svg")}">
@@ -300,6 +301,7 @@ function saveGarments(e) {
 	deleteEdit();
 	editButton();
 	deleteButton();
+	duplicateButton();
 	var modal = document.getElementById("modal"); //access modal element
 	modal.style.display = "none"; //make modal invisible
 }
@@ -339,6 +341,7 @@ function addGarment(e) {
 	mapCustomisedGarments();
 	editButton();
 	deleteButton();
+	duplicateButton();
 }
 
 /* Notice when Delete Button is Clicked  */
@@ -359,9 +362,53 @@ function deleteGarment(e) {
 
 	selectedDesign > -1 ? customisedGarments.splice(selectedDesign, 1) : false;
 
-	console.log(customisedGarments);
 
 	mapCustomisedGarments();
 	deleteButton();
+	duplicateButton();
 	editButton();
+}
+
+
+/* Notice when Duplicate Button is Clicked  */
+
+function duplicateButton() {
+let garmentDuplicate = document.getElementsByClassName("duplicate"); //access duplicate-button element button
+for (let i = 0; i < garmentDuplicate.length; i++) { //workout which duplicate-button was selected
+		garmentDuplicate[i].onclick = duplicateGarment; //operate 'duplicateGarment' function on reset-button press
+	}
+}
+
+duplicateButton() //run deleteButton function on page load
+
+/* Function to Operate when delete Button is clicked  */
+
+function duplicateGarment(e) {
+	let selectedDesign = e.target.getAttribute("ref"); //identify the ref of the garment clicked
+	console.log(e.target);
+	let refNumber = customisedGarments.length;
+	customisedGarments.push(
+		{
+	    ref: refNumber,
+	    garmentTypeRef: customisedGarments[selectedDesign].garmentTypeRef,
+	    garmentType: customisedGarments[selectedDesign].garmentType,
+	    club: customisedGarments[selectedDesign].club,
+	    sponsorsVersion: customisedGarments[selectedDesign].sponsorsVersion,
+	    sponsorsType: customisedGarments[selectedDesign].sponsorsType,
+	    design: customisedGarments[selectedDesign].design,
+	    path1: customisedGarments[selectedDesign].path1,
+	    path2: customisedGarments[selectedDesign].path2,
+	    pattern: customisedGarments[selectedDesign].pattern,
+	    pathBackground: customisedGarments[selectedDesign].pathBackground,
+	    baseImage: customisedGarments[selectedDesign].baseImage,
+	    colorBackground: customisedGarments[selectedDesign].colorBackground,
+	    color1: customisedGarments[selectedDesign].color1,
+	    color2: customisedGarments[selectedDesign].color2,
+	    toneBackground: customisedGarments[selectedDesign].toneBackground,
+	    tone1: customisedGarments[selectedDesign].tone1,
+		});
+	mapCustomisedGarments();
+	editButton();
+	deleteButton();
+	duplicateButton();
 }
