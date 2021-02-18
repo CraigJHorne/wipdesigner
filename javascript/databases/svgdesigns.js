@@ -107,7 +107,7 @@ let replicaRugbyShirtDesigns = [
 let designs = [
 	{
 	"ref": 0,	
-	"name": "Pro Rugby Shirts",
+	"name": "Pro Rugby Shirt",
 	"garment":"prorugbyshirt", 
 	"designs": proRugbyShirtDesigns,
 	"pathBackground": [backgrounds[0].pathBackground, backgrounds[1].pathBackground],
@@ -115,7 +115,7 @@ let designs = [
 	},
 	{
 	"ref": 1,	
-	"name": "Replica Rugby Shirts",
+	"name": "Replica Rugby Shirt",
 	"garment":"replicarugbyshirt", 
 	"designs": replicaRugbyShirtDesigns,
 	"pathBackground": [backgrounds[2].pathBackground, backgrounds[3].pathBackground],

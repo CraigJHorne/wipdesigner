@@ -1,11 +1,21 @@
 garmentEditing = designs[0].designs;
 
 
+/* Map Club Options to modal */
+
+function mapClubOptions() {
+	document.getElementById("edit-club").innerHTML = clubs.map(clubs => 
+    `<h5 class="button club-button" ref="${clubs.ref}">${clubs.name}</h5>`
+).join('');
+}
+
+mapClubOptions() // map club on load
+
 /* Map Garment Options to modal */
 
 function mapGarmentOptions() {
 	document.getElementById("edit-garment").innerHTML = designs.map(designs => 
-    `<h5 class="button garment-button" ref="${designs.ref}">${designs.name}</h5>`
+    `<h5 class="button garment-button" ref="${designs.ref}" name="${designs.name}">${designs.name}</h5>`
 ).join('');
 }
 
@@ -44,8 +54,8 @@ mapColorOptions() // map colors on load
 function mapCustomisedGarments() {
 	let i = 0;
 	document.getElementById("design-pack").innerHTML = customisedGarments.map(customisedGarments => 
-    `<h4 class="edit-garment" ref="${i}" ${customisedGarments.ref = i} ${i++}>${customisedGarments.garmentType}</h4>
-    <button class="delete" ref="${customisedGarments.ref}">DELETE GARMENT</button><button class="duplicate" ref="${customisedGarments.ref}">DUPLICATE GARMENT</button>
+    `<h4>${customisedGarments.garmentName}</h4>
+    <button class="edit-garment" ref="${i}" ${customisedGarments.ref = i} ${i++}>EDIT GARMENT</button><button class="delete" ref="${customisedGarments.ref}">DELETE GARMENT</button><button class="duplicate" ref="${customisedGarments.ref}">DUPLICATE GARMENT</button>
     <section>
 	    <aside id="svg">
 			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + customisedGarments.sponsorsType +  customisedGarments.toneBackground  + customisedGarments.tone1 + ".svg")}">
@@ -71,8 +81,7 @@ mapCustomisedGarments() // map on load
 
 function mapEdit(selectedDesign) {
 	document.getElementById("design-edit").innerHTML = 
-    `<h4>${customisedGarments[selectedDesign].garmentType}</h4>
-    <section>
+    `<section>
 	    <aside id="svg">
 			<img id="svg__sponsors" src="${("assets/" + customisedGarments[selectedDesign].sponsorsVersion + "/" + customisedGarments[selectedDesign].garmentType + "/" + customisedGarments[selectedDesign].club + "/" + customisedGarments[selectedDesign].sponsorsType +  customisedGarments[selectedDesign].toneBackground  + customisedGarments[selectedDesign].tone1 + ".svg")}">
 			<svg class="svg__design" viewBox="0 0 750 400">
@@ -168,10 +177,12 @@ for (let i = 0; i < htmlGarmentButton.length; i++) { //so that it operates for a
 /* Function to Operate when garment Button is clicked  */
 
 function changeGarment(e) {
+	let chosenGarmentTypeName = e.target.getAttribute("name"); //identify the name of the garment-button clicked
 	let chosenGarmentTypeRef = e.target.getAttribute("ref"); //identify the ref of the garment-button clicked
 	let selectedDesign = document.getElementById("edit-ref"); //identify the garment loaded
 	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the item selected clicked
 	let sleevesRef = designs[chosenGarmentTypeRef].designs[0].sleevesRef; //identify the sleeves ref for the type of garment we are editing
+	customisedGarments[selectedDesignRef].garmentName = chosenGarmentTypeName; // amend the garment ref to the new one
 	customisedGarments[selectedDesignRef].garmentTypeRef = chosenGarmentTypeRef; // amend the garment ref to the new one
 	customisedGarments[selectedDesignRef].garmentType = designs[chosenGarmentTypeRef].garment; // amend the garment to the new one
 	customisedGarments[selectedDesignRef].sponsorsVersion = "logos" // make sponsor version "logos"
@@ -237,6 +248,30 @@ function changeColor(e) {
 	mapEdit(selectedDesignRef);
 }
 
+
+
+/* Notice when Club Button is Clicked  */
+
+let htmlClubButton = document.getElementsByClassName("club-button"); //access club-button element
+for (let i = 0; i < htmlClubButton.length; i++) { //so that it operates for all club-button elements
+	htmlClubButton[i].onclick = changeClub; //operate 'changeClub' function on any color-button element press
+}
+
+/* Function to Operate when Club Button is clicked  */
+
+function changeClub(e) {
+	let chosenClub= e.target.getAttribute("ref"); //identify the ref of the club-button clicked
+	let selectedDesign = document.getElementById("edit-ref"); //identify the design loaded
+	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the design-button clicked
+	customisedGarments[selectedDesignRef].club = chosenClub; //change hex to the one from the selected color
+
+
+	mapEdit(selectedDesignRef);
+}
+
+
+
+
 /* Notice when Pattern Button is Clicked  */
 
 let htmlPatternButton = document.getElementsByClassName("pattern-button"); //access pattern-button element
@@ -272,7 +307,7 @@ function changeSponsors(e) {
 	customisedGarments[selectedDesignRef].sponsorsVersion = chosenOption; //change sponors version to the one from the selected sponors-button
 
 
-	let selectedClub = "leedsrhinos"; //set club selected
+	let selectedClub = customisedGarments[selectedDesignRef].club; //set club selected
 	let noClub = "noclub"; //set no club
 
 	if (chosenOption === "none") {
@@ -385,7 +420,6 @@ duplicateButton() //run deleteButton function on page load
 
 function duplicateGarment(e) {
 	let selectedDesign = e.target.getAttribute("ref"); //identify the ref of the garment clicked
-	console.log(e.target);
 	let refNumber = customisedGarments.length;
 	customisedGarments.push(
 		{
