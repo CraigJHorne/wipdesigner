@@ -47,6 +47,16 @@ function mapColorOptions() {
 
 mapColorOptions() // map colors on load
 
+/* Map Pattern Options to modal */
+
+function mapPatternOptions() {
+	document.getElementById("edit-pattern").innerHTML = patterns.map(patterns => 
+    `<h5 class="button pattern-button" ref="${patterns.ref}">${patterns.name}</h5>`
+).join('');
+}
+
+mapPatternOptions() // map patterns on load
+
 
 /* Map Customised Garments to "design-pack Html element */
 
@@ -219,6 +229,11 @@ function changeDesign(e) {
 	customisedGarments[selectedDesignRef].path2 = designs[garmentTypeRef].designs[chosenDesign].path2; //change path 2 to the one from the selected design
 	customisedGarments[selectedDesignRef].design = designs[garmentTypeRef].designs[chosenDesign].design; //change design to the one from the selected design
 	customisedGarments[selectedDesignRef].sponsorsType = designs[garmentTypeRef].designs[chosenDesign].sponsorsType //change sponsorType to the one from the selected design
+	currentPattern = customisedGarments[selectedDesignRef].patternRef; // identify current selected pattern for this design
+	let currentPatternInfo = patterns[currentPattern]; //identify the full info of the pattern chosen
+	let selectedDesignGarmentType = customisedGarments[selectedDesignRef]["garmentType"]; //identify the garment type of the design loaded
+	let currentPatternSrc = currentPatternInfo[selectedDesignGarmentType][sleevesRef]; //identify the full info of the pattern chosen
+	customisedGarments[selectedDesignRef].pattern = currentPatternSrc; //change src to the one from the selected pattern
 
 	let chosenOption = customisedGarments[selectedDesignRef].sponsorsVersion; //make the sponsorVersion used in the sponsorPathUpdate function the current one
 
@@ -284,8 +299,16 @@ for (let i = 0; i < htmlPatternButton.length; i++) { //so that it operates for a
 function changePattern(e) {
 	let chosenPattern = e.target.getAttribute("ref"); //identify the ref of the pattern-button clicked
 	let selectedDesign = document.getElementById("edit-ref"); //identify the design loaded
-	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the design-button clicked
-	customisedGarments[selectedDesignRef].pattern = patterns[chosenPattern].src; //change src to the one from the selected pattern
+	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the design loaded
+	let selectedDesignGarmentType = customisedGarments[selectedDesignRef]["garmentType"]; //identify the garment type of the design loaded
+	let garmentTypeRef = customisedGarments[selectedDesignRef].garmentTypeRef; //identify the current chosen design
+	let chosenDesign = customisedGarments[selectedDesignRef].design; //identify the current chosen design\
+	let sleevesRef = designs[garmentTypeRef].designs[chosenDesign].sleevesRef; //identify the sleeves ref for the type of garment we are editing
+	let chosenPatternInfo = patterns[chosenPattern]; //identify the full info of the pattern chosen
+	let chosenPatternSrc = chosenPatternInfo[selectedDesignGarmentType][sleevesRef]; //identify the full info of the pattern chosen
+
+	customisedGarments[selectedDesignRef].pattern = chosenPatternSrc; //change src to the one from the selected pattern
+	customisedGarments[selectedDesignRef].patternRef = chosenPattern; //change pattern ref to the one from the selected pattern
 
 	mapEdit(selectedDesignRef);
 }
