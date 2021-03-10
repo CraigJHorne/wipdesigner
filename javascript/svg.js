@@ -1,4 +1,30 @@
-garmentEditing = designs[0].designs;
+
+let garmentEditing = designs[0].designs;
+let tempSave = 0; //details of original design properties prioor to edit so edit can be cancelled
+let output = [];
+
+
+// Calculate number of each item and put into an array
+
+function createArray() {
+	let p = 0;
+	let r = 0;
+	output = [];
+	for (let i = 0; i < customisedGarments.length; i++) { //workout which duplicate-button was selected
+		if (customisedGarments[i].garmentType === "prorugbyshirt") {
+			p++
+       		output.push(p);
+       	} else if (customisedGarments[i].garmentType === "replicarugbyshirt") {
+       		r++
+       		output.push(r);
+        } else {
+    return output;
+	}
+}
+
+console.log(output);}
+
+createArray() 
 
 
 /* Map Club Options to modal */
@@ -64,7 +90,7 @@ mapPatternOptions() // map patterns on load
 function mapCustomisedGarments() {
 	let i = 0;
 	document.getElementById("design-pack").innerHTML = customisedGarments.map(customisedGarments => 
-    `<h4>${customisedGarments.garmentName}</h4>
+    `<h4>${customisedGarments.garmentName} ${output[i]}</h4>
     <button class="edit-garment" ref="${i}" ${customisedGarments.ref = i} ${i++}>EDIT GARMENT</button><button class="delete" ref="${customisedGarments.ref}">DELETE GARMENT</button><button class="duplicate" ref="${customisedGarments.ref}">DUPLICATE GARMENT</button>
     <section>
 	    <aside id="svg">
@@ -113,6 +139,35 @@ function mapEdit(selectedDesign) {
 	<h5 id="edit-ref" ref="${customisedGarments[selectedDesign].ref}"></h5>`
 }
 
+/* Save current design so can revert back if cancelled */
+
+function tempSaveAction(selectedDesign) {
+	tempSave = 
+	{
+	ref: customisedGarments[selectedDesign].ref,
+    garmentTypeRef: customisedGarments[selectedDesign].garmentTypeRef,
+    garmentName: customisedGarments[selectedDesign].garmentName,
+    garmentType: customisedGarments[selectedDesign].garmentType,
+    club: customisedGarments[selectedDesign].club,
+    sponsorsVersion: customisedGarments[selectedDesign].sponsorsVersion,
+    sponsorsType: customisedGarments[selectedDesign].sponsorsType,
+    design: customisedGarments[selectedDesign].design,
+    path1: customisedGarments[selectedDesign].path1,
+    path2: customisedGarments[selectedDesign].path2,
+    patternRef: customisedGarments[selectedDesign].patternRef,
+    pattern: customisedGarments[selectedDesign].pattern,
+    pathBackground: customisedGarments[selectedDesign].pathBackground,
+    baseImage: customisedGarments[selectedDesign].baseImage,
+    colorBackground: customisedGarments[selectedDesign].colorBackground,
+    color1: customisedGarments[selectedDesign].color1,
+    color2: customisedGarments[selectedDesign].color2,
+    toneBackground: customisedGarments[selectedDesign].toneBackground,
+    tone1: customisedGarments[selectedDesign].tone1,
+}
+
+
+}
+
 /* Remove content from "design-edit" Html element */
 
 
@@ -142,6 +197,8 @@ function garmentEditLoad(e) {
 
 	var modal = document.getElementById("modal"); //access modal element
 	modal.style.display = "block"; //make modal visible
+
+	tempSaveAction(selectedDesign);
 }
 
 
@@ -204,9 +261,10 @@ function changeGarment(e) {
 	customisedGarments[selectedDesignRef].pathBackground = designs[chosenGarmentTypeRef].pathBackground[sleevesRef]; // amend pathBackground to the new one
 	customisedGarments[selectedDesignRef].baseImage = designs[chosenGarmentTypeRef].baseImage[sleevesRef]; // amend pathBackground to the new one
 
-
 	let chosenOption = customisedGarments[selectedDesignRef].sponsorsVersion; //make the sponsorVersion used in the sponsorPathUpdate function the current one
 	garmentEditing = designs[chosenGarmentTypeRef].designs;
+
+	let itemNumber = 1;
 
 
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
@@ -355,6 +413,7 @@ for (let i = 0; i < saveButton.length; i++) { //workout which save-button was se
 /* Function to Operate when save Button is clicked  */
 
 function saveGarments(e) {
+	createArray()
 	mapCustomisedGarments();
 	deleteEdit();
 	editButton();
@@ -363,6 +422,31 @@ function saveGarments(e) {
 	var modal = document.getElementById("modal"); //access modal element
 	modal.style.display = "none"; //make modal invisible
 }
+
+/* Notice when Cancel Button is Clicked  */
+
+let cancelButton = document.getElementsByClassName("cancel"); //access cancel-button element button
+for (let i = 0; i < cancelButton.length; i++) { //workout which cancel-button was selected
+		cancelButton[i].onclick = cancelGarments; //operate 'saveGarments' function on reset-button press
+	}
+
+/* Function to Operate when cancel Button is clicked  */
+
+function cancelGarments(e) {
+	let selectedDesign = document.getElementById("edit-ref"); //identify the garment loaded
+	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the item selected design
+
+	customisedGarments[selectedDesignRef] = tempSave; //revert selected design to pre edit properties
+
+	mapCustomisedGarments();
+	deleteEdit();
+	editButton();
+	deleteButton();
+	duplicateButton();
+	var modal = document.getElementById("modal"); //access modal element
+	modal.style.display = "none"; //make modal invisible
+}
+
 
 
 /* Notice when Add Button is Clicked  */
@@ -380,13 +464,15 @@ function addGarment(e) {
 		{
 	    ref: refNumber,
 	    garmentTypeRef: 0,
+	    garmentName: designs[0].name,
 	    garmentType: designs[0].garment,
-	    club: "leedsrhinos",
-	    sponsorsVersion:"sponsors",
+	    club: "noclub",
+	    sponsorsVersion:"logos",
 	    sponsorsType: designs[0].designs[0].sponsorsType,
 	    design: designs[0].designs[0].design,
 	    path1: designs[0].designs[0].path1,
 	    path2: designs[0].designs[0].path2,
+	    patternRef: 0,
 	    pattern:"",
 	    pathBackground: designs[0].pathBackground[0],
 	    baseImage: designs[0].baseImage[0],
@@ -396,6 +482,7 @@ function addGarment(e) {
 	    toneBackground: "dark",
 	    tone1: "light",
 		});
+	createArray()
 	mapCustomisedGarments();
 	editButton();
 	deleteButton();
@@ -420,7 +507,7 @@ function deleteGarment(e) {
 
 	selectedDesign > -1 ? customisedGarments.splice(selectedDesign, 1) : false;
 
-
+	createArray()
 	mapCustomisedGarments();
 	deleteButton();
 	duplicateButton();
@@ -448,6 +535,7 @@ function duplicateGarment(e) {
 		{
 	    ref: refNumber,
 	    garmentTypeRef: customisedGarments[selectedDesign].garmentTypeRef,
+	    garmentName: customisedGarments[selectedDesign].garmentName,
 	    garmentType: customisedGarments[selectedDesign].garmentType,
 	    club: customisedGarments[selectedDesign].club,
 	    sponsorsVersion: customisedGarments[selectedDesign].sponsorsVersion,
@@ -455,6 +543,7 @@ function duplicateGarment(e) {
 	    design: customisedGarments[selectedDesign].design,
 	    path1: customisedGarments[selectedDesign].path1,
 	    path2: customisedGarments[selectedDesign].path2,
+	    patternRef: customisedGarments[selectedDesign].patternRef,
 	    pattern: customisedGarments[selectedDesign].pattern,
 	    pathBackground: customisedGarments[selectedDesign].pathBackground,
 	    baseImage: customisedGarments[selectedDesign].baseImage,
@@ -464,8 +553,11 @@ function duplicateGarment(e) {
 	    toneBackground: customisedGarments[selectedDesign].toneBackground,
 	    tone1: customisedGarments[selectedDesign].tone1,
 		});
+	createArray()
 	mapCustomisedGarments();
 	editButton();
 	deleteButton();
 	duplicateButton();
 }
+
+

@@ -77,7 +77,8 @@
 
 .button {
 	margin: 5px 10px;
-		cursor: pointer;
+	cursor: pointer;
+	display: inline-block;
 }
 
 .options {
