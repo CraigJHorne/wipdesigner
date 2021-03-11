@@ -18,11 +18,10 @@ function createArray() {
        		r++
        		output.push(r);
         } else {
-    return output;
+    	return output;
+		}
 	}
 }
-
-console.log(output);}
 
 createArray() 
 
