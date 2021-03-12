@@ -90,7 +90,7 @@ function mapCustomisedGarments() {
 	let i = 0;
 	document.getElementById("design-pack").innerHTML = customisedGarments.map(customisedGarments => 
     `<h4>${customisedGarments.garmentName} ${output[i]}</h4>
-    <button class="edit-garment" ref="${i}" ${customisedGarments.ref = i} ${i++}>EDIT GARMENT</button><button class="delete" ref="${customisedGarments.ref}">DELETE GARMENT</button><button class="duplicate" ref="${customisedGarments.ref}">DUPLICATE GARMENT</button>
+    <button class="edit-garment" ref="${i}" ${customisedGarments.ref = i} ${i++}>EDIT GARMENT</button><button class="delete" ref="${customisedGarments.ref}">DELETE GARMENT</button><button class="duplicate" ref="${customisedGarments.ref}">DUPLICATE GARMENT</button><button class="rearrange-up" ref="${customisedGarments.ref}">Move Up</button><button class="rearrange-down" ref="${customisedGarments.ref}">Move Down</button>
     <section>
 	    <aside id="svg">
 			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + customisedGarments.sponsorsType +  customisedGarments.toneBackground  + customisedGarments.tone1 + ".svg")}">
@@ -431,6 +431,8 @@ function saveGarments(e) {
 	editButton();
 	deleteButton();
 	duplicateButton();
+	rearrangeUpButton();
+	rearrangeDownButton();
 	var modal = document.getElementById("modal"); //access modal element
 	modal.style.display = "none"; //make modal invisible
 }
@@ -466,6 +468,8 @@ function cancelGarments(e) {
 	editButton();
 	deleteButton();
 	duplicateButton();
+	rearrangeUpButton();
+	rearrangeDownButton();
 	var modal = document.getElementById("modal"); //access modal element
 	modal.style.display = "none"; //make modal invisible
 }
@@ -511,6 +515,8 @@ function addGarment(e) {
 	editButton();
 	deleteButton();
 	duplicateButton();
+	rearrangeUpButton();
+	rearrangeDownButton();
 }
 
 /* Notice when Delete Button is Clicked  */
@@ -535,6 +541,8 @@ function deleteGarment(e) {
 	mapCustomisedGarments();
 	deleteButton();
 	duplicateButton();
+	rearrangeUpButton();
+	rearrangeDownButton();
 	editButton();
 }
 
@@ -550,7 +558,7 @@ for (let i = 0; i < garmentDuplicate.length; i++) { //workout which duplicate-bu
 
 duplicateButton() //run deleteButton function on page load
 
-/* Function to Operate when delete Button is clicked  */
+/* Function to Operate when duplicate Button is clicked  */
 
 function duplicateGarment(e) {
 	let selectedDesign = e.target.getAttribute("ref"); //identify the ref of the garment clicked
@@ -583,6 +591,75 @@ function duplicateGarment(e) {
 	editButton();
 	deleteButton();
 	duplicateButton();
+	rearrangeUpButton();
+	rearrangeDownButton();
+	rearrangeDownButton();
+}
+
+/* Notice when Rearrange Up Button is Clicked  */
+
+function rearrangeUpButton() {
+let moveUp = document.getElementsByClassName("rearrange-up"); //access rearrangeup-button element button
+for (let i = 0; i < moveUp.length; i++) { //workout which rearrangeup-button was selected
+		moveUp[i].onclick = rearrangeUp; //operate 'rearrangeUp' function on reset-button press
+	}
+}
+
+rearrangeUpButton() //run rearrangeUpButton function on page load
+
+/* Function to Operate when rearrange up Button is clicked  */
+
+function rearrangeUp(e) {
+	let selectedDesign = e.target.getAttribute("ref"); //identify the ref of the garment clicked
+	let currentPosition = parseInt(selectedDesign, 10); //make design ref a number
+	let newPosition = currentPosition - 1; // identify the ref for one position up
+
+	if (newPosition < 0) {
+		newPosition = 0;
+	}
+
+	customisedGarments.splice(newPosition, 0, customisedGarments.splice(currentPosition, 1)[0]);
+
+	createArray()
+	mapCustomisedGarments();
+	editButton();
+	deleteButton();
+	duplicateButton();
+	rearrangeUpButton();
+	rearrangeDownButton();
 }
 
 
+/* Notice when Rearrange Down Button is Clicked  */
+
+function rearrangeDownButton() {
+let moveDown = document.getElementsByClassName("rearrange-down"); //access rearrangedown-button element button
+for (let i = 0; i < moveDown.length; i++) { //workout which rearrangedown-button was selected
+		moveDown[i].onclick = rearrangeDown; //operate 'rearrangeDown' function on reset-button press
+	}
+}
+
+rearrangeDownButton() //run rearrangeDownButton function on page load
+
+/* Function to Operate when rearrange down Button is clicked  */
+
+function rearrangeDown(e) {
+	let selectedDesign = e.target.getAttribute("ref"); //identify the ref of the garment clicked
+	let currentPosition = parseInt(selectedDesign, 10); //make design ref a number
+	let newPosition = currentPosition + 1; // identify the ref for one position down
+	let maxPosition = customisedGarments.length; //identify how many items in the array
+
+	if (newPosition > maxPosition) {
+		newPosition = maxPosition;
+	}
+
+	customisedGarments.splice(newPosition, 0, customisedGarments.splice(currentPosition, 1)[0]);
+
+	createArray()
+	mapCustomisedGarments();
+	editButton();
+	deleteButton();
+	duplicateButton();
+	rearrangeUpButton();
+	rearrangeDownButton();
+}
