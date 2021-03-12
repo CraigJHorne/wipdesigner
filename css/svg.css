@@ -1,7 +1,7 @@
 /* SVG */
 
 #svg {
-	width: 500px;
+	width: 554px;
 	position: relative;
 	align-items: center;
   	justify-content: center;
@@ -12,7 +12,7 @@
 
 #svg__sponsors {
 	z-index: 6;
-	max-width: 500px;
+	max-width: 554px;
 	height: auto;
 	position: absolute;
 	/*visibility: hidden;*/
@@ -25,7 +25,7 @@
 
 #svg__pattern {
 	z-index: 3;
-	max-width: 500px;
+	max-width: 554px;
 	height: auto;
 	position: absolute;
 }
@@ -92,4 +92,14 @@
 
 h5 {
 	font-size: 0.7em;
+}
+
+/* Print */
+
+@media print {
+
+	.edit-garment, .delete, .duplicate, .rearrange-up, .rearrange-down{
+		display: none;
+	}
+
 }

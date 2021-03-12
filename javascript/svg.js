@@ -614,11 +614,11 @@ function rearrangeUp(e) {
 	let currentPosition = parseInt(selectedDesign, 10); //make design ref a number
 	let newPosition = currentPosition - 1; // identify the ref for one position up
 
-	if (newPosition < 0) {
-		newPosition = 0;
+	if (newPosition < 0) { //find out if the new position is lower than 0
+		newPosition = 0; // if it is make the new positon 0 which is the current position
 	}
 
-	customisedGarments.splice(newPosition, 0, customisedGarments.splice(currentPosition, 1)[0]);
+	customisedGarments.splice(newPosition, 0, customisedGarments.splice(currentPosition, 1)[0]); // change the position
 
 	createArray()
 	mapCustomisedGarments();
@@ -649,8 +649,8 @@ function rearrangeDown(e) {
 	let newPosition = currentPosition + 1; // identify the ref for one position down
 	let maxPosition = customisedGarments.length; //identify how many items in the array
 
-	if (newPosition > maxPosition) {
-		newPosition = maxPosition;
+	if (newPosition > maxPosition) { //find out if the new position is higher than the max position
+		newPosition = maxPosition; // if it is make the new positon the bighest position which is its current position
 	}
 
 	customisedGarments.splice(newPosition, 0, customisedGarments.splice(currentPosition, 1)[0]);
