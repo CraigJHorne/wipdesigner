@@ -429,6 +429,17 @@ for (let i = 0; i < cancelButton.length; i++) { //workout which cancel-button wa
 		cancelButton[i].onclick = cancelGarments; //operate 'saveGarments' function on reset-button press
 	}
 
+/* Notice when outside the modal is Clicked and cancel  */
+
+var modal = document.getElementById("modal"); // get the modal
+
+// operate cancel function when outside the modal is clicked.
+window.onclick = function(event) { 
+  if (event.target == modal) {
+    cancelGarments();
+  }
+}
+
 /* Function to Operate when cancel Button is clicked  */
 
 function cancelGarments(e) {
