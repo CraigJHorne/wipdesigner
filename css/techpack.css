@@ -1,0 +1,308 @@
+
+.border1 {
+    border: 1px solid black;
+}
+
+
+
+/* Modal */
+
+
+
+.grid{
+	height: 625px;
+	width: 1000px;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+  	grid-template-rows: 5% 9% 23% 23% 20% 20%;
+  	grid-row-gap: 2%;
+  	grid-column-gap: 1%;
+  	grid-template-areas: 
+    "tech-logo tech-colours tech-colours ."
+    "tech-cad tech-main tech-main tech-main"
+    "tech-order tech-main tech-main tech-main"
+    "tech-production tech-main tech-main tech-main"
+    "tech-comments tech-main tech-main tech-main"
+    "tech-comments tech-trims tech-trims tech-trims";
+}
+
+.tech-logo {
+    grid-area: tech-logo;
+    background-color: black;
+    padding: 2px;
+    justify-content: center;
+    text-align: center;
+}
+
+.tech-logo img{
+	height: 100%;
+}
+
+.tech-colours {
+    grid-area: tech-colours;
+}
+.tech-cad {
+    grid-area: tech-cad;
+}
+
+
+
+.tech-order{
+    grid-area: tech-order;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  	grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    grid-template-areas: 
+    "order-title order-title"
+    "order-1title order-1info"
+    "order-2title order-2info"
+    "order-3title order-3info"
+    "order-4title order-4info"
+    "order-5title order-5info"
+    "order-6title order-6info"
+    "order-7title order-7info"
+    "order-8title order-8info";
+}
+
+.order-title {
+    grid-area: order-title;
+    background-color: black;
+    color: white;
+
+}
+
+.order-1title {
+    grid-area: order-1title;
+}
+.order-1info {
+    grid-area: order-1info;
+}
+
+
+.order-2title {
+    grid-area: order-2title;
+}
+.order-2info {
+    grid-area: order-2info;
+}
+
+
+.order-3title {
+    grid-area: order-3title;
+}
+.order-3info {
+    grid-area: order-3info;
+}
+
+
+.order-4title {
+    grid-area: order-4title;
+}
+.order-4info {
+    grid-area: order-4info;
+}
+
+
+.order-5title {
+    grid-area: order-5title;
+}
+.order-5info {
+    grid-area: order-5info;
+}
+
+
+.order-6title {
+    grid-area: order-6title;
+}
+.order-6info {
+    grid-area: order-6info;
+}
+
+
+.order-7title {
+    grid-area: order-7title;
+}
+.order-7info {
+    grid-area: order-7info;
+}
+
+
+.order-8title {
+    grid-area: order-8title;
+}
+.order-8info {
+    grid-area: order-8info;
+}
+
+
+
+.tech-production {
+    grid-area: tech-production;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+  	grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    grid-template-areas: 
+    "production-title production-title production-title"
+    "production-1title production-1info production-1color"
+    "production-2title production-2info production-2color"
+    "production-3title production-3info production-3color"
+    "production-4title production-4info production-4color"
+    "production-5title production-5info production-5color"
+    "production-6title production-6info production-6color"
+    "production-7title production-7info production-7color"
+    "production-8title production-8info production-8color";
+}
+
+.production-title {
+    grid-area: production-title;
+    background-color: black;
+    color: white;
+}
+
+.production-1title {
+    grid-area: production-1title;
+}
+.production-1info {
+    grid-area: production-1info;
+}
+.production-1color {
+    grid-area: production-1color;
+}
+
+.production-2title {
+    grid-area: production-2title;
+}
+.production-2info {
+    grid-area: production-2info;
+}
+.production-2color {
+    grid-area: production-2color;
+}
+
+.production-3title {
+    grid-area: production-3title;
+}
+.production-3info {
+    grid-area: production-3info;
+}
+.production-3color {
+    grid-area: production-3color;
+}
+
+.production-4title {
+    grid-area: production-4title;
+}
+.production-4info {
+    grid-area: production-4info;
+}
+.production-4color {
+    grid-area: production-4color;
+}
+
+.production-5title {
+    grid-area: production-5title;
+}
+.production-5info {
+    grid-area: production-5info;
+}
+.production-5color {
+    grid-area: production-5color;
+}
+
+.production-6title {
+    grid-area: production-6title;
+}
+.production-6info {
+    grid-area: production-6info;
+}
+.production-6color {
+    grid-area: production-6color;
+}
+
+.production-7title {
+    grid-area: production-7title;
+}
+.production-7info {
+    grid-area: production-7info;
+}
+.production-7color {
+    grid-area: production-7color;
+}
+
+.production-8title {
+    grid-area: production-8title;
+}
+.production-8info {
+    grid-area: production-8info;
+}
+.production-8color {
+    grid-area: production-8color;
+}
+
+.tech-comments {
+    grid-area: tech-comments;
+    display: grid;
+    grid-template-columns: 100%;
+  	grid-template-rows: 8% 92%;
+    grid-template-areas: 
+    "comments-title"
+    "comments-info";
+}
+
+.comments-title {
+    grid-area: comments-title;
+    background-color: black;
+    color: white;
+}
+
+.comments-info {
+    grid-area: comments-info;
+
+}
+
+.tech-colours {
+    grid-area: tech-colours;
+}
+.tech-main {
+    grid-area: tech-main;
+}
+
+
+.tech-trims {
+    grid-area: tech-trims;
+    display: grid;
+    grid-template-columns: 100%;
+  	grid-template-rows: 12.5% 87.5%;
+    grid-template-areas: 
+    "trims-title"
+    "trims-info";
+}
+
+.trims-title {
+    grid-area: trims-title;
+    background-color: black;
+    color: white;
+}
+
+.trims-info {
+    grid-area: trims-info;
+
+}
+
+
+h1 {
+	font-family: Arial;
+	font-weight: 500;
+	color: red;
+	margin: 0;
+	padding: 0;
+	font-size: 1.7em;
+}
+
+h2 {
+	font-family: Arial;
+	font-weight: 500;
+	margin: 0;
+	padding: 0;
+	font-size: 1.3em;
+}

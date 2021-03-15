@@ -98,7 +98,7 @@ h5 {
 
 @media print {
 
-	.edit-garment, .delete, .duplicate, .rearrange-up, .rearrange-down{
+	.edit-garment, .delete, .duplicate, .rearrange-up, .rearrange-down, .add{
 		display: none;
 	}
 
