@@ -24,7 +24,7 @@ body {
   	grid-row-gap: 2%;
   	grid-column-gap: 1%;
   	grid-template-areas: 
-    "tech-logo tech-colours tech-colours ."
+    "tech-logo tech-colours tech-colours tech-colours"
     "tech-cad tech-main tech-main tech-main"
     "tech-order tech-main tech-main tech-main"
     "tech-production tech-main tech-main tech-main"
@@ -56,7 +56,7 @@ body {
 .tech-order{
     grid-area: tech-order;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 35% 65%;
   	grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
     grid-template-areas: 
     "order-title order-title"
@@ -66,8 +66,7 @@ body {
     "order-4title order-4info"
     "order-5title order-5info"
     "order-6title order-6info"
-    "order-7title order-7info"
-    "order-8title order-8info";
+    "order-7title order-7info";
 }
 
 .order-title {
@@ -82,6 +81,8 @@ body {
 }
 .order-1info {
     grid-area: order-1info;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 
@@ -90,6 +91,8 @@ body {
 }
 .order-2info {
     grid-area: order-2info;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 
@@ -98,6 +101,8 @@ body {
 }
 .order-3info {
     grid-area: order-3info;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 
@@ -106,6 +111,8 @@ body {
 }
 .order-4info {
     grid-area: order-4info;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 
@@ -114,6 +121,8 @@ body {
 }
 .order-5info {
     grid-area: order-5info;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 
@@ -122,6 +131,8 @@ body {
 }
 .order-6info {
     grid-area: order-6info;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 
@@ -130,6 +141,8 @@ body {
 }
 .order-7info {
     grid-area: order-7info;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 
@@ -138,6 +151,8 @@ body {
 }
 .order-8info {
     grid-area: order-8info;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 
@@ -145,7 +160,7 @@ body {
 .tech-production {
     grid-area: tech-production;
     display: grid;
-    grid-template-columns: 40% 40% 20%;
+    grid-template-columns: 45% 45% 10%;
   	grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
     grid-template-areas: 
     "production-title production-title production-title"
@@ -155,8 +170,7 @@ body {
     "production-4title production-4info production-4color"
     "production-5title production-5info production-5color"
     "production-6title production-6info production-6color"
-    "production-7title production-7info production-7color"
-    "production-8title production-8info production-8color";
+    "production-7title production-7info production-7color";
 }
 
 .production-title {
@@ -170,6 +184,8 @@ body {
 }
 .production-1info {
     grid-area: production-1info;
+    text-transform: uppercase;
+    text-align: center;
 }
 .production-1color {
     grid-area: production-1color;
@@ -180,6 +196,8 @@ body {
 }
 .production-2info {
     grid-area: production-2info;
+    text-transform: uppercase;
+    text-align: center;
 }
 .production-2color {
     grid-area: production-2color;
@@ -190,6 +208,8 @@ body {
 }
 .production-3info {
     grid-area: production-3info;
+    text-transform: uppercase;
+    text-align: center;
 }
 .production-3color {
     grid-area: production-3color;
@@ -200,6 +220,8 @@ body {
 }
 .production-4info {
     grid-area: production-4info;
+    text-transform: uppercase;
+    text-align: center;
 }
 .production-4color {
     grid-area: production-4color;
@@ -210,6 +232,8 @@ body {
 }
 .production-5info {
     grid-area: production-5info;
+    text-transform: uppercase;
+    text-align: center;
 }
 .production-5color {
     grid-area: production-5color;
@@ -220,6 +244,8 @@ body {
 }
 .production-6info {
     grid-area: production-6info;
+    text-transform: uppercase;
+    text-align: center;
 }
 .production-6color {
     grid-area: production-6color;
@@ -230,6 +256,8 @@ body {
 }
 .production-7info {
     grid-area: production-7info;
+    text-transform: uppercase;
+    text-align: center;
 }
 .production-7color {
     grid-area: production-7color;
@@ -240,6 +268,8 @@ body {
 }
 .production-8info {
     grid-area: production-8info;
+    text-transform: uppercase;
+    text-align: center;
 }
 .production-8color {
     grid-area: production-8color;
@@ -263,23 +293,22 @@ body {
 
 .comments-info {
     grid-area: comments-info;
+    text-transform: uppercase;
 
 }
 
 .tech-colours {
     grid-area: tech-colours;display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 17% 16% 17% 16% 17% 17%;
   	grid-template-rows: 45% 55%;
   	grid-column-gap: 1%;
     grid-template-areas: 
-    "colour-1colour colour-2colour colour-3colour colour-4colour colour-5colour colour-6colour colour-7colour colour-8colour colour-9colour colour-10colour"
-    "colour-1title colour-2title colour-3title colour-4title colour-5title colour-6title colour-7title colour-8title colour-9title colour-10title";
+    "colour-1colour colour-2colour colour-3colour colour-4colour colour-5colour colour-6colour"
+    "colour-1title colour-2title colour-3title colour-4title colour-5title colour-6title";
 }
 
 .colour-1colour {
     grid-area: colour-1colour;
-    background-color: red;
-
 }
 
 .colour-2colour {
@@ -306,22 +335,6 @@ body {
 
 }
 
-.colour-7colour {
-    grid-area: colour-7colour;
-
-}
-.colour-8colour {
-    grid-area: colour-8colour;
-
-}
-.colour-9colour {
-    grid-area: colour-9colour;
-
-}
-.colour-10colour {
-    grid-area: colour-10colour;
-
-}
 
 .colour-1title {
     grid-area: colour-1title;
@@ -331,44 +344,31 @@ body {
 
 .colour-2title {
     grid-area: colour-2title;
+    text-align: center;
 
 }
 
 .colour-3title {
     grid-area: colour-3title;
+    text-align: center;
 
 }
 
 .colour-4title {
     grid-area: colour-4title;
+    text-align: center;
 
 }
 
 .colour-5title {
     grid-area: colour-5title;
+    text-align: center;
 
 }
 
 .colour-6title {
     grid-area: colour-6title;
-
-}
-
-.colour-7title {
-    grid-area: colour-7title;
-
-}
-.colour-8title {
-    grid-area: colour-8title;
-
-}
-.colour-9title {
-    grid-area: colour-9title;
-
-}
-.colour-10title {
-    grid-area: colour-10title;
-
+    text-align: center;
 }
 
 
@@ -410,7 +410,7 @@ body {
 .page2{
 	height: 625px;
 	width: 1000px;
-	margin-bottom: 110px;
+	margin-bottom: 120px;
 	display: grid;
 	grid-template-columns: 25% 75%;
   	grid-template-rows: 20% 80%;
@@ -450,7 +450,7 @@ body {
 .page3{
 	height: 625px;
 	width: 910px;
-    margin-bottom: 110px;
+    margin-bottom: 120px;
 	display: grid;
 	grid-template-columns: 20% 80%;
   	grid-template-rows: 5% 95%;
@@ -564,5 +564,9 @@ h2 {
 	margin: 0;
 	padding: 0;
 	font-size: 1.3em;
+}
+
+#back {
+    display: none;
 }
 

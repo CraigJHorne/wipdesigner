@@ -34,7 +34,7 @@ createArray()
 
 function mapClubOptions() {
 	document.getElementById("edit-club").innerHTML = clubs.map(clubs => 
-    `<h5 class="button club-button" ref="${clubs.ref}">${clubs.name}</h5>`
+    `<h5 class="button club-button" index="${clubs.index}">${clubs.name}</h5>`
 ).join('');
 }
 
@@ -64,13 +64,13 @@ mapDesignOptions() // map design options on load
 
 function mapColorOptions() {
 	document.getElementById("edit-colorBackground").innerHTML = colors.map(colors => 
-    `<h5 class="button color-button" ref="${colors.ref}" option="colorBackground">BG Color ${colors.ref + 1}</h5>`
+    `<h5 class="button color-button" ref="${colors.ref}" option="colorBackground">${colors.pantone}</h5>`
 ).join('');
 	document.getElementById("edit-color1").innerHTML = colors.map(colors => 
-    `<h5 class="button color-button" ref="${colors.ref}" option="color1">A Color ${colors.ref + 1}</h5>`
+    `<h5 class="button color-button" ref="${colors.ref}" option="color1">${colors.pantone}</h5>`
 ).join('');
 	document.getElementById("edit-color2").innerHTML = colors.map(colors => 
-    `<h5 class="button color-button" ref="${colors.ref}" option="color2">B Color ${colors.ref + 1}</h5>`
+    `<h5 class="button color-button" ref="${colors.ref}" option="color2">${colors.pantone}</h5>`
 ).join('')
 }
 
@@ -94,7 +94,7 @@ function mapCustomisedGarments() {
 	let i = 0;
 	document.getElementById("design-pack").innerHTML = customisedGarments.map(customisedGarments => 
     `<h4>${customisedGarments.garmentName} ${output[i]}</h4>
-    <button class="edit-garment" ref="${i}" ${customisedGarments.ref = i} ${i++}>EDIT GARMENT</button><button class="delete" ref="${customisedGarments.ref}">DELETE GARMENT</button><button class="duplicate" ref="${customisedGarments.ref}">DUPLICATE GARMENT</button><button class="rearrange-up" ref="${customisedGarments.ref}">Move Up</button><button class="rearrange-down" ref="${customisedGarments.ref}">Move Down</button>
+    <button class="edit-garment" ref="${i}" ${customisedGarments.ref = i} ${i++}>EDIT GARMENT</button><button class="delete" ref="${customisedGarments.ref}">DELETE GARMENT</button><button class="duplicate" ref="${customisedGarments.ref}">DUPLICATE GARMENT</button><button class="rearrange-up" ref="${customisedGarments.ref}">Move Up</button><button class="rearrange-down" ref="${customisedGarments.ref}">Move Down</button><button class="tech-garment" ref="${customisedGarments.ref}">TECH PACK</button>
     <section>
 	    <aside id="svg">
 			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + customisedGarments.sponsorsType +  customisedGarments.toneBackground  + customisedGarments.tone1 + ".svg")}">
@@ -151,6 +151,7 @@ function tempSaveAction(selectedDesign) {
     garmentTypeRef: customisedGarments[selectedDesign].garmentTypeRef,
     garmentName: customisedGarments[selectedDesign].garmentName,
     garmentType: customisedGarments[selectedDesign].garmentType,
+    clubIndex: customisedGarments[selectedDesign].clubIndex,
     club: customisedGarments[selectedDesign].club,
     sponsorsVersion: customisedGarments[selectedDesign].sponsorsVersion,
     sponsorsType: customisedGarments[selectedDesign].sponsorsType,
@@ -165,6 +166,9 @@ function tempSaveAction(selectedDesign) {
     colorBackground: customisedGarments[selectedDesign].colorBackground,
     color1: customisedGarments[selectedDesign].color1,
     color2: customisedGarments[selectedDesign].color2,
+    colorBackgroundRef: customisedGarments[selectedDesign].colorBackgroundRef,
+    color1Ref: customisedGarments[selectedDesign].color1Ref,
+    color2Ref: customisedGarments[selectedDesign].color2Ref,
     toneBackground: customisedGarments[selectedDesign].toneBackground,
     tone1: customisedGarments[selectedDesign].tone1,
 }
@@ -330,9 +334,10 @@ function changeColor(e) {
 	let chosenTone = chosenOption.replace("color","tone"); // turn "colorX" into "toneX"
 	let selectedDesign = document.getElementById("edit-ref"); //identify the design loaded
 	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the design-button clicked
+	let chosenOptionRef = chosenOption + "Ref"
 	customisedGarments[selectedDesignRef][chosenOption] = colors[chosenColor].hex; //change hex to the one from the selected color
 	customisedGarments[selectedDesignRef][chosenTone] = colors[chosenColor].tone; //change hex to the one from the selected color
-
+	customisedGarments[selectedDesignRef][chosenOptionRef] = chosenColor; //change hex to the one from the selected color
 
 	mapEdit(selectedDesignRef);
 }
@@ -349,11 +354,11 @@ for (let i = 0; i < htmlClubButton.length; i++) { //so that it operates for all 
 /* Function to Operate when Club Button is clicked  */
 
 function changeClub(e) {
-	let chosenClub= e.target.getAttribute("ref"); //identify the ref of the club-button clicked
+	let chosenClub= e.target.getAttribute("index"); //identify the ref of the club-button clicked
 	let selectedDesign = document.getElementById("edit-ref"); //identify the design loaded
 	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the design-button clicked
-	customisedGarments[selectedDesignRef].club = chosenClub; //change hex to the one from the selected color
-
+	customisedGarments[selectedDesignRef].club = clubs[chosenClub].ref; //change club to the one from the selected club
+	customisedGarments[selectedDesignRef].clubIndex = chosenClub; //change club to the one from the selected club
 
 	mapEdit(selectedDesignRef);
 }
@@ -431,6 +436,7 @@ for (let i = 0; i < saveButton.length; i++) { //workout which save-button was se
 function saveGarments(e) {
 	createArray()
 	mapCustomisedGarments();
+	techButton();
 	deleteEdit();
 	editButton();
 	deleteButton();
@@ -468,6 +474,7 @@ function cancelGarments(e) {
 	customisedGarments[selectedDesignRef] = tempSave; //revert selected design to pre edit properties
 
 	mapCustomisedGarments();
+	techButton();
 	deleteEdit();
 	editButton();
 	deleteButton();
@@ -497,6 +504,7 @@ function addGarment(e) {
 	    garmentTypeRef: 0,
 	    garmentName: designs[0].name,
 	    garmentType: designs[0].garment,
+	    clubIndex: 0,
 	    club: "noclub",
 	    sponsorsVersion:"logos",
 	    sponsorsType: designs[0].designs[0].sponsorsType,
@@ -508,14 +516,18 @@ function addGarment(e) {
 	    pattern:"",
 	    pathBackground: designs[0].pathBackground[0],
 	    baseImage: designs[0].baseImage[0],
-	    colorBackground: "#08253d",
-	    color1: "#ffc629",
-	    color2: "#505e28",
+	    colorBackground: "#000000",
+	    color1: "#FFFFFF",
+	    color2: "#004a98",
+	    colorBackgroundRef: 0,
+    	color1Ref: 1,
+    	color2Ref: 2,
 	    toneBackground: "dark",
 	    tone1: "light",
 		});
 	createArray()
 	mapCustomisedGarments();
+	techButton();
 	editButton();
 	deleteButton();
 	duplicateButton();
@@ -543,6 +555,7 @@ function deleteGarment(e) {
 
 	createArray()
 	mapCustomisedGarments();
+	techButton();
 	deleteButton();
 	duplicateButton();
 	rearrangeUpButton();
@@ -573,6 +586,7 @@ function duplicateGarment(e) {
 	    garmentTypeRef: customisedGarments[selectedDesign].garmentTypeRef,
 	    garmentName: customisedGarments[selectedDesign].garmentName,
 	    garmentType: customisedGarments[selectedDesign].garmentType,
+	    clubIndex: customisedGarments[selectedDesign].clubIndex,
 	    club: customisedGarments[selectedDesign].club,
 	    sponsorsVersion: customisedGarments[selectedDesign].sponsorsVersion,
 	    sponsorsType: customisedGarments[selectedDesign].sponsorsType,
@@ -587,11 +601,16 @@ function duplicateGarment(e) {
 	    colorBackground: customisedGarments[selectedDesign].colorBackground,
 	    color1: customisedGarments[selectedDesign].color1,
 	    color2: customisedGarments[selectedDesign].color2,
+	    colorBackgroundRef: customisedGarments[selectedDesign].colorBackgroundRef,
+   		color1Ref: customisedGarments[selectedDesign].color1Ref,
+    	color2Ref: customisedGarments[selectedDesign].color2Ref,
 	    toneBackground: customisedGarments[selectedDesign].toneBackground,
 	    tone1: customisedGarments[selectedDesign].tone1,
 		});
+
 	createArray()
 	mapCustomisedGarments();
+	techButton();
 	editButton();
 	deleteButton();
 	duplicateButton();
@@ -626,6 +645,7 @@ function rearrangeUp(e) {
 
 	createArray()
 	mapCustomisedGarments();
+	techButton();
 	editButton();
 	deleteButton();
 	duplicateButton();
@@ -661,6 +681,7 @@ function rearrangeDown(e) {
 
 	createArray()
 	mapCustomisedGarments();
+	techButton();
 	editButton();
 	deleteButton();
 	duplicateButton();

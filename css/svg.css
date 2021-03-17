@@ -96,14 +96,20 @@ h5 {
 
 h6 {
 	font-size: 0.7em;
+	margin: 0;
+}
+
+h7 {
+	font-size: 0.55em;
+	margin: 0;
 }
 
 /* Print */
 
 @media print {
 
-	.edit-garment, .delete, .duplicate, .back, .rearrange-up, .rearrange-down, .add{
-		display: none;
+	.edit-garment, .delete, .duplicate, .back, #back, .rearrange-up, .rearrange-down, .add{
+		display: none!important;
 	}
 
 }
