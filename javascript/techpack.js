@@ -135,14 +135,14 @@ function mapTechPack(selectedDesign) {
 
 				<div class="tech-main">
 					<section>
-	    				<aside id="svg">
-							<img id="svg__sponsors" src="${("assets/" + customisedGarments[selectedDesign].sponsorsVersion + "/" + customisedGarments[selectedDesign].garmentType + "/" + customisedGarments[selectedDesign].club + "/" + customisedGarments[selectedDesign].sponsorsType +  customisedGarments[selectedDesign].toneBackground  + customisedGarments[selectedDesign].tone1 + ".svg")}">
-							<svg class="svg__design" viewBox="0 0 750 400">
+	    				<aside id="svg2">
+							<img id="svg2__sponsors" src="${("assets/" + customisedGarments[selectedDesign].sponsorsVersion + "/" + customisedGarments[selectedDesign].garmentType + "/" + customisedGarments[selectedDesign].club + "/" + customisedGarments[selectedDesign].sponsorsType +  customisedGarments[selectedDesign].toneBackground  + customisedGarments[selectedDesign].tone1 + ".svg")}">
+							<svg class="svg2__design" viewBox="0 0 750 400">
 								<path id="path-1" d="${customisedGarments[selectedDesign].path1}" style="fill:${customisedGarments[selectedDesign].color1}"/>
 								<path id="path-2" d="${customisedGarments[selectedDesign].path2}" style="fill:${customisedGarments[selectedDesign].color2}"/>
 							</svg>
-							<img id="svg__pattern" src="${customisedGarments[selectedDesign].pattern}">
-							<svg class="svg__background" viewBox="0 0 750 400">
+							<img id="svg2__pattern" src="${customisedGarments[selectedDesign].pattern}">
+							<svg class="svg2__background" viewBox="0 0 750 400">
 								<defs>
 									<style>
 									.	cls-2{fill:none}
@@ -150,7 +150,7 @@ function mapTechPack(selectedDesign) {
 								</defs>
 								<path id="path-background" d="${customisedGarments[selectedDesign].pathBackground}" style="fill:${customisedGarments[selectedDesign].colorBackground}"/>
 							</svg>
-							<img id="svg__baseimage" src="${customisedGarments[selectedDesign].baseImage}">
+							<img id="svg2__baseimage" src="${customisedGarments[selectedDesign].baseImage}">
 						</aside>
 					</section>
 				</div>

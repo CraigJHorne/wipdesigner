@@ -266,7 +266,7 @@ let designs = [
 	"baseImage": [backgrounds[2].baseImage, backgrounds[3].baseImage],
 	"initials": "RRS",
 	"fabric1": "Replica Jersey Fabric",
-	"fabric2": "THT951",
+	"fabric2": "",
 	"option1": "Sleeve Cuff",
 	"option2": "Hem Binding",
 	"option3": "Collar Binding",

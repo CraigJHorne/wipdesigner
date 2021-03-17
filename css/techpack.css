@@ -548,6 +548,51 @@ body {
 }
 
 
+/* SVG */
+
+#svg2 {
+    width: 750px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* --- */
+
+#svg2__sponsors {
+    z-index: 6;
+    max-width: 750px;
+    height: auto;
+    position: absolute;
+    /*visibility: hidden;*/
+}
+
+.svg2__design {
+    z-index: 4;
+    position: absolute;
+}
+
+#svg2__pattern {
+    z-index: 3;
+    max-width: 750px;
+    height: auto;
+    position: absolute;
+}
+
+.svg2__background {
+    z-index: 2;
+    position: absolute;
+    mix-blend-mode: multiply;
+
+}
+
+#svg2__baseimage {
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
+
 
 h1 {
 	font-family: Arial;
