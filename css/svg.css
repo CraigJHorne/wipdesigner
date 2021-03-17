@@ -94,11 +94,15 @@ h5 {
 	font-size: 0.7em;
 }
 
+h6 {
+	font-size: 0.7em;
+}
+
 /* Print */
 
 @media print {
 
-	.edit-garment, .delete, .duplicate, .rearrange-up, .rearrange-down, .add{
+	.edit-garment, .delete, .duplicate, .back, .rearrange-up, .rearrange-down, .add{
 		display: none;
 	}
 

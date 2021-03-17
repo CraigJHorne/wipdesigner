@@ -1,17 +1,23 @@
 
+body {
+	font-family: Arial;
+	font-size: 0.9em;
+}
+
 .border1 {
     border: 1px solid black;
 }
 
 
 
-/* Modal */
+/* Page 1 */
 
 
 
-.grid{
+.page1{
 	height: 625px;
 	width: 1000px;
+	margin-bottom: 120px;
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
   	grid-template-rows: 5% 9% 23% 23% 20% 20%;
@@ -261,10 +267,115 @@
 }
 
 .tech-colours {
-    grid-area: tech-colours;
+    grid-area: tech-colours;display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  	grid-template-rows: 45% 55%;
+  	grid-column-gap: 1%;
+    grid-template-areas: 
+    "colour-1colour colour-2colour colour-3colour colour-4colour colour-5colour colour-6colour colour-7colour colour-8colour colour-9colour colour-10colour"
+    "colour-1title colour-2title colour-3title colour-4title colour-5title colour-6title colour-7title colour-8title colour-9title colour-10title";
 }
+
+.colour-1colour {
+    grid-area: colour-1colour;
+    background-color: red;
+
+}
+
+.colour-2colour {
+    grid-area: colour-2colour;
+}
+
+.colour-3colour {
+    grid-area: colour-3colour;
+
+}
+
+.colour-4colour {
+    grid-area: colour-4colour;
+
+}
+
+.colour-5colour {
+    grid-area: colour-5colour;
+
+}
+
+.colour-6colour {
+    grid-area: colour-6colour;
+
+}
+
+.colour-7colour {
+    grid-area: colour-7colour;
+
+}
+.colour-8colour {
+    grid-area: colour-8colour;
+
+}
+.colour-9colour {
+    grid-area: colour-9colour;
+
+}
+.colour-10colour {
+    grid-area: colour-10colour;
+
+}
+
+.colour-1title {
+    grid-area: colour-1title;
+    text-align: center;
+
+}
+
+.colour-2title {
+    grid-area: colour-2title;
+
+}
+
+.colour-3title {
+    grid-area: colour-3title;
+
+}
+
+.colour-4title {
+    grid-area: colour-4title;
+
+}
+
+.colour-5title {
+    grid-area: colour-5title;
+
+}
+
+.colour-6title {
+    grid-area: colour-6title;
+
+}
+
+.colour-7title {
+    grid-area: colour-7title;
+
+}
+.colour-8title {
+    grid-area: colour-8title;
+
+}
+.colour-9title {
+    grid-area: colour-9title;
+
+}
+.colour-10title {
+    grid-area: colour-10title;
+
+}
+
+
+
 .tech-main {
     grid-area: tech-main;
+    margin: auto;
 }
 
 
@@ -290,13 +401,161 @@
 }
 
 
+
+
+/* Page 2 */
+
+
+
+.page2{
+	height: 625px;
+	width: 1000px;
+	margin-bottom: 110px;
+	display: grid;
+	grid-template-columns: 25% 75%;
+  	grid-template-rows: 20% 80%;
+  	grid-row-gap: 2%;
+  	grid-column-gap: 1%;
+  	grid-template-areas: 
+    "tech-logo2 tech-labels"
+    "tech-construction tech-construction";
+}
+
+.tech-logo2 {
+    grid-area: tech-logo2;
+    background-color: black;
+    padding: 4px;
+    justify-content: center;
+    text-align: center;
+    height: 22%;
+}
+
+.tech-logo2 img{
+	height: 100%;
+}
+
+.tech-labels {
+    grid-area: tech-labels;
+}
+
+.tech-construction {
+    grid-area: tech-construction;
+}
+
+
+/* Page 3 */
+
+
+
+.page3{
+	height: 625px;
+	width: 910px;
+    margin-bottom: 110px;
+	display: grid;
+	grid-template-columns: 20% 80%;
+  	grid-template-rows: 5% 95%;
+  	grid-row-gap: 2%;
+  	grid-column-gap: 1%;
+  	grid-template-areas: 
+    "tech-logo3 ."
+    "tech-sponsors tech-sponsors";
+}
+
+.tech-logo3 {
+    grid-area: tech-logo3;
+    background-color: black;
+    padding: 4px;
+    justify-content: center;
+    text-align: center;
+    height: 80%;
+}
+
+.tech-logo3 img{
+	height: 100%;
+}
+
+.tech-sponsors {
+    grid-area: tech-sponsors;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.tech-sponsorssvg {
+    height: 593px;
+    width: 919px;
+    z-index: 1;
+    position: absolute;
+}
+
+.tech-logosizes {
+	position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+
+
+/* Page 4 */
+
+
+
+.page4{
+    height: 625px;
+    width: 910px;
+    margin-bottom: 110px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 5% 95%;
+    grid-row-gap: 2%;
+    grid-column-gap: 1%;
+    grid-template-areas: 
+    "tech-logo4 ."
+    "tech-sizes tech-sizes";
+}
+
+.tech-logo4 {
+    grid-area: tech-logo4;
+    background-color: black;
+    padding: 4px;
+    justify-content: center;
+    text-align: center;
+    height: 80%;
+}
+
+.tech-logo4 img{
+    height: 100%;
+}
+
+.tech-sizes {
+    grid-area: tech-sizes;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.tech-garmentsizes {
+    position: relative;
+    height: 593px;
+    width: 919px;
+    z-index: 2;
+}
+
+.tech-garmentsizes img{
+    position: relative;
+    height: 593px;
+    width: 919px;
+    z-index: 2;
+}
+
+
+
 h1 {
 	font-family: Arial;
 	font-weight: 500;
 	color: red;
 	margin: 0;
 	padding: 0;
-	font-size: 1.7em;
+	font-size: 2.2em;
 }
 
 h2 {
@@ -306,3 +565,4 @@ h2 {
 	padding: 0;
 	font-size: 1.3em;
 }
+
