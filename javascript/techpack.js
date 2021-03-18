@@ -46,8 +46,6 @@ function mapTechPack(selectedDesign) {
 	let chosenSleeveTip = chosenGarmentTypeArray[chosenDesign].sleeveTipColor;
 	let chosenSleeveType = chosenGarmentTypeArray[chosenDesign].sleeves;
 
-	console.log(chosenGarmentTypeArray);
-
 	let item = customisedGarments[selectedDesign];
 	let chosenSleeveTipColor = item[chosenSleeveTip];
 	let chosenSleeveTipColorRef = colors[chosenSleeveTipColor].pantone;
@@ -87,7 +85,7 @@ function mapTechPack(selectedDesign) {
 
 	let constructionSrc = "assets/techpack/construction/" + customisedGarments[selectedDesign].garmentType + "/" + customisedGarments[selectedDesign].designRef + ".svg"
 
-	if (chosenGarmentTypeArray[chosenDesign].path1Break != "" ) {
+	if (chosenGarmentTypeArray[chosenDesign].path1Break != "" && customisedGarments[selectedDesign].sponsorsVersion === "sponsors") {
 		constructionSrc = "assets/techpack/construction/" + customisedGarments[selectedDesign].garmentType + "/" + customisedGarments[selectedDesign].designRef + "b.svg";
 	}
 
