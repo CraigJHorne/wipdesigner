@@ -108,7 +108,7 @@ h7 {
 
 @media print {
 
-	.edit-garment, .delete, .duplicate, .back, #back, .rearrange-up, .rearrange-down, .add{
+	.edit-garment, .delete, .duplicate, .back, #back, .tech-garment, .rearrange-up, .rearrange-down, .add{
 		display: none!important;
 	}
 

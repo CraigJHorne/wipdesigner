@@ -70,6 +70,35 @@ let colors = [
 	"pantone": "424C",
 	"tone": "dark",
 	},
-
+	{
+	"ref": 12,
+	"hex": "#ce0e2d",
+	"pantone": "186C",
+	"tone": "dark",
+	},
+	{
+	"ref": 13,
+	"hex": "#aa182c",
+	"pantone": "187C",
+	"tone": "dark",
+	},
+	{
+	"ref": 14,
+	"hex": "#006937",
+	"pantone": "349C",
+	"tone": "dark",
+	},
+	{
+	"ref": 15,
+	"hex": "#93d500",
+	"pantone": "375C",
+	"tone": "light",
+	},
+	{
+	"ref": 16,
+	"hex": "#ff8300",
+	"pantone": "151C",
+	"tone": "light",
+	},
 ];
 
