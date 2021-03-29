@@ -10,6 +10,8 @@ function createArray() {
 	let p = 0;
 	let r = 0;
 	let t = 0;
+	let ps = 0;
+	let oh = 0;
 	output = [];
 	for (let i = 0; i < customisedGarments.length; i++) { //workout which duplicate-button was selected
 		if (customisedGarments[i].garmentType === "prorugbyshirt") {
@@ -21,6 +23,12 @@ function createArray() {
         }  else if (customisedGarments[i].garmentType === "trainingtshirt") {
        		t++
        		output.push(t);
+        } else if (customisedGarments[i].garmentType === "poloshirt") {
+       		ps++
+       		output.push(ps);
+        } else if (customisedGarments[i].garmentType === "ohhoodie") {
+       		oh++
+       		output.push(oh);
         } else {
     	return output;
 		}
