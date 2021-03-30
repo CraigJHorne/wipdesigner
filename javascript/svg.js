@@ -42,7 +42,7 @@ createArray()
 
 function mapClubOptions() {
 	document.getElementById("edit-club").innerHTML = clubs.map(clubs => 
-    `<h5 class="button club-button" index="${clubs.index}">${clubs.name}</h5>`
+    `<h5 class="button club-button modal-button" index="${clubs.index}">${clubs.name}</h5>`
 ).join('');
 }
 
@@ -52,7 +52,7 @@ mapClubOptions() // map club on load
 
 function mapGarmentOptions() {
 	document.getElementById("edit-garment").innerHTML = designs.map(designs => 
-    `<h5 class="button garment-button" ref="${designs.ref}" name="${designs.name}">${designs.name}</h5>`
+    `<h5 class="button garment-button modal-button" ref="${designs.ref}" name="${designs.name}">${designs.name}</h5>`
 ).join('');
 }
 
@@ -62,7 +62,7 @@ mapGarmentOptions() // map colors on load
 
 function mapDesignOptions() {
 	document.getElementById("edit-design").innerHTML = garmentEditing.map(garmentEditing => 
-    `<h5 class="button design-button" ref="${garmentEditing.design}">Design ${garmentEditing.design + 1}</h5>`
+    `<h5 class="button design-button modal-button" ref="${garmentEditing.design}">Design ${garmentEditing.design + 1}</h5>`
 ).join('');
 }
 
@@ -72,13 +72,13 @@ mapDesignOptions() // map design options on load
 
 function mapColorOptions() {
 	document.getElementById("edit-colorBackground").innerHTML = colors.map(colors => 
-    `<h5 class="button color-button" ref="${colors.ref}" option="colorBackground">${colors.pantone}</h5>`
+    `<h5 class="button color-button modal-button" ref="${colors.ref}" option="colorBackground">${colors.pantone}</h5>`
 ).join('');
 	document.getElementById("edit-color1").innerHTML = colors.map(colors => 
-    `<h5 class="button color-button" ref="${colors.ref}" option="color1">${colors.pantone}</h5>`
+    `<h5 class="button color-button modal-button" ref="${colors.ref}" option="color1">${colors.pantone}</h5>`
 ).join('');
 	document.getElementById("edit-color2").innerHTML = colors.map(colors => 
-    `<h5 class="button color-button" ref="${colors.ref}" option="color2">${colors.pantone}</h5>`
+    `<h5 class="button color-button modal-button" ref="${colors.ref}" option="color2">${colors.pantone}</h5>`
 ).join('')
 }
 
@@ -88,7 +88,7 @@ mapColorOptions() // map colors on load
 
 function mapPatternOptions() {
 	document.getElementById("edit-pattern").innerHTML = patterns.map(patterns => 
-    `<h5 class="button pattern-button" ref="${patterns.ref}">${patterns.name}</h5>`
+    `<h5 class="button pattern-button modal-button" ref="${patterns.ref}">${patterns.name}</h5>`
 ).join('');
 }
 
@@ -102,7 +102,7 @@ function mapCustomisedGarments() {
 	let i = 0;
 	document.getElementById("design-pack").innerHTML = customisedGarments.map(customisedGarments => 
     `<h4>${customisedGarments.garmentName} ${output[i]}</h4>
-    <button class="edit-garment" ref="${i}" ${customisedGarments.ref = i} ${i++}>EDIT GARMENT</button><button class="delete" ref="${customisedGarments.ref}">DELETE GARMENT</button><button class="duplicate" ref="${customisedGarments.ref}">DUPLICATE GARMENT</button><button class="rearrange-up" ref="${customisedGarments.ref}">Move Up</button><button class="rearrange-down" ref="${customisedGarments.ref}">Move Down</button><button class="tech-garment" ref="${customisedGarments.ref}">TECH PACK</button>
+    <button class="edit-garment select-button" ref="${i}" ${customisedGarments.ref = i} ${i++}>EDIT GARMENT</button><button class="delete select-button" ref="${customisedGarments.ref}">DELETE GARMENT</button><button class="duplicate select-button" ref="${customisedGarments.ref}">DUPLICATE GARMENT</button><button class="rearrange-up select-button" ref="${customisedGarments.ref}">MOVE UP</button><button class="rearrange-down select-button" ref="${customisedGarments.ref}">MOVE DOWN</button><button class="tech-garment select-button" ref="${customisedGarments.ref}">TECH PACK</button>
     <section>
 	    <aside id="svg">
 			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + customisedGarments.sponsorsType +  customisedGarments.toneBackground  + customisedGarments.tone1 + ".svg")}">
@@ -209,6 +209,13 @@ editButton() // run on load
 function garmentEditLoad(e) {
 	let selectedDesign = e.target.getAttribute("ref"); //identify the ref of the garment clicked
 
+	chosenGarmentTypeRef = customisedGarments[selectedDesign].garmentTypeRef;
+
+	garmentEditing = designs[chosenGarmentTypeRef].designs;
+
+	mapDesignOptions();
+	editDesignOptions();
+
 	mapEdit(selectedDesign);
 
 	var modal = document.getElementById("modal"); //access modal element
@@ -270,19 +277,28 @@ function changeGarment(e) {
 	let currentSettingsDesignRef = currentSettings.designRef; // save current Design before editing anything
 	let currentSettingsPatternRef = currentSettings.patternRef; // save current Pattern before editing anything
 
-	customisedGarments[selectedDesignRef].garmentName = chosenGarmentTypeName; // amend the garment ref to the new one
+	let currentSettingsDesignRefAmended = currentSettingsDesignRef;
+
+	let newGarmentDesignsArray = designs[chosenGarmentTypeRef].designs;
+	let newGarmentDesignsLength = newGarmentDesignsArray.length;
+
+	if (newGarmentDesignsLength < currentSettingsDesignRefAmended) {
+		currentSettingsDesignRefAmended = (newGarmentDesignsLength - 1);
+	}
+
+	customisedGarments[selectedDesignRef].garmentName = chosenGarmentTypeName; // amend the garment name to the new one
 	customisedGarments[selectedDesignRef].garmentTypeRef = chosenGarmentTypeRef; // amend the garment ref to the new one
-	customisedGarments[selectedDesignRef].garmentType = designs[chosenGarmentTypeRef].garment; // amend the garment to the new one
+	customisedGarments[selectedDesignRef].garmentType = designs[chosenGarmentTypeRef].garment; // amend the garment type to the new one
 
 	let newGarmentType = designs[chosenGarmentTypeRef].garment; 
 
-	let sleevesRef = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRef].sleevesRef; //identify the sleeves ref for design
+	let sleevesRef = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].sleevesRef; //identify the sleeves ref for design
 	
 	customisedGarments[selectedDesignRef].sponsorsVersion = currentSettings.sponsorsVersion // keep existing sponsor version
-	customisedGarments[selectedDesignRef].sponsorsType = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRef].sponsorsType; // Change sponsor Type to the equivalent for this garment but same design
-	customisedGarments[selectedDesignRef].design = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRef].design; // Change design to the equivalent for this garment but same design
-	customisedGarments[selectedDesignRef].path1 = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRef].path1; // Change path 1 to the equivalent for this garment but same design
-	customisedGarments[selectedDesignRef].path2 = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRef].path2; // Change path 2 to the equivalent for this garment but same design
+	customisedGarments[selectedDesignRef].sponsorsType = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].sponsorsType; // Change sponsor Type to the equivalent for this garment but same design
+	customisedGarments[selectedDesignRef].design = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].design; // Change design to the equivalent for this garment but same design
+	customisedGarments[selectedDesignRef].path1 = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].path1; // Change path 1 to the equivalent for this garment but same design
+	customisedGarments[selectedDesignRef].path2 = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].path2; // Change path 2 to the equivalent for this garment but same design
 	customisedGarments[selectedDesignRef].pattern = patterns[currentSettingsPatternRef][newGarmentType][sleevesRef] // Change pattern to the equivalent for this garment but same pattern
 
 	customisedGarments[selectedDesignRef].pathBackground = designs[chosenGarmentTypeRef].pathBackground[sleevesRef]; // amend pathBackground to the new one
@@ -296,7 +312,7 @@ function changeGarment(e) {
 
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	mapDesignOptions();
-	editDesignOptions()
+	editDesignOptions();
 	mapEdit(selectedDesignRef);
 }
 
