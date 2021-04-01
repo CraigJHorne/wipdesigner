@@ -92,7 +92,7 @@ function mapTechPack(selectedDesign) {
 
 	let logosSrc = "assets/techpack/logosizes" + "/" + customisedGarments[selectedDesign].sponsorsVersion + "/" + customisedGarments[selectedDesign].garmentType + "/" + customisedGarments[selectedDesign].club + "/" + customisedGarments[selectedDesign].sponsorsType +  customisedGarments[selectedDesign].toneBackground  + customisedGarments[selectedDesign].tone1 + ".svg";
 
-	document.getElementById("design-pack").innerHTML = 
+	document.getElementById("design-pack2").innerHTML = 
     `<div class="page1">
 				<div class="tech-logo"><img src="assets/techpack/logos/eps-logo.svg" class="logo" alt="logo"></div>
 				<div class="tech-cad"><h2>CAD</h2><h1>SAMPLE</div>
@@ -189,7 +189,7 @@ function mapTechPack(selectedDesign) {
 /* Notice when a tech pack button is being clicked  */
 
 function techButton() {
-let garmentTech = document.getElementsByClassName("tech-garment"); //access design-pack element
+let garmentTech = document.getElementsByClassName("tech-garment"); //access design-pack2 element
 for (let i = 0; i < garmentTech.length; i++) { //workout which design-pack element was selected
 		garmentTech[i].onclick = garmentTechLoad; //operate 'designPackInfo' function on design-pack element press
 
@@ -198,7 +198,7 @@ for (let i = 0; i < garmentTech.length; i++) { //workout which design-pack eleme
 
 techButton() // run on load
 
-/* Function to Operate when design design-pack element is clicked  */
+/* Function to Operate when design design-pack2 element is clicked  */
 
 function garmentTechLoad(e) {
 	let selectedDesign = e.target.getAttribute("ref"); //identify the ref of the garment clicked
@@ -208,6 +208,12 @@ function garmentTechLoad(e) {
 
 	var add = document.getElementById("add"); //access back element
 	add.style.display = "none"; //make back buttons invisible
+
+	var removeDesignPack = document.getElementById("design-pack"); //access design-pack element
+	removeDesignPack.style.display = "none"; //make design-pack invisible
+
+	var addDesignPack2 = document.getElementById("design-pack2"); //access design-pack element
+	addDesignPack2.style.display = "block"; //design-pack visible
 
 	mapTechPack(selectedDesign);
 	tempSaveAction(selectedDesign);
@@ -231,6 +237,13 @@ function backGarments(e) {
 	var add = document.getElementById("add"); //access back element
 	add.style.display = "block"; //make back buttons visible
 
+	var addDesignPack = document.getElementById("design-pack"); //access design-pack element
+	addDesignPack.style.display = "block"; //design-pack visible
+
+	var removeDesignPack2 = document.getElementById("design-pack2"); //access design-pack element
+	removeDesignPack2.style.display = "none"; //design-pack invisible
+
+
 	mapCustomisedGarments()
 	techButton();
 	deleteEdit();
@@ -240,3 +253,4 @@ function backGarments(e) {
 	rearrangeUpButton();
 	rearrangeDownButton();
 }
+
