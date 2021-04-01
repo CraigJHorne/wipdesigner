@@ -192,4 +192,10 @@ h7 {
 		display: none!important;
 	}
 
+	main {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	}
+
 }
