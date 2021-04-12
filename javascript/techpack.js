@@ -92,6 +92,8 @@ function mapTechPack(selectedDesign) {
 
 	let logosSrc = "assets/techpack/logosizes" + "/" + customisedGarments[selectedDesign].sponsorsVersion + "/" + customisedGarments[selectedDesign].garmentType + "/" + customisedGarments[selectedDesign].club + "/" + customisedGarments[selectedDesign].sponsorsType +  customisedGarments[selectedDesign].toneBackground  + customisedGarments[selectedDesign].tone1 + ".svg";
 
+	let mappedGarment = customisedGarments[selectedDesign];
+
 	document.getElementById("design-pack2").innerHTML = 
     `<div class="page1">
 				<div class="tech-logo"><img src="assets/techpack/logos/eps-logo.svg" class="logo" alt="logo"></div>
@@ -111,10 +113,10 @@ function mapTechPack(selectedDesign) {
 					<div class="production-1title border1">Fabric 1</div><div class="production-1info border1"><h7>${designs[chosenGarment].fabric1}</h7></div><div class="production-1color border1"></div>
 					<div class="production-2title border1">Fabric 2</div><div class="production-2info border1"><h7>${designs[chosenGarment].fabric2}</h7></div><div class="production-2color border1"></div>
 					<div class="production-3title border1">Neck Tape</div><div class="production-3info border1"><h7>Oxen</h7></div><div class="production-3color border1"></div>
-					<div class="production-4title border1">${designs[chosenGarment].option1}</div><div class="production-4info border1">${chosenSleeveTipColorRef}</div><div class="production-4color border1" style="background-color:${chosenSleeveTipColorHex};""></div>
-					<div class="production-5title border1">${designs[chosenGarment].option2}</div><div class="production-5info border1">${chosenColorBgRef}</div><div class="production-5color border1" style="background-color:${chosenColorBgHex};"></div>
-					<div class="production-6title border1"><h6>${designs[chosenGarment].option3}</h6></div><div class="production-6info border1">${option3ColorRef}</div><div class="production-6color border1" style="background-color:${option3ColorHex};"></div>
-					<div class="production-7title border1">${designs[chosenGarment].option4}</div><div class="production-7info border1">${option4ColorRef}</div><div class="production-7color border1" style="background-color:${option4ColorHex};"></div>
+					<div class="production-4title border1">${designs[chosenGarment].option1}</div><div class="production-4info border1"><h7>${chosenSleeveTipColorRef}</h7></div><div class="production-4color border1" style="background-color:${chosenSleeveTipColorHex};""></div>
+					<div class="production-5title border1">${designs[chosenGarment].option2}</div><div class="production-5info border1"><h7>${chosenColorBgRef}</h7></div><div class="production-5color border1" style="background-color:${chosenColorBgHex};"></div>
+					<div class="production-6title border1"><h6>${designs[chosenGarment].option3}</h6></div><div class="production-6info border1"><h7>${option3ColorRef}</h7></div><div class="production-6color border1" style="background-color:${option3ColorHex};"></div>
+					<div class="production-7title border1">${designs[chosenGarment].option4}</div><div class="production-7info border1"><h7>${option4ColorRef}</h7></div><div class="production-7color border1" style="background-color:${option4ColorHex};"></div>
 				</div>
 				<div class="tech-comments">
 					<div class="comments-title border1">Comments</div>
@@ -134,7 +136,21 @@ function mapTechPack(selectedDesign) {
 				<div class="tech-main">
 					<section>
 	    				<aside id="svg2">
-							<img id="svg2__sponsors" src="${("assets/" + customisedGarments[selectedDesign].sponsorsVersion + "/" + customisedGarments[selectedDesign].garmentType + "/" + customisedGarments[selectedDesign].club + "/" + customisedGarments[selectedDesign].sponsorsType +  customisedGarments[selectedDesign].toneBackground  + customisedGarments[selectedDesign].tone1 + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhchest" + "/" + mappedGarment.rhchest[0] + "rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + mappedGarment.lhchest[0] + "lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "centrechest" + "/" + mappedGarment.centrechest[0] + "centrechest" + mappedGarment[mappedGarment.centrechest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "mainfront" + "/" + mappedGarment.mainfront[0] + "mainfront" + mappedGarment[mappedGarment.mainfront[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhcollar" + "/" + mappedGarment.rhcollar[0] + "rhcollar" + mappedGarment[mappedGarment.rhcollar[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhcollar" + "/" + mappedGarment.lhcollar[0] + "lhcollar" + mappedGarment[mappedGarment.lhcollar[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop1" + "/" + mappedGarment.backtop1[0] + "backtop1" + mappedGarment[mappedGarment.backtop1[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop2" + "/" + mappedGarment.backtop2[0] + "backtop2" + mappedGarment[mappedGarment.backtop2[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom1" + "/" + mappedGarment.backbottom1[0] + "backbottom1" + mappedGarment[mappedGarment.backbottom1[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom2" + "/" + mappedGarment.backbottom2[0] + "backbottom2" + mappedGarment[mappedGarment.backbottom2[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleeveupper" + "/" + mappedGarment.rhsleeveupper[0] + "rhsleeveupper" + mappedGarment[mappedGarment.rhsleeveupper[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleevelower" + "/" + mappedGarment.rhsleevelower[0] + "rhsleevelower" + mappedGarment[mappedGarment.rhsleevelower[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleeveupper" + "/" + mappedGarment.lhsleeveupper[0]+ "lhsleeveupper" + mappedGarment[mappedGarment.lhsleeveupper[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleevelower" + "/" + mappedGarment.lhsleevelower[0] + "lhsleevelower" + mappedGarment[mappedGarment.lhsleevelower[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "numberbox" + "/" + mappedGarment.numberbox[0] + "numberbox" + mappedGarment[mappedGarment.numberbox[1]] + ".svg")}">	
 							<svg class="svg2__design" viewBox="0 0 750 400">
 								<path id="path-1" d="${customisedGarments[selectedDesign].path1}" style="fill:${customisedGarments[selectedDesign].color1}"/>
 								<path id="path-2" d="${customisedGarments[selectedDesign].path2}" style="fill:${customisedGarments[selectedDesign].color2}"/>

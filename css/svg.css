@@ -82,7 +82,7 @@ button {
 /* SVG */
 
 #svg {
-	width: 554px;
+	width: 631px;
 	position: relative;
 	align-items: center;
   	justify-content: center;
@@ -93,7 +93,7 @@ button {
 
 #svg__sponsors {
 	z-index: 6;
-	max-width: 554px;
+	max-width: 631px;
 	height: auto;
 	position: absolute;
 	/*visibility: hidden;*/
@@ -106,7 +106,7 @@ button {
 
 #svg__pattern {
 	z-index: 3;
-	max-width: 554px;
+	max-width: 631px;
 	height: auto;
 	position: absolute;
 }
@@ -196,6 +196,10 @@ h7 {
 	display: flex;
 	justify-content: center;
 	text-align: center;
+	}
+
+	h4 {
+		margin: 0;
 	}
 
 }
