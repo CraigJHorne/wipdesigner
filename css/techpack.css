@@ -478,21 +478,61 @@ body {
     grid-area: tech-sponsors;
     justify-content: center;
     align-items: baseline;
+    margin:20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 2%;
+    grid-column-gap: 1%;
+    grid-template-areas: 
+    "tech-logo-lhchest . . . . ."
+    ". . . . . ."
+    ". . . . . .";
 }
 
-.tech-sponsorssvg {
-    height: 593px;
-    width: 919px;
-    z-index: 1;
-    position: absolute;
+.tech-logosize {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3% 38% 3% 7% 49%;
+    grid-row-gap: 5%;
+    text-align: centre;
+    grid-template-areas: 
+    "tech-logosize-type"
+    "tech-logosize-logo"
+    "tech-logosize-position"
+    "tech-logosize-colours"
+    "tech-logosize-size";
+    border: solid black 1px;
+    border-radius: 5px;
 }
 
-.tech-logosizes {
-	position: relative;
+.tech-logosize-type {
+    margin: auto;
+}
+
+.tech-logosize-logo {
+    margin: auto;
     height: 100%;
-    width: 100%;
-    z-index: 2;
+    width: auto;
+    border: solid black 1px;
+    border-radius: 5px;
 }
+
+.tech-logosize-position {
+    margin: auto;
+}
+
+.tech-logosize-colours {
+    margin: auto;
+}
+
+.tech-logosize-size {
+    text-align: center;
+    margin: 0px auto;
+}
+
+
 
 
 
@@ -609,6 +649,24 @@ h2 {
 	margin: 0;
 	padding: 0;
 	font-size: 1.3em;
+}
+
+h4 {
+    font-family: Arial;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+    line-height: 1.1em;
+}
+
+h5 {
+    font-family: Arial;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    font-size: 0.6em;
+    line-height: 0.9em;
 }
 
 #back {
