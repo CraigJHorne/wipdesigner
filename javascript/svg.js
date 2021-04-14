@@ -325,13 +325,15 @@ function changeGarment(e) {
 	let newGarmentDesignsArray = designs[chosenGarmentTypeRef].designs;
 	let newGarmentDesignsLength = newGarmentDesignsArray.length;
 
-	if (newGarmentDesignsLength < currentSettingsDesignRefAmended) {
+	if (newGarmentDesignsLength <= currentSettingsDesignRefAmended) {
 		currentSettingsDesignRefAmended = (newGarmentDesignsLength - 1);
 	}
 
 	customisedGarments[selectedDesignRef].garmentName = chosenGarmentTypeName; // amend the garment name to the new one
 	customisedGarments[selectedDesignRef].garmentTypeRef = chosenGarmentTypeRef; // amend the garment ref to the new one
 	customisedGarments[selectedDesignRef].garmentType = designs[chosenGarmentTypeRef].garment; // amend the garment type to the new one
+	customisedGarments[selectedDesignRef].designRef = currentSettingsDesignRefAmended ; // amend the garment type to the new one
+
 
 	let newGarmentType = designs[chosenGarmentTypeRef].garment; 
 
