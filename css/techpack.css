@@ -440,6 +440,16 @@ body {
 
 .tech-construction {
     grid-area: tech-construction;
+    margin: auto;
+    position: relative;
+}
+
+#construction-info{
+    z-index: 10;
+    width: 1010px;
+    position: absolute;
+    margin: 135px auto auto auto;
+    /*visibility: hidden;*/
 }
 
 
