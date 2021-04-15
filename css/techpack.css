@@ -503,7 +503,7 @@ body {
     "tech-logosize-position"
     "tech-logosize-colours"
     "tech-logosize-size";
-    border: solid black 1px;
+    border: solid #F6F6F6 1px;
     border-radius: 5px;
 }
 
@@ -515,7 +515,7 @@ body {
     margin: auto;
     height: 100%;
     width: auto;
-    border: solid black 1px;
+    border: solid #000000 1px;
     border-radius: 5px;
 }
 
