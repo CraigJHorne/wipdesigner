@@ -661,7 +661,7 @@ h2 {
 	font-size: 1.3em;
 }
 
-h4 {
+h3 {
     font-family: Arial;
     font-weight: 800;
     margin: 0;
@@ -670,7 +670,7 @@ h4 {
     line-height: 1.1em;
 }
 
-h5 {
+#size-text {
     font-family: Arial;
     font-weight: 500;
     margin: 0;
