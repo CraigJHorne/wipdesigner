@@ -3,7 +3,6 @@ let garmentEditing = designs[0].designs;
 let tempSave = 0; //details of original design properties prioor to edit so edit can be cancelled
 let output = [];
 
-
 // Calculate number of each item and put into an array
 
 function createArray() {
@@ -287,12 +286,20 @@ editDesignOptions() // run on load
 function sponsorsPathUpdate(chosenOption, selectedDesignRef) {
 	let garmentTypeRef = customisedGarments[selectedDesignRef].garmentTypeRef; //identify the current chosen design
 	let chosenDesign = customisedGarments[selectedDesignRef].design; //identify the current chosen design\
+	let chosenClub = customisedGarments[selectedDesignRef].club; //identify the current chosen club
+	let breakRef = designs[garmentTypeRef].designs[chosenDesign][chosenClub]; //identify which break this design uses for that club
+
 
 	if (chosenOption === "sponsors") {
-		if (designs[garmentTypeRef].designs[chosenDesign].path1Break === "") { //do nothing if there isn;t an alternative broken path version
-		} else {
-			customisedGarments[selectedDesignRef].path1 = designs[garmentTypeRef].designs[chosenDesign].path1Break; // use broken path version
-			customisedGarments[selectedDesignRef].path2 = designs[garmentTypeRef].designs[chosenDesign].path2Break; // use broken path version
+		if (breakRef === 0) { 
+			customisedGarments[selectedDesignRef].path1 = designs[garmentTypeRef].designs[chosenDesign].path1; // use unbroken path
+			customisedGarments[selectedDesignRef].path2 = designs[garmentTypeRef].designs[chosenDesign].path2; // use unbroken path
+		} else if (breakRef === 1) {
+			customisedGarments[selectedDesignRef].path1 = designs[garmentTypeRef].designs[chosenDesign].path1Break1; // use broken path version 1
+			customisedGarments[selectedDesignRef].path2 = designs[garmentTypeRef].designs[chosenDesign].path2Break1; // use broken path version 1
+		} else if (breakRef === 2) {
+			customisedGarments[selectedDesignRef].path1 = designs[garmentTypeRef].designs[chosenDesign].path1Break2; // use broken path version 2
+			customisedGarments[selectedDesignRef].path2 = designs[garmentTypeRef].designs[chosenDesign].path2Break2; // use broken path version 2
 		}
 	} else if (chosenOption === "logos" || 'none') {
 		customisedGarments[selectedDesignRef].path1 = designs[garmentTypeRef].designs[chosenDesign].path1; // use unbroken path version
@@ -340,22 +347,26 @@ function changeGarment(e) {
 	let sleevesRef = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].sleevesRef; //identify the sleeves ref for design
 	
 	customisedGarments[selectedDesignRef].sponsorsVersion = currentSettings.sponsorsVersion // keep existing sponsor version
+
+	let mappedGarment = customisedGarments[selectedDesignRef];
+	let clubSelector = String(mappedGarment.club) + "logos";
+	let designSelector = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended];
 	
-	customisedGarments[selectedDesignRef].rhchest = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].rhchest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhchest = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].lhchest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].centrechest = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].centrechest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].mainfront = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].mainfront //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhcollar = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].rhcollar //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhcollar = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].lhcollar //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backtop1 = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].backtop1 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backtop2 = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].backtop2 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backbottom1 = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].backbottom1 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backbottom2 = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].backbottom2 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhsleeveupper = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].rhsleeveupper //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhsleevelower = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].rhsleevelower //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhsleeveupper = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].lhsleeveupper //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhsleevelower = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].lhsleevelower //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].numberbox = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].numberbox //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhchest = designSelector[clubSelector].rhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhchest = designSelector[clubSelector].lhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].centrechest = designSelector[clubSelector].centrechest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].mainfront = designSelector[clubSelector].mainfront //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhcollar = designSelector[clubSelector].rhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhcollar = designSelector[clubSelector].lhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop1 = designSelector[clubSelector].backtop1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop2 = designSelector[clubSelector].backtop2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom1 = designSelector[clubSelector].backbottom1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom2 = designSelector[clubSelector].backbottom2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleeveupper = designSelector[clubSelector].rhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleevelower = designSelector[clubSelector].rhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleeveupper = designSelector[clubSelector].lhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleevelower = designSelector[clubSelector].lhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].numberbox = designSelector[clubSelector].numberbox //change logo info to the one from the new design
 
 
 	customisedGarments[selectedDesignRef].design = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].design; // Change design to the equivalent for this garment but same design
@@ -392,22 +403,26 @@ function changeDesign(e) {
 	customisedGarments[selectedDesignRef].path2 = designs[garmentTypeRef].designs[chosenDesign].path2; //change path 2 to the one from the selected design
 	customisedGarments[selectedDesignRef].design = designs[garmentTypeRef].designs[chosenDesign].design; //change design to the one from the selected design
 	customisedGarments[selectedDesignRef].designRef = [chosenDesign]; //change designRef to the one from the selected design	
+
+	let mappedGarment = customisedGarments[selectedDesignRef];
+	let clubSelector = String(mappedGarment.club) + "logos";
+	let designSelector = designs[garmentTypeRef].designs[chosenDesign];
 	
-	customisedGarments[selectedDesignRef].rhchest = designs[garmentTypeRef].designs[chosenDesign].rhchest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhchest = designs[garmentTypeRef].designs[chosenDesign].lhchest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].centrechest = designs[garmentTypeRef].designs[chosenDesign].centrechest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].mainfront = designs[garmentTypeRef].designs[chosenDesign].mainfront //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhcollar = designs[garmentTypeRef].designs[chosenDesign].rhcollar //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhcollar = designs[garmentTypeRef].designs[chosenDesign].lhcollar //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backtop1 = designs[garmentTypeRef].designs[chosenDesign].backtop1 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backtop2 = designs[garmentTypeRef].designs[chosenDesign].backtop2 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backbottom1 = designs[garmentTypeRef].designs[chosenDesign].backbottom1 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backbottom2 = designs[garmentTypeRef].designs[chosenDesign].backbottom2 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhsleeveupper = designs[garmentTypeRef].designs[chosenDesign].rhsleeveupper //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhsleevelower = designs[garmentTypeRef].designs[chosenDesign].rhsleevelower //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhsleeveupper = designs[garmentTypeRef].designs[chosenDesign].lhsleeveupper //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhsleevelower = designs[garmentTypeRef].designs[chosenDesign].lhsleevelower //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].numberbox = designs[garmentTypeRef].designs[chosenDesign].numberbox //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhchest = designSelector[clubSelector].rhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhchest = designSelector[clubSelector].lhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].centrechest = designSelector[clubSelector].centrechest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].mainfront = designSelector[clubSelector].mainfront //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhcollar = designSelector[clubSelector].rhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhcollar = designSelector[clubSelector].lhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop1 = designSelector[clubSelector].backtop1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop2 = designSelector[clubSelector].backtop2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom1 = designSelector[clubSelector].backbottom1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom2 = designSelector[clubSelector].backbottom2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleeveupper = designSelector[clubSelector].rhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleevelower = designSelector[clubSelector].rhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleeveupper = designSelector[clubSelector].lhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleevelower = designSelector[clubSelector].lhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].numberbox = designSelector[clubSelector].numberbox //change logo info to the one from the new design
 
 
 	currentPattern = customisedGarments[selectedDesignRef].patternRef; // identify current selected pattern for this design
@@ -463,6 +478,33 @@ function changeClub(e) {
 	customisedGarments[selectedDesignRef].club = clubs[chosenClub].ref; //change club to the one from the selected club
 	customisedGarments[selectedDesignRef].clubIndex = chosenClub; //change club to the one from the selected club
 
+	let garmentTypeRef = customisedGarments[selectedDesignRef].garmentTypeRef; //identify the garment ref for the type of garment we are editing
+	let mappedGarment = customisedGarments[selectedDesignRef];
+	let clubSelector = String(mappedGarment.club) + "logos";
+	let chosenDesignRef = customisedGarments[selectedDesignRef].designRef;
+	let designSelector = designs[garmentTypeRef].designs[chosenDesignRef];
+
+	
+	customisedGarments[selectedDesignRef].rhchest = designSelector[clubSelector].rhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhchest = designSelector[clubSelector].lhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].centrechest = designSelector[clubSelector].centrechest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].mainfront = designSelector[clubSelector].mainfront //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhcollar = designSelector[clubSelector].rhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhcollar = designSelector[clubSelector].lhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop1 = designSelector[clubSelector].backtop1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop2 = designSelector[clubSelector].backtop2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom1 = designSelector[clubSelector].backbottom1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom2 = designSelector[clubSelector].backbottom2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleeveupper = designSelector[clubSelector].rhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleevelower = designSelector[clubSelector].rhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleeveupper = designSelector[clubSelector].lhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleevelower = designSelector[clubSelector].lhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].numberbox = designSelector[clubSelector].numberbox //change logo info to the one from the new design
+
+	let chosenOption = customisedGarments[selectedDesignRef].sponsorsVersion; //make the sponsorVersion used in the sponsorPathUpdate function the current one
+
+
+	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	mapEdit(selectedDesignRef);
 }
 
@@ -601,6 +643,9 @@ for (let i = 0; i < addButton.length; i++) { //workout which add-button was sele
 
 function addGarment(e) {
 	let refNumber = customisedGarments.length;
+	let newDesign = designs[0].designs[0];
+	let club = "noclublogos";
+
 	customisedGarments.push(
 		{
 	    ref: refNumber,
@@ -627,21 +672,21 @@ function addGarment(e) {
 	    toneBackground: "dark",
 	    tone1: "light",
 	    tone2: "light",
-	    rhchest: designs[0].designs[0].rhchest,
-   		lhchest: designs[0].designs[0].lhchest,
-    	centrechest: designs[0].designs[0].centrechest,
-    	mainfront: designs[0].designs[0].mainfront,
-    	rhcollar: designs[0].designs[0].rhcollar,
-    	lhcollar: designs[0].designs[0].lhcollar,
-    	backtop1: designs[0].designs[0].backtop1,
-    	backtop2: designs[0].designs[0].backtop2,
-    	backbottom1: designs[0].designs[0].backbottom1,
-    	backbottom2: designs[0].designs[0].backbottom2,
-    	rhsleeveupper: designs[0].designs[0].rhsleeveupper,
-    	rhsleevelower: designs[0].designs[0].rhsleevelower,
-    	lhsleeveupper: designs[0].designs[0].lhsleeveupper,
-    	lhsleevelower: designs[0].designs[0].lhsleevelower,
-    	numberbox: designs[0].designs[0].numberbox,
+	    rhchest: newDesign[club].rhchest,
+   		lhchest: newDesign[club].lhchest,
+    	centrechest: newDesign[club].centrechest,
+    	mainfront: newDesign[club].mainfront,
+    	rhcollar: newDesign[club].rhcollar,
+    	lhcollar: newDesign[club].lhcollar,
+    	backtop1: newDesign[club].backtop1,
+    	backtop2: newDesign[club].backtop2,
+    	backbottom1: newDesign[club].backbottom1,
+    	backbottom2: newDesign[club].backbottom2,
+    	rhsleeveupper: newDesign[club].rhsleeveupper,
+    	rhsleevelower: newDesign[club].rhsleevelower,
+    	lhsleeveupper: newDesign[club].lhsleeveupper,
+    	lhsleevelower: newDesign[club].lhsleevelower,
+    	numberbox: newDesign[club].numberbox,
 		});
 	createArray()
 	mapCustomisedGarments();
@@ -822,3 +867,112 @@ function rearrangeDown(e) {
 	rearrangeUpButton();
 	rearrangeDownButton();
 }
+
+
+
+/* Notice when Random Color Button is Clicked  */
+
+function randomColorsButton() {
+let randomColor = document.getElementsByClassName("random-colors-button"); //access rearrangedown-button element button
+for (let i = 0; i < randomColor.length; i++) { //workout which rearrangedown-button was selected
+
+		randomColor[i].onclick = randomColors; //operate 'rearrangeDown' function on reset-button press
+	}
+}
+
+/* Function to Operate when Random Color Button is clicked  */
+
+function randomColors(e) {
+	let colorsLength = colors.length;
+
+	let chosenColorBg = (Math.random() * (colorsLength - 1) + 0).toFixed(0); //generate random Bg color
+	let chosenColor1 = (Math.random() * (colorsLength - 1) + 0).toFixed(0); //generate random color 1 
+	let chosenColor2 = (Math.random() * (colorsLength - 1) + 0).toFixed(0); //generate random color 2
+	
+	let selectedDesign = document.getElementById("edit-ref"); //identify the design loaded
+	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the design-button clicked
+
+	customisedGarments[selectedDesignRef].colorBackground = colors[chosenColorBg].hex; //change hex to the one from the selected color
+	customisedGarments[selectedDesignRef].toneBackground = colors[chosenColorBg].tone; //change hex to the one from the selected color
+	customisedGarments[selectedDesignRef].colorBackgroundRef = chosenColorBg; //change hex to the one from the selected color
+
+	customisedGarments[selectedDesignRef].color1 = colors[chosenColor1].hex; //change hex to the one from the selected color
+	customisedGarments[selectedDesignRef].tone1= colors[chosenColor1].tone; //change hex to the one from the selected color
+	customisedGarments[selectedDesignRef].color1Ref = chosenColor1; //change hex to the one from the selected color
+
+	customisedGarments[selectedDesignRef].color2 = colors[chosenColor2].hex; //change hex to the one from the selected color
+	customisedGarments[selectedDesignRef].tone2= colors[chosenColor2].tone; //change hex to the one from the selected color
+	customisedGarments[selectedDesignRef].color2Ref = chosenColor2; //change hex to the one from the selected color
+
+	mapEdit(selectedDesignRef);
+}
+
+randomColorsButton() //run randomColorsButton function on page load
+
+
+/* Notice when Random Color Button is Clicked  */
+
+function randomDesignButton() {
+let randomDesign = document.getElementsByClassName("random-design-button"); //access rearrangedown-button element button
+for (let i = 0; i < randomDesign.length; i++) { //workout which rearrangedown-button was selected
+		randomDesign[i].onclick = randomDesignChosen; //operate 'rearrangeDown' function on reset-button press
+	}
+}
+
+/* Function to Operate when Random Color Button is clicked  */
+
+function randomDesignChosen(e) {
+
+	let selectedDesign = document.getElementById("edit-ref"); //identify the design loaded
+	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the design clicked
+	let garmentTypeRef = customisedGarments[selectedDesignRef].garmentTypeRef; //identify the garment ref for the type of garment we are editing
+
+
+
+	let garmentDesigns = designs[garmentTypeRef].designs;
+	let garmentDesignsLength = garmentDesigns.length;
+	let chosenDesign =(Math.random() * (garmentDesignsLength - 1) + 0).toFixed(0); //chose random design	
+
+
+	let sleevesRef = designs[garmentTypeRef].designs[chosenDesign].sleevesRef; //identify the sleeves ref for the type of garment we are editing
+	customisedGarments[selectedDesignRef].baseImage = designs[garmentTypeRef].baseImage[sleevesRef]; //change baseimage to the one from the selected design
+	customisedGarments[selectedDesignRef].pathBackground = designs[garmentTypeRef].pathBackground[sleevesRef]; //change baackground path to the one from the selected design
+	customisedGarments[selectedDesignRef].path1 = designs[garmentTypeRef].designs[chosenDesign].path1; //change path 1 to the one from the selected design
+	customisedGarments[selectedDesignRef].path2 = designs[garmentTypeRef].designs[chosenDesign].path2; //change path 2 to the one from the selected design
+	customisedGarments[selectedDesignRef].design = designs[garmentTypeRef].designs[chosenDesign].design; //change design to the one from the selected design
+	customisedGarments[selectedDesignRef].designRef = [chosenDesign]; //change designRef to the one from the selected design	
+
+	let mappedGarment = customisedGarments[selectedDesignRef];
+	let clubSelector = String(mappedGarment.club) + "logos";
+	let designSelector = designs[garmentTypeRef].designs[chosenDesign];
+	
+	customisedGarments[selectedDesignRef].rhchest = designSelector[clubSelector].rhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhchest = designSelector[clubSelector].lhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].centrechest = designSelector[clubSelector].centrechest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].mainfront = designSelector[clubSelector].mainfront //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhcollar = designSelector[clubSelector].rhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhcollar = designSelector[clubSelector].lhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop1 = designSelector[clubSelector].backtop1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop2 = designSelector[clubSelector].backtop2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom1 = designSelector[clubSelector].backbottom1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom2 = designSelector[clubSelector].backbottom2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleeveupper = designSelector[clubSelector].rhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleevelower = designSelector[clubSelector].rhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleeveupper = designSelector[clubSelector].lhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleevelower = designSelector[clubSelector].lhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].numberbox = designSelector[clubSelector].numberbox //change logo info to the one from the new design
+
+
+	currentPattern = customisedGarments[selectedDesignRef].patternRef; // identify current selected pattern for this design
+	let currentPatternInfo = patterns[currentPattern]; //identify the full info of the pattern chosen
+	let selectedDesignGarmentType = customisedGarments[selectedDesignRef]["garmentType"]; //identify the garment type of the design loaded
+	let currentPatternSrc = currentPatternInfo[selectedDesignGarmentType][sleevesRef]; //identify the full info of the pattern chosen
+	customisedGarments[selectedDesignRef].pattern = currentPatternSrc; //change src to the one from the selected pattern
+
+	let chosenOption = customisedGarments[selectedDesignRef].sponsorsVersion; //make the sponsorVersion used in the sponsorPathUpdate function the current one
+
+	sponsorsPathUpdate(chosenOption, selectedDesignRef);
+	mapEdit(selectedDesignRef);
+}
+
+randomDesignButton() //run randomColorsButton function on page load
