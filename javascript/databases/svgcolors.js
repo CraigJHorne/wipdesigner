@@ -27,7 +27,7 @@ let colors = [
 	"ref": 4,
 	"hex": "#ed5ddf",
 	"pantone": "Magenta C",
-	"tone": "light",
+	"tone": "dark",
 	},{
 	"ref": 5,
 	"hex": "#770fba",

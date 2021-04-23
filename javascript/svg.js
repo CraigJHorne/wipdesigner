@@ -221,6 +221,7 @@ function tempSaveAction(selectedDesign) {
     toneBackground: customisedGarments[selectedDesign].toneBackground,
     tone1: customisedGarments[selectedDesign].tone1,
     tone2: customisedGarments[selectedDesign].tone1,
+    clash: "clash",
 }
 
 
@@ -382,10 +383,10 @@ function changeGarment(e) {
 
 	let itemNumber = 1;
 
-
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	mapDesignOptions();
 	editDesignOptions();
+	colorClash(selectedDesignRef);
 	mapEdit(selectedDesignRef);
 }
 
@@ -434,6 +435,7 @@ function changeDesign(e) {
 	let chosenOption = customisedGarments[selectedDesignRef].sponsorsVersion; //make the sponsorVersion used in the sponsorPathUpdate function the current one
 
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
+	colorClash(selectedDesignRef);
 	mapEdit(selectedDesignRef);
 }
 
@@ -457,6 +459,7 @@ function changeColor(e) {
 	customisedGarments[selectedDesignRef][chosenTone] = colors[chosenColor].tone; //change hex to the one from the selected color
 	customisedGarments[selectedDesignRef][chosenOptionRef] = chosenColor; //change hex to the one from the selected color
 
+	colorClash(selectedDesignRef);
 	mapEdit(selectedDesignRef);
 }
 
@@ -503,8 +506,8 @@ function changeClub(e) {
 
 	let chosenOption = customisedGarments[selectedDesignRef].sponsorsVersion; //make the sponsorVersion used in the sponsorPathUpdate function the current one
 
-
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
+	colorClash(selectedDesignRef);
 	mapEdit(selectedDesignRef);
 }
 
@@ -566,6 +569,7 @@ function changeSponsors(e) {
 	}
 
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
+	colorClash(selectedDesignRef);
 	mapEdit(selectedDesignRef);
 }
 
@@ -672,6 +676,7 @@ function addGarment(e) {
 	    toneBackground: "dark",
 	    tone1: "light",
 	    tone2: "light",
+	    clash: "clash",
 	    rhchest: newDesign[club].rhchest,
    		lhchest: newDesign[club].lhchest,
     	centrechest: newDesign[club].centrechest,
@@ -769,6 +774,7 @@ function duplicateGarment(e) {
 	    toneBackground: customisedGarments[selectedDesign].toneBackground,
 	    tone1: customisedGarments[selectedDesign].tone1,
 	    tone2: customisedGarments[selectedDesign].tone2,
+	    clash: "clash",
 
 	    rhchest: customisedGarments[selectedDesign].rhchest,
 	    lhchest: customisedGarments[selectedDesign].lhchest,
@@ -904,6 +910,7 @@ function randomColors(e) {
 	customisedGarments[selectedDesignRef].tone2= colors[chosenColor2].tone; //change hex to the one from the selected color
 	customisedGarments[selectedDesignRef].color2Ref = chosenColor2; //change hex to the one from the selected color
 
+	colorClash(selectedDesignRef);
 	mapEdit(selectedDesignRef);
 }
 
@@ -972,7 +979,9 @@ function randomDesignChosen(e) {
 	let chosenOption = customisedGarments[selectedDesignRef].sponsorsVersion; //make the sponsorVersion used in the sponsorPathUpdate function the current one
 
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
+	colorClash(selectedDesignRef);
 	mapEdit(selectedDesignRef);
 }
 
 randomDesignButton() //run randomColorsButton function on page load
+

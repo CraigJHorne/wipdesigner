@@ -16,6 +16,7 @@ function mapTechPack(selectedDesign) {
 	yy = parseInt(yyString, 10);
 
 	let chosenClubIndex = customisedGarments[selectedDesign].clubIndex;
+	let chosenClubName = clubs[chosenClubIndex].ref;
 
 	let chosenGarment = customisedGarments[selectedDesign].garmentTypeRef;
 
@@ -83,14 +84,64 @@ function mapTechPack(selectedDesign) {
 		option4ColorHex = "";
 	}
 
-	let constructionSrc = "assets/techpack/construction/" + customisedGarments[selectedDesign].garmentType + "/" + customisedGarments[selectedDesign].designRef + ".svg"
+	let constructionSrc = "";
 
-	if (chosenGarmentTypeArray[chosenDesign].path1Break != "" && customisedGarments[selectedDesign].sponsorsVersion === "sponsors") {
+	if (chosenGarmentTypeArray[chosenDesign][chosenClubName] === 1 && customisedGarments[selectedDesign].sponsorsVersion === "sponsors") {
 		constructionSrc = "assets/techpack/construction/" + customisedGarments[selectedDesign].garmentType + "/" + customisedGarments[selectedDesign].designRef + "b.svg";
+	} else if (chosenGarmentTypeArray[chosenDesign][chosenClubName] === 2 && customisedGarments[selectedDesign].sponsorsVersion === "sponsors") {
+		constructionSrc = "assets/techpack/construction/" + customisedGarments[selectedDesign].garmentType + "/" + customisedGarments[selectedDesign].designRef + "c.svg";
+	} else {
+		constructionSrc = "assets/techpack/construction/" + customisedGarments[selectedDesign].garmentType + "/" + customisedGarments[selectedDesign].designRef + ".svg";
 	}
 
 
+
 	let mappedGarment = customisedGarments[selectedDesign];
+
+	let mapPosition = "";
+
+	function removeClash(position) {
+
+		tempPosition = position;
+
+		if (mappedGarment[tempPosition][1] === "clash") {
+			
+			tempColor = "chosenColor" + oldClash.substr(4,1) + oldClash.substr(8,1) + "Hex";
+
+			if (tempColor === "chosenColorBgHex") {
+
+				chosenColorhHex = chosenColorBgHex;
+
+			} else if (tempColor === "chosenColor1Hex") {
+
+				chosenColorhHex = chosenColor1Hex;
+
+			} if (tempColor === "chosenColor2Hex") {
+
+				chosenColorhHex = chosenColor2Hex;
+			}
+		}
+	}
+
+	removeClash("rhchest");
+	removeClash("lhchest");
+	removeClash("centrechest");
+	removeClash("mainfront");
+	removeClash("rhcollar");
+	removeClash("lhcollar");
+	removeClash("backtop1");
+	removeClash("backtop2");
+	removeClash("backbottom1");
+	removeClash("backbottom2");
+	removeClash("rhsleeveupper");
+	removeClash("rhsleevelower");
+	removeClash("lhsleeveupper");
+	removeClash("lhsleevelower");
+	removeClash("numberbox");
+
+
+
+
 
 	let logoAccessGarment = String(mappedGarment.garmentType);
 
@@ -411,7 +462,42 @@ function mapTechPack(selectedDesign) {
 			<div class="page2">
 				<div class="tech-logo2"><img src="assets/techpack/logos/eps-logo.svg" class="logo" alt="logo"></div>
 				<div class="tech-labels"><img src="${("assets/techpack/labels/" + customisedGarments[selectedDesign].club + "/" + customisedGarments[selectedDesign].garmentType + ".svg")}"></div>
-				<div class="tech-construction"><img src="${(constructionSrc)}"></div>
+				<img id="construction-info" src="${(constructionSrc)}">
+				<div class="tech-construction">
+	    			<section>
+	    				<aside id="svg2">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhchest" + "/" + mappedGarment.rhchest[0] + "rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + mappedGarment.lhchest[0] + "lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "centrechest" + "/" + mappedGarment.centrechest[0] + "centrechest" + mappedGarment[mappedGarment.centrechest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "mainfront" + "/" + mappedGarment.mainfront[0] + "mainfront" + mappedGarment[mappedGarment.mainfront[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhcollar" + "/" + mappedGarment.rhcollar[0] + "rhcollar" + mappedGarment[mappedGarment.rhcollar[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhcollar" + "/" + mappedGarment.lhcollar[0] + "lhcollar" + mappedGarment[mappedGarment.lhcollar[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop1" + "/" + mappedGarment.backtop1[0] + "backtop1" + mappedGarment[mappedGarment.backtop1[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop2" + "/" + mappedGarment.backtop2[0] + "backtop2" + mappedGarment[mappedGarment.backtop2[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom1" + "/" + mappedGarment.backbottom1[0] + "backbottom1" + mappedGarment[mappedGarment.backbottom1[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom2" + "/" + mappedGarment.backbottom2[0] + "backbottom2" + mappedGarment[mappedGarment.backbottom2[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleeveupper" + "/" + mappedGarment.rhsleeveupper[0] + "rhsleeveupper" + mappedGarment[mappedGarment.rhsleeveupper[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleevelower" + "/" + mappedGarment.rhsleevelower[0] + "rhsleevelower" + mappedGarment[mappedGarment.rhsleevelower[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleeveupper" + "/" + mappedGarment.lhsleeveupper[0]+ "lhsleeveupper" + mappedGarment[mappedGarment.lhsleeveupper[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleevelower" + "/" + mappedGarment.lhsleevelower[0] + "lhsleevelower" + mappedGarment[mappedGarment.lhsleevelower[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "numberbox" + "/" + mappedGarment.numberbox[0] + "numberbox" + mappedGarment[mappedGarment.numberbox[1]] + ".svg")}">	
+							<svg class="svg2__design" viewBox="0 0 750 400">
+								<path id="path-1" d="${customisedGarments[selectedDesign].path1}" style="fill:${customisedGarments[selectedDesign].color1}"/>
+								<path id="path-2" d="${customisedGarments[selectedDesign].path2}" style="fill:${customisedGarments[selectedDesign].color2}"/>
+							</svg>
+							<img id="svg2__pattern" src="${customisedGarments[selectedDesign].pattern}">
+							<svg class="svg2__background" viewBox="0 0 750 400">
+								<defs>
+									<style>
+									.	cls-2{fill:none}
+									</style>
+								</defs>
+								<path id="path-background" d="${customisedGarments[selectedDesign].pathBackground}" style="fill:${customisedGarments[selectedDesign].colorBackground}"/>
+							</svg>
+							<img id="svg2__baseimage" src="${customisedGarments[selectedDesign].baseImage}">
+						</aside>
+					</section>
+				</div>
 			</div>
 
 			<div class="page3">
