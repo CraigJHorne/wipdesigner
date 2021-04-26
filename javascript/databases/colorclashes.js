@@ -53,7 +53,7 @@ if (lbsPosition != "") {
 
 if (clashChange === "leedsrhinos") {
 
-	if (lbsBackgroundColor === "6" || lbsBackgroundColor === "7" || lbsBackgroundColor === "16" || lbsBackgroundColor === "4") {
+	if (lbsBackgroundColor === "6" || lbsBackgroundColor === "7" || lbsBackgroundColor === "16") {
 
 		if (customisedGarments[selectedDesignRef][lbsPosition][1] != "clash") {
 			oldClash = customisedGarments[selectedDesignRef][lbsPosition][1];

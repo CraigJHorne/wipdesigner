@@ -306,6 +306,13 @@ function sponsorsPathUpdate(chosenOption, selectedDesignRef) {
 		customisedGarments[selectedDesignRef].path1 = designs[garmentTypeRef].designs[chosenDesign].path1; // use unbroken path version
 			customisedGarments[selectedDesignRef].path2 = designs[garmentTypeRef].designs[chosenDesign].path2; // use unbroken path version
 		}
+
+
+	if (chosenClub === "noclub") {
+		customisedGarments[selectedDesignRef].path1 = designs[garmentTypeRef].designs[chosenDesign].path1; // use unbroken path
+		customisedGarments[selectedDesignRef].path2 = designs[garmentTypeRef].designs[chosenDesign].path2; // use unbroken path
+	} 
+	
 }
 
 /* Notice when Garment Button is Clicked  */
