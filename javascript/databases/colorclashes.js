@@ -53,7 +53,7 @@ if (lbsPosition != "") {
 
 if (clashChange === "leedsrhinos") {
 
-	if (lbsBackgroundColor === "6" || lbsBackgroundColor === "7" || lbsBackgroundColor === "16") {
+	if (lbsBackgroundColor === "6" || lbsBackgroundColor === "7" || lbsBackgroundColor === "16" || lbsBackgroundColor === "24" ) {
 
 		if (customisedGarments[selectedDesignRef][lbsPosition][1] != "clash") {
 			oldClash = customisedGarments[selectedDesignRef][lbsPosition][1];
@@ -101,7 +101,7 @@ if (hartpuryUniPosition != "") {
 
 if (clashChange === "gloucester") {
 
-	if (hartpuryBackgroundColor === "4" || hartpuryBackgroundColor === "12" || hartpuryBackgroundColor === "13") {
+	if (hartpuryBackgroundColor === "4" || hartpuryBackgroundColor === "12" || hartpuryBackgroundColor === "13" || hartpuryBackgroundColor === "18") {
 
 		if (customisedGarments[selectedDesignRef][hartpuryUniPosition][1] != "clash") {
 			oldClash = customisedGarments[selectedDesignRef][hartpuryUniPosition][1];

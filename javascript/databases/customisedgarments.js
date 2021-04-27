@@ -11,6 +11,7 @@ let customisedGarments = [
     design: designs[0].designs[0].design,
 	path1: designs[0].designs[0].path1,
     path2: designs[0].designs[0].path2,
+    sublimatedPattern: "no",
     patternRef: 0,
     pattern:"",
     pathBackground: designs[0].pathBackground[0],

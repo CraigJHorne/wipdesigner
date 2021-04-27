@@ -100,5 +100,53 @@ let colors = [
 	"pantone": "151C",
 	"tone": "light",
 	},
+	{
+	"ref": 17,
+	"hex": "#E5E1E6",
+	"pantone": "663C",
+	"tone": "light",
+	},
+	{
+	"ref": 18,
+	"hex": "#df3faf",
+	"pantone": "239C",
+	"tone": "dark",
+	},
+	{
+	"ref": 19,
+	"hex": "#533278",
+	"pantone": "7680C",
+	"tone": "dark",
+	},
+	{
+	"ref": 20,
+	"hex": "#0075a9",
+	"pantone": "7690C",
+	"tone": "dark",
+	},
+	{
+	"ref": 21,
+	"hex": "#95d4e9",
+	"pantone": "2975C",
+	"tone": "light",
+	},
+	{
+	"ref": 22,
+	"hex": "#295135",
+	"pantone": "350C",
+	"tone": "dark",
+	},
+	{
+	"ref": 23,
+	"hex": "#c2e76b",
+	"pantone": "374C",
+	"tone": "light",
+	},
+	{
+	"ref": 24,
+	"hex": "#f09f54",
+	"pantone": "157C",
+	"tone": "light",
+	},
 ];
 

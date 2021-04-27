@@ -381,6 +381,8 @@ function changeGarment(e) {
 	customisedGarments[selectedDesignRef].path1 = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].path1; // Change path 1 to the equivalent for this garment but same design
 	customisedGarments[selectedDesignRef].path2 = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].path2; // Change path 2 to the equivalent for this garment but same design
 	customisedGarments[selectedDesignRef].pattern = patterns[currentSettingsPatternRef][newGarmentType][sleevesRef] // Change pattern to the equivalent for this garment but same pattern
+	customisedGarments[selectedDesignRef].sublimatedPattern = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].sublimatedPattern; //change sublimatedPattern to the one from the selected design	
+
 
 	customisedGarments[selectedDesignRef].pathBackground = designs[chosenGarmentTypeRef].pathBackground[sleevesRef]; // amend pathBackground to the new one
 	customisedGarments[selectedDesignRef].baseImage = designs[chosenGarmentTypeRef].baseImage[sleevesRef]; // amend baseImageto the new one
@@ -390,6 +392,7 @@ function changeGarment(e) {
 
 	let itemNumber = 1;
 
+	subimatedPatternFunction (selectedDesignRef);
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	mapDesignOptions();
 	editDesignOptions();
@@ -411,6 +414,7 @@ function changeDesign(e) {
 	customisedGarments[selectedDesignRef].path2 = designs[garmentTypeRef].designs[chosenDesign].path2; //change path 2 to the one from the selected design
 	customisedGarments[selectedDesignRef].design = designs[garmentTypeRef].designs[chosenDesign].design; //change design to the one from the selected design
 	customisedGarments[selectedDesignRef].designRef = [chosenDesign]; //change designRef to the one from the selected design	
+	customisedGarments[selectedDesignRef].sublimatedPattern = designs[garmentTypeRef].designs[chosenDesign].sublimatedPattern; //change sublimatedPattern to the one from the selected design	
 
 	let mappedGarment = customisedGarments[selectedDesignRef];
 	let clubSelector = String(mappedGarment.club) + "logos";
@@ -441,6 +445,7 @@ function changeDesign(e) {
 
 	let chosenOption = customisedGarments[selectedDesignRef].sponsorsVersion; //make the sponsorVersion used in the sponsorPathUpdate function the current one
 
+	subimatedPatternFunction (selectedDesignRef);
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	colorClash(selectedDesignRef);
 	mapEdit(selectedDesignRef);
@@ -466,6 +471,7 @@ function changeColor(e) {
 	customisedGarments[selectedDesignRef][chosenTone] = colors[chosenColor].tone; //change hex to the one from the selected color
 	customisedGarments[selectedDesignRef][chosenOptionRef] = chosenColor; //change hex to the one from the selected color
 
+	subimatedPatternFunction (selectedDesignRef);
 	colorClash(selectedDesignRef);
 	mapEdit(selectedDesignRef);
 }
@@ -670,6 +676,7 @@ function addGarment(e) {
 	    design: designs[0].designs[0].design,
 	    path1: designs[0].designs[0].path1,
 	    path2: designs[0].designs[0].path2,
+	    sublimatedPattern: "no",
 	    patternRef: 0,
 	    pattern:"",
 	    pathBackground: designs[0].pathBackground[0],
@@ -768,6 +775,7 @@ function duplicateGarment(e) {
 	    design: customisedGarments[selectedDesign].design,
 	    path1: customisedGarments[selectedDesign].path1,
 	    path2: customisedGarments[selectedDesign].path2,
+	    sublimatedPattern: customisedGarments[selectedDesign].sublimatedPattern,
 	    patternRef: customisedGarments[selectedDesign].patternRef,
 	    pattern: customisedGarments[selectedDesign].pattern,
 	    pathBackground: customisedGarments[selectedDesign].pathBackground,
@@ -917,6 +925,7 @@ function randomColors(e) {
 	customisedGarments[selectedDesignRef].tone2= colors[chosenColor2].tone; //change hex to the one from the selected color
 	customisedGarments[selectedDesignRef].color2Ref = chosenColor2; //change hex to the one from the selected color
 
+	subimatedPatternFunction (selectedDesignRef);
 	colorClash(selectedDesignRef);
 	mapEdit(selectedDesignRef);
 }
@@ -955,6 +964,8 @@ function randomDesignChosen(e) {
 	customisedGarments[selectedDesignRef].path2 = designs[garmentTypeRef].designs[chosenDesign].path2; //change path 2 to the one from the selected design
 	customisedGarments[selectedDesignRef].design = designs[garmentTypeRef].designs[chosenDesign].design; //change design to the one from the selected design
 	customisedGarments[selectedDesignRef].designRef = [chosenDesign]; //change designRef to the one from the selected design	
+	customisedGarments[selectedDesignRef].sublimatedPattern = designs[garmentTypeRef].designs[chosenDesign].sublimatedPattern; //change sublimatedPattern to the one from the selected design	
+
 
 	let mappedGarment = customisedGarments[selectedDesignRef];
 	let clubSelector = String(mappedGarment.club) + "logos";
@@ -986,9 +997,221 @@ function randomDesignChosen(e) {
 	let chosenOption = customisedGarments[selectedDesignRef].sponsorsVersion; //make the sponsorVersion used in the sponsorPathUpdate function the current one
 
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
+	subimatedPatternFunction (selectedDesignRef);
 	colorClash(selectedDesignRef);
 	mapEdit(selectedDesignRef);
-}
+};
 
-randomDesignButton() //run randomColorsButton function on page load
+randomDesignButton(); //run randomColorsButton function on page load
 
+function subimatedPatternFunction(selectedDesignRef) {
+
+	let selectedDesign = customisedGarments[selectedDesignRef];
+
+	if (selectedDesign.sublimatedPattern === "yes") {
+
+
+		if (selectedDesign.colorBackgroundRef === "0") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "10";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		} else if (selectedDesign.colorBackgroundRef === "1") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "17";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		} else if (selectedDesign.colorBackgroundRef === "2") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "3";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "3") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "2";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "4") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "18";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "5") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "19";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "6") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "7";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "7") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "6";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "8") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "20";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "9") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "21";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "10") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "0";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "11") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "10";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "12") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "13";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "13") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "12";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "14") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "22";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "15") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "23";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "16") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "24";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		}  else if (selectedDesign.colorBackgroundRef === "17") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "1";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		} else if (selectedDesign.colorBackgroundRef === "18") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "4";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		} else if (selectedDesign.colorBackgroundRef === "19") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "5";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		} else if (selectedDesign.colorBackgroundRef === "20") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "8";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		} else if (selectedDesign.colorBackgroundRef === "21") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "9";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		} else if (selectedDesign.colorBackgroundRef === "22") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "14";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		} else if (selectedDesign.colorBackgroundRef === "23") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "15";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		} else if (selectedDesign.colorBackgroundRef === "24") {
+
+
+			customisedGarments[selectedDesignRef].color1Ref = "16";
+			sublimatedColorRef = customisedGarments[selectedDesignRef].color1Ref;
+			customisedGarments[selectedDesignRef].color1 = colors[sublimatedColorRef].hex;
+			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
+
+		} 
+	} 
+} 
+	
