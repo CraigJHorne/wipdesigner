@@ -163,7 +163,6 @@ button {
 }
 
 .options {
-	display: flex;
 	flex-direction: row!important;
 }
 
