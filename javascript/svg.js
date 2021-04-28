@@ -141,7 +141,9 @@ mapCustomisedGarments() // map on load
 
 function mapEdit(selectedDesign) {
 
+
 	let mappedGarment = customisedGarments[selectedDesign];
+
 
 	document.getElementById("design-edit").innerHTML = 
     `<section>
@@ -222,6 +224,7 @@ function tempSaveAction(selectedDesign) {
     tone1: customisedGarments[selectedDesign].tone1,
     tone2: customisedGarments[selectedDesign].tone1,
     clash: "clash",
+    clash2: "clash2",
 }
 
 
@@ -691,6 +694,7 @@ function addGarment(e) {
 	    tone1: "light",
 	    tone2: "light",
 	    clash: "clash",
+	    clash2: "clash2",
 	    rhchest: newDesign[club].rhchest,
    		lhchest: newDesign[club].lhchest,
     	centrechest: newDesign[club].centrechest,
@@ -790,6 +794,7 @@ function duplicateGarment(e) {
 	    tone1: customisedGarments[selectedDesign].tone1,
 	    tone2: customisedGarments[selectedDesign].tone2,
 	    clash: "clash",
+	    clash2: "clash2",
 
 	    rhchest: customisedGarments[selectedDesign].rhchest,
 	    lhchest: customisedGarments[selectedDesign].lhchest,

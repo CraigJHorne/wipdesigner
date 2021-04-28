@@ -26,6 +26,7 @@ let customisedGarments = [
     tone1: "light",
     tone2: "light",
     clash: "clash",
+    clash2: "clash2",
     rhchest: ["1", "toneBackground"],
     lhchest: ["1", "toneBackground"],
     centrechest: ["1", "toneBackground"],
