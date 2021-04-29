@@ -56,7 +56,11 @@ if (clashClub === "leedsrhinos" && clashSponsorsVersion === "sponsors") {
 if (lbsPosition != "") {
 
 	if (customisedGarments[selectedDesignRef][lbsPosition][1] === "clash" || customisedGarments[selectedDesignRef][lbsPosition][1] === "clash2") {
-		customisedGarments[selectedDesignRef][lbsPosition][1] = oldClashMainFront;
+		if (lbsPosition === "mainfront") {
+			customisedGarments[selectedDesignRef][lbsPosition][1] = oldClashMainFront;
+		} else if (lbsPosition === "rhchest") {
+			customisedGarments[selectedDesignRef][lbsPosition][1] = oldClashRhChest;
+		}
 	}
 
 
@@ -72,16 +76,27 @@ if (clashChange === "leedsrhinos") {
 
 	if (lbsBackgroundColor === "6" || lbsBackgroundColor === "7" || lbsBackgroundColor === "16" || lbsBackgroundColor === "24" ) {
 
-		if (customisedGarments[selectedDesignRef][lbsPosition][1] != "clash") {
-			oldClashMainFront = customisedGarments[selectedDesignRef][lbsPosition][1];
-			customisedGarments[selectedDesignRef][lbsPosition][1] = "clash";
-		}
-
-	} else if (lbsBackgroundColor === "4" || lbsBackgroundColor === "18") {
+		if (customisedGarments[selectedDesignRef][lbsPosition][1] != "clash" ) {
+			
+			if (lbsPosition === "mainfront") {
+				oldClashMainFront = customisedGarments[selectedDesignRef][lbsPosition][1];
+				customisedGarments[selectedDesignRef][lbsPosition][1] = "clash";
+			} else if (lbsPosition === "rhchest") {
+				oldClashRhChest = customisedGarments[selectedDesignRef][lbsPosition][1];
+				customisedGarments[selectedDesignRef][lbsPosition][1] = "clash";
+			}
+		} 
+		} else if (lbsBackgroundColor === "4" || lbsBackgroundColor === "18") {
 
 		if (customisedGarments[selectedDesignRef][lbsPosition][1] != "clash2") {
-			oldClashMainFront = customisedGarments[selectedDesignRef][lbsPosition][1];
-			customisedGarments[selectedDesignRef][lbsPosition][1] = "clash2";
+			
+			if (lbsPosition === "mainfront") {
+				oldClashMainFront = customisedGarments[selectedDesignRef][lbsPosition][1];
+				customisedGarments[selectedDesignRef][lbsPosition][1] = "clash2";
+			} else if (lbsPosition === "rhchest") {
+				oldClashRhChest = customisedGarments[selectedDesignRef][lbsPosition][1];
+				customisedGarments[selectedDesignRef][lbsPosition][1] = "clash2";
+			}
 		} 
 
 	} 
