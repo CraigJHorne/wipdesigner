@@ -395,6 +395,7 @@ function changeGarment(e) {
 
 	let itemNumber = 1;
 
+	removeOrAddPatternOptions(selectedDesignRef);
 	subimatedPatternFunction (selectedDesignRef);
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	mapDesignOptions();
@@ -1218,5 +1219,22 @@ function subimatedPatternFunction(selectedDesignRef) {
 
 		} 
 	} 
+} 
+	
+
+function removeOrAddPatternOptions(selectedDesignRef) {
+
+	let selectedDesignGarmentTypeRef = customisedGarments[selectedDesignRef].garmentTypeRef;
+
+
+	if (selectedDesignGarmentTypeRef === "3" || selectedDesignGarmentTypeRef === "4") {
+		document.getElementById("edit-pattern").style.display = "none";
+
+		customisedGarments[selectedDesignRef].pattern = ""; //change src to none
+		customisedGarments[selectedDesignRef].patternRef = 0; //change pattern ref to none
+	} else {
+		document.getElementById("edit-pattern").style.display = "inline-block";
+	}
+
 } 
 	

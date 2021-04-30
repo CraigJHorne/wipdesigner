@@ -519,6 +519,7 @@ body {
 
 .tech-logosize-type {
     margin: auto;
+    cursor: pointer;
 }
 
 .tech-logosize-logo {
@@ -680,6 +681,10 @@ h3 {
 }
 
 #back {
+    display: none;
+}
+
+#factory {
     display: none;
 }
 
