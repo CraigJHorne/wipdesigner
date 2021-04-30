@@ -10891,7 +10891,7 @@ let designs = [
 	"pathBackground": [backgrounds[2].pathBackground, backgrounds[3].pathBackground],
 	"baseImage": [backgrounds[2].baseImage, backgrounds[3].baseImage],
 	"initials": "RRS",
-	"fabric1": "Replica Fabric",
+	"fabric1": "Replica Jersey Fabric",
 	"fabric2": "N/A",
 	"option1": "Sleeve Cuff",
 	"option2": "Hem Binding",

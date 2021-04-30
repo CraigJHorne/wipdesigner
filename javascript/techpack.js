@@ -204,8 +204,8 @@ function mapTechPack(selectedDesign) {
 				</div>
 				<div class="tech-production">
 					<div class="production-title border1">Production Details</div>
-					<div class="production-1title border1">Fabric 1</div><div class="production-1info border1"><h6 class="edit-text fabric1" ref="6" contenteditable="true">${fabric1}</h6></div><div class="production-1color border1"></div>
-					<div class="production-2title border1">Fabric 2</div><div class="production-2info border1"><h6 class="edit-text fabric2" ref="7" contenteditable="true">${fabric2}</h6></div><div class="production-2color border1"></div>
+					<div class="production-1title border1">Fabric 1</div><div class="production-1info border1"><h7 class="edit-text fabric1" ref="6" contenteditable="true">${fabric1}</h7></div><div class="production-1color border1"></div>
+					<div class="production-2title border1">Fabric 2</div><div class="production-2info border1"><h7 class="edit-text fabric2" ref="7" contenteditable="true">${fabric2}</h7></div><div class="production-2color border1"></div>
 					<div class="production-3title border1">Neck Tape</div><div class="production-3info border1"><h6 class="edit-text" ref="8" contenteditable="true">Oxen</h6></div><div class="production-3color border1"></div>
 					<div class="production-4title border1">${designs[chosenGarment].option1}</div><div class="production-4info border1"><h3>${chosenSleeveTipColorRef}</h3></div><div class="production-4color border1" style="background-color:${chosenSleeveTipColorHex};""></div>
 					<div class="production-5title border1">${designs[chosenGarment].option2}</div><div class="production-5info border1"><h3>${chosenColorBgRef}</h3></div><div class="production-5color border1" style="background-color:${chosenColorBgHex};"></div>
@@ -448,8 +448,8 @@ function mapTechPack(selectedDesign) {
 				</div>
 				<div class="tech-production">
 					<div class="production-title border1">Production Details</div>
-					<div class="production-1title border1">Fabric 1</div><div class="production-1info border1"><h6 class="edit-text" ref="6" contenteditable="true">${fabric1}</h6></div><div class="production-1color border1"></div>
-					<div class="production-2title border1">Fabric 2</div><div class="production-2info border1"><h6 class="edit-text" ref="7" contenteditable="true">${fabric2}</h6></div><div class="production-2color border1"></div>
+					<div class="production-1title border1">Fabric 1</div><div class="production-1info border1"><h7 class="edit-text" ref="6" contenteditable="true">${fabric1}</h7></div><div class="production-1color border1"></div>
+					<div class="production-2title border1">Fabric 2</div><div class="production-2info border1"><h7 class="edit-text" ref="7" contenteditable="true">${fabric2}</h7></div><div class="production-2color border1"></div>
 					<div class="production-3title border1">Neck Tape</div><div class="production-3info border1"><h6 class="edit-text" ref="8" contenteditable="true">Oxen</h6></div><div class="production-3color border1"></div>
 					<div class="production-4title border1">${designs[chosenGarment].option1}</div><div class="production-4info border1"><h3>${chosenSleeveTipColorRef}</h3></div><div class="production-4color border1" style="background-color:${chosenSleeveTipColorHex};""></div>
 					<div class="production-5title border1">${designs[chosenGarment].option2}</div><div class="production-5info border1"><h3>${chosenColorBgRef}</h3></div><div class="production-5color border1" style="background-color:${chosenColorBgHex};"></div>
