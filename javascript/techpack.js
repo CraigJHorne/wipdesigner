@@ -603,6 +603,9 @@ function backGarments(e) {
 	var removeDesignPack2 = document.getElementById("design-pack2"); //access design-pack element
 	removeDesignPack2.style.display = "none"; //design-pack invisible
 
+	var addPackLayout = document.getElementById("pack-layout"); //access design-pack element
+	addPackLayout.style.display = "grid"; //make design-pack invisible
+
 
 	mapCustomisedGarments()
 	techButton();
@@ -769,6 +772,9 @@ function garmentTechLoad(e) {
 
 	var addDesignPack2 = document.getElementById("design-pack2"); //access design-pack element
 	addDesignPack2.style.display = "block"; //design-pack visible
+
+	var removePackLayout = document.getElementById("pack-layout"); //access design-pack element
+	removePackLayout.style.display = "none"; //make design-pack invisible
 
 	mapTechPack(selectedDesign);
 	tempSaveAction(selectedDesign);
