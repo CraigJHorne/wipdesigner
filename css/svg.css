@@ -167,6 +167,41 @@ button {
 }
 
 
+
+/* Pack logos */
+
+.club-logo {
+	height: 200px;
+}
+
+
+.pack-layout{
+	display: grid;
+	grid-template-columns: 1% 99%;
+  	grid-column-gap: 0%;
+  	grid-template-areas: 
+    "pack-titles design-section";
+}
+
+.design-section {
+    grid-area: design-section;
+}
+
+.pack-titles {
+    grid-area: pack-titles;
+    justify-content: left;
+    visibility: hidden!important;
+}
+
+.title-info {
+    height: 580px;
+}
+
+
+
+
+
+
 /* Temp text */
 
 h5 {
@@ -191,9 +226,21 @@ h7 {
 		display: none!important;
 	}
 
+	.pack-titles {
+		visibility: visible!important;
+	}
+
+	.pack-layout{
+	display: grid;
+	grid-template-columns: 25% 75%;
+  	grid-column-gap: 10%;
+  	grid-template-areas: 
+    "pack-titles design-section";
+	}
+
 	main {
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 	text-align: center;
 	}
 

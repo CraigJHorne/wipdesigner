@@ -523,6 +523,7 @@ function changeClub(e) {
 
 	let chosenOption = customisedGarments[selectedDesignRef].sponsorsVersion; //make the sponsorVersion used in the sponsorPathUpdate function the current one
 
+	determineClubLogo();
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	colorClash(selectedDesignRef);
 	mapEdit(selectedDesignRef);
@@ -712,6 +713,7 @@ function addGarment(e) {
     	lhsleevelower: newDesign[club].lhsleevelower,
     	numberbox: newDesign[club].numberbox,
 		});
+	determineClubLogo();
 	createArray()
 	mapCustomisedGarments();
 	techButton();
@@ -740,6 +742,7 @@ function deleteGarment(e) {
 
 	selectedDesign > -1 ? customisedGarments.splice(selectedDesign, 1) : false;
 
+	determineClubLogo();
 	createArray()
 	mapCustomisedGarments();
 	techButton();
@@ -814,6 +817,7 @@ function duplicateGarment(e) {
 	    numberbox: customisedGarments[selectedDesign].numberbox,
 		});
 
+	determineClubLogo();
 	createArray()
 	mapCustomisedGarments();
 	techButton();
