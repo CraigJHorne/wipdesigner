@@ -100,7 +100,7 @@ mapPatternOptions() // map patterns on load
 function mapCustomisedGarments() {
 	let i = 0;
 	document.getElementById("design-pack").innerHTML = customisedGarments.map(customisedGarments => 
-    `<h4>${customisedGarments.garmentName} ${output[i]}</h4>
+    `<h4 class="design-title">${customisedGarments.garmentName} ${output[i]}</h4>
     <button class="edit-garment select-button" ref="${i}" ${customisedGarments.ref = i} ${i++}>EDIT GARMENT</button><button class="delete select-button" ref="${customisedGarments.ref}">DELETE GARMENT</button><button class="duplicate select-button" ref="${customisedGarments.ref}">DUPLICATE GARMENT</button><button class="rearrange-up select-button" ref="${customisedGarments.ref}">MOVE UP</button><button class="rearrange-down select-button" ref="${customisedGarments.ref}">MOVE DOWN</button><button class="tech-garment select-button" ref="${customisedGarments.ref}">TECH PACK</button>
     <section>
 	    <aside id="svg">

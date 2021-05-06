@@ -166,6 +166,9 @@ button {
 	flex-direction: row!important;
 }
 
+.design-title {
+	margin-left: 0px;
+}
 
 
 /* Pack logos */
@@ -247,5 +250,9 @@ h7 {
 	h4 {
 		margin: 0;
 	}
+
+	.design-title {
+	margin-left: 32%;
+}
 
 }
