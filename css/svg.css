@@ -32,6 +32,14 @@ button {
   cursor: pointer;
 }
 
+.active {
+	background-color: yellow!important;
+}
+
+.other {
+	background-color: #c5c8c9!important;
+}
+
 .select-button {
 	background-color: #3c3c3b;
 	padding: 5px 10px;

@@ -267,6 +267,7 @@ function garmentEditLoad(e) {
 	var modal = document.getElementById("modal"); //access modal element
 	modal.style.display = "block"; //make modal visible
 
+	activeClass();
 	tempSaveAction(selectedDesign);
 }
 
@@ -401,6 +402,7 @@ function changeGarment(e) {
 	mapDesignOptions();
 	editDesignOptions();
 	colorClash(selectedDesignRef);
+	activeClass()
 	mapEdit(selectedDesignRef);
 }
 
@@ -452,6 +454,7 @@ function changeDesign(e) {
 	subimatedPatternFunction (selectedDesignRef);
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	colorClash(selectedDesignRef);
+	activeClass()
 	mapEdit(selectedDesignRef);
 }
 
@@ -478,6 +481,7 @@ function changeColor(e) {
 
 	subimatedPatternFunction (selectedDesignRef);
 	colorClash(selectedDesignRef);
+	activeClass()
 	mapEdit(selectedDesignRef);
 }
 
@@ -527,6 +531,7 @@ function changeClub(e) {
 	determineClubLogo();
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	colorClash(selectedDesignRef);
+	activeClass()
 	mapEdit(selectedDesignRef);
 }
 
@@ -556,6 +561,7 @@ function changePattern(e) {
 	customisedGarments[selectedDesignRef].pattern = chosenPatternSrc; //change src to the one from the selected pattern
 	customisedGarments[selectedDesignRef].patternRef = chosenPattern; //change pattern ref to the one from the selected pattern
 
+	activeClass()
 	mapEdit(selectedDesignRef);
 }
 
@@ -587,8 +593,10 @@ function changeSponsors(e) {
 		customisedGarments[selectedDesignRef].club = selectedClub;
 	}
 
+
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	colorClash(selectedDesignRef);
+	activeClass()
 	mapEdit(selectedDesignRef);
 }
 
@@ -953,6 +961,7 @@ function randomColors(e) {
 
 	subimatedPatternFunction (selectedDesignRef);
 	colorClash(selectedDesignRef);
+	activeClass()
 	mapEdit(selectedDesignRef);
 }
 
@@ -1025,16 +1034,21 @@ function randomDesignChosen(e) {
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	subimatedPatternFunction (selectedDesignRef);
 	colorClash(selectedDesignRef);
+	activeClass()
 	mapEdit(selectedDesignRef);
 };
 
 randomDesignButton(); //run randomColorsButton function on page load
+
 
 function subimatedPatternFunction(selectedDesignRef) {
 
 	let selectedDesign = customisedGarments[selectedDesignRef];
 
 	if (selectedDesign.sublimatedPattern === "yes") {
+
+		var editColor1 = document.getElementById("edit-color1"); //access edit-color1 element
+		editColor1.style.display = "none"; //make color 1 buttons invisible
 
 
 		if (selectedDesign.colorBackgroundRef === "0") {
@@ -1238,7 +1252,11 @@ function subimatedPatternFunction(selectedDesignRef) {
 			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
 
 		} 
-	} 
+	} else {
+
+		var editColor1 = document.getElementById("edit-color1"); //access edit-color1 element
+		editColor1.style.display = "block"; //make color 1 buttons invisible
+	}
 } 
 	
 
@@ -1258,3 +1276,76 @@ function removeOrAddPatternOptions(selectedDesignRef) {
 
 } 
 	
+function activeClass() {
+
+	let selectedDesign = document.getElementById("edit-ref"); //identify the design loaded
+	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the design-button clicked
+
+	let activeClub = customisedGarments[selectedDesignRef].clubIndex;
+	let activeSponsors = customisedGarments[selectedDesignRef].sponsorsVersion;
+	let activeGarment = customisedGarments[selectedDesignRef].garmentTypeRef;
+	let activeDesign = customisedGarments[selectedDesignRef].designRef;
+	let activePattern = customisedGarments[selectedDesignRef].patternRef;
+	let activeColorBg = customisedGarments[selectedDesignRef].colorBackgroundRef;
+	let activeColor1 = customisedGarments[selectedDesignRef].color1Ref;
+	let activeColor2 = customisedGarments[selectedDesignRef].color2Ref;
+
+	let clubOptions = document.getElementsByClassName("club-button");
+	let sponsorOptions = document.getElementsByClassName("sponsors-button");
+	let garmentOptions = document.getElementsByClassName("garment-button");
+	let designOptions = document.getElementsByClassName("design-button");
+	let patternOptions = document.getElementsByClassName("pattern-button");
+	let colorOptions = document.getElementsByClassName("color-button");
+
+	for (let i = 0; i < clubOptions.length; i++) {
+	clubOptions[i].classList.remove("active"); //remove active class from all logo elements
+	}
+	let clubElement = clubOptions[activeClub];
+	clubElement.classList.add("active"); // add active to current class
+
+	for (let i = 0; i < sponsorOptions.length; i++) {
+	sponsorOptions[i].classList.remove("active"); //remove active class from all logo elements
+	}
+	if (activeSponsors === "logos"){
+		activeSponsors = 0;
+	} else if (activeSponsors === "sponsors"){
+		activeSponsors = 1;
+	} else if (activeSponsors === "none"){
+		activeSponsors = 2;
+	}
+	let sponsorElement = sponsorOptions[activeSponsors];
+	sponsorElement.classList.add("active"); // add active to current class
+
+	for (let i = 0; i < garmentOptions.length; i++) {
+	garmentOptions[i].classList.remove("active"); //remove active class from all logo elements
+	}
+	let garmentElement = garmentOptions[activeGarment];
+	garmentElement.classList.add("active"); // add active to current class
+
+	for (let i = 0; i < designOptions.length; i++) {
+	designOptions[i].classList.remove("active"); //remove active class from all logo elements
+	}
+	let designElement = designOptions[activeDesign];
+	designElement.classList.add("active"); // add active to current class
+
+	for (let i = 0; i < patternOptions.length; i++) {
+	patternOptions[i].classList.remove("active"); //remove active class from all logo elements
+	}
+	let patternElement = patternOptions[activePattern];
+	patternElement.classList.add("active"); // add active to current class
+
+	for (let i = 0; i < colorOptions.length; i++) {
+	colorOptions[i].classList.remove("active"); //remove active class from all logo elements
+	}
+	let colorLength = colorOptions.length;
+	colorLength = colorLength/3;
+	activeColor1 = parseInt(activeColor1, 10)
+	activeColor2 = parseInt(activeColor2, 10)
+	let colorBgElement = colorOptions[activeColorBg];
+	let color1Element = colorOptions[activeColor1 + colorLength];
+	let color2Element = colorOptions[activeColor2 + (2 * colorLength)];
+	colorBgElement.classList.add("active"); // add active to current class
+	color1Element.classList.add("active"); // add active to current class
+	color2Element.classList.add("active"); // add active to current class
+
+}
