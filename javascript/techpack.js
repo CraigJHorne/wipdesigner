@@ -448,8 +448,8 @@ function mapTechPack(selectedDesign) {
 				</div>
 				<div class="tech-production">
 					<div class="production-title border1">Production Details</div>
-					<div class="production-1title border1">Fabric 1</div><div class="production-1info border1"><h7 class="edit-text" ref="6" contenteditable="true">${fabric1}</h7></div><div class="production-1color border1"></div>
-					<div class="production-2title border1">Fabric 2</div><div class="production-2info border1"><h7 class="edit-text" ref="7" contenteditable="true">${fabric2}</h7></div><div class="production-2color border1"></div>
+					<div class="production-1title border1">Fabric 1</div><div class="production-1info border1"><h7 class="edit-text fabric1" ref="6" contenteditable="true">${fabric1}</h7></div><div class="production-1color border1"></div>
+					<div class="production-2title border1">Fabric 2</div><div class="production-2info border1"><h7 class="edit-text fabric2" ref="6" contenteditable="true">${fabric2}</h7></div><div class="production-2color border1"></div>
 					<div class="production-3title border1">Neck Tape</div><div class="production-3info border1"><h6 class="edit-text" ref="8" contenteditable="true">Oxen</h6></div><div class="production-3color border1"></div>
 					<div class="production-4title border1">${designs[chosenGarment].option1}</div><div class="production-4info border1"><h3>${chosenSleeveTipColorRef}</h3></div><div class="production-4color border1" style="background-color:${chosenSleeveTipColorHex};""></div>
 					<div class="production-5title border1">${designs[chosenGarment].option2}</div><div class="production-5info border1"><h3>${chosenColorBgRef}</h3></div><div class="production-5color border1" style="background-color:${chosenColorBgHex};"></div>
@@ -607,6 +607,10 @@ function backGarments(e) {
 	addPackLayout.style.display = "grid"; //make design-pack invisible
 
 
+	document.body.scrollTop = 0; // For Safari
+  	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+
 	mapCustomisedGarments()
 	techButton();
 	deleteEdit();
@@ -659,6 +663,8 @@ function factoryFunction(e) {
 
 let fabric1Text = document.getElementsByClassName("fabric1");
 
+console.log(fabric1Text[0]);
+
 let fabric2Text = document.getElementsByClassName("fabric2");
  
  let ref = e.target.getAttribute("ref"); //identify the ref
@@ -667,72 +673,92 @@ let fabric2Text = document.getElementsByClassName("fabric2");
 
  if (ref === "hangzhou") {
 
- 	if (factoryGarment === "0") {
+ 	if (factoryGarment === 0 || factoryGarment === "0") {
  		fabric1Text[0].innerHTML = "Pinhole Pro 0171";
  		fabric2Text[0].innerHTML = "0129 Exotek";
- 	} else if (factoryGarment === "1") {
+ 		console.log("H");
+ 	} else if (factoryGarment === 1  || factoryGarment === "1") {
  		fabric1Text[0].innerHTML = "Replica Fabric";
  		fabric2Text[0].innerHTML ="N/A";
- 	} else if (factoryGarment === "2") {
+ 		console.log("H");
+ 	} else if (factoryGarment === 2  || factoryGarment === "2") {
  		fabric1Text[0].innerHTML = "Silk Poly";
  		fabric2Text[0].innerHTML ="N/A";
- 	} else if (factoryGarment === "3") {
+ 		console.log("H");
+ 	} else if (factoryGarment === 3  || factoryGarment === "3") {
  		fabric1Text[0].innerHTML = "Birdseye";
  		fabric2 = "N/A";
- 	} else if (factoryGarment === "4") {
+ 		console.log("H");
+ 	} else if (factoryGarment === 4  || factoryGarment === "4") {
  		fabric1Text[0].innerHTML = "Bonded Fleece No. 12";
  		fabric2Text[0].innerHTML = "N/A";
+ 		console.log("H");
  	}
  } else if (ref === "blackthorn") {
- 	if (factoryGarment === "0") {
+ 	if (factoryGarment === 0  || factoryGarment === "0") {
  		fabric1Text[0].innerHTML = "TBC";
  		fabric2Text[0].innerHTML = "TBC";
- 	} else if (factoryGarment === "1") {
+ 		console.log("B");
+ 	} else if (factoryGarment === 1  || factoryGarment === "1") {
  		fabric1Text[0].innerHTML = "Smooth Replica";
  		fabric2Text[0].innerHTML ="N/A";
- 	} else if (factoryGarment === "2") {
+ 		console.log("B");
+ 	} else if (factoryGarment === 2  || factoryGarment === "2") {
  		fabric1Text[0].innerHTML = "Interlock 140";
  		fabric2Text[0].innerHTML ="N/A";
- 	} else if (factoryGarment === "3") {
+ 		console.log("B");
+ 	} else if (factoryGarment === 3  || factoryGarment === "3") {
  		fabric1Text[0].innerHTML = "Micro Mesh";
+ 		console.log("B");
  		fabric2 = "N/A";
- 	} else if (factoryGarment === "4") {
+ 	} else if (factoryGarment === 4  || factoryGarment === "4") {
  		fabric1Text[0].innerHTML = "Poly Softshell";
  		fabric2Text[0].innerHTML = "N/A";
+ 		console.log("B");
  	}
  } else if (ref === "calaro") {
- 	if (factoryGarment === "0") {
+ 	if (factoryGarment === 0  || factoryGarment === "0") {
  		fabric1Text[0].innerHTML = "TBC";
  		fabric2Text[0].innerHTML = "TBC";
- 	} else if (factoryGarment === "1") {
+ 		console.log("C");
+ 	} else if (factoryGarment === 1  || factoryGarment === "1") {
  		fabric1Text[0].innerHTML = "TBC";
  		fabric2Text[0].innerHTML ="N/A";
- 	} else if (factoryGarment === "2") {
+ 		console.log("C");
+ 	} else if (factoryGarment === 2  || factoryGarment === "2") {
  		fabric1Text[0].innerHTML = "TBC";
  		fabric2Text[0].innerHTML ="N/A";
- 	} else if (factoryGarment === "3") {
+ 		console.log("C");
+ 	} else if (factoryGarment === 3  || factoryGarment === "3") {
  		fabric1Text[0].innerHTML = "TBC";
  		fabric2 = "N/A";
- 	} else if (factoryGarment === "4") {
+ 		console.log("C");
+ 	} else if (factoryGarment === 4  || factoryGarment === "4") {
  		fabric1Text[0].innerHTML = "TBC";
  		fabric2Text[0].innerHTML = "N/A";
+ 		console.log("C");
  	}
  } else if (ref === "mahr") {
- 	if (factoryGarment === "0") {
+ 	if (factoryGarment === 0  || factoryGarment === "0") {
  		fabric1Text[0].innerHTML = "TBC";
  		fabric2Text[0].innerHTML = "TBC";
- 	} else if (factoryGarment === "1") {
+ 		console.log("M");
+ 	} else if (factoryGarment === 1  || factoryGarment === "1") {
  		fabric1Text[0].innerHTML = "TBC";
  		fabric2Text[0].innerHTML ="N/A";
- 	} else if (factoryGarment === "2") {
+ 		console.log("M");
+ 	} else if (factoryGarment === 2  || factoryGarment === "2") {
  		fabric1Text[0].innerHTML = "Microdot";
  		fabric2Text[0].innerHTML ="N/A";
- 	} else if (factoryGarment === "3") {
+ 		console.log("M");
+ 	} else if (factoryGarment === 3  || factoryGarment === "3") {
  		fabric1Text[0].innerHTML = "Dazzle Mesh";
  		fabric2 = "N/A";
- 	} else if (factoryGarment === "4") {
+ 		console.log("M");
+ 	} else if (factoryGarment === 4  || factoryGarment === "4") {
  		fabric1Text[0].innerHTML = "Heavy French Rib";
  		fabric2Text[0].innerHTML = "N/A";
+ 		console.log("M");
  	}
  }
 
@@ -775,6 +801,9 @@ function garmentTechLoad(e) {
 
 	var removePackLayout = document.getElementById("pack-layout"); //access design-pack element
 	removePackLayout.style.display = "none"; //make design-pack invisible
+
+	document.body.scrollTop = 0; // For Safari
+  	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 
 	mapTechPack(selectedDesign);
 	tempSaveAction(selectedDesign);

@@ -475,6 +475,7 @@ function changeColor(e) {
 	customisedGarments[selectedDesignRef][chosenTone] = colors[chosenColor].tone; //change hex to the one from the selected color
 	customisedGarments[selectedDesignRef][chosenOptionRef] = chosenColor; //change hex to the one from the selected color
 
+
 	subimatedPatternFunction (selectedDesignRef);
 	colorClash(selectedDesignRef);
 	mapEdit(selectedDesignRef);
@@ -687,13 +688,13 @@ function addGarment(e) {
 	    pathBackground: designs[0].pathBackground[0],
 	    baseImage: designs[0].baseImage[0],
 	    colorBackground: "#000000",
-	    color1: "#FFFFFF",
-	    color2: "#004a98",
+	    color1: "#414344",
+	    color2: "#FFFFFF",
 	    colorBackgroundRef: 0,
-    	color1Ref: 1,
-    	color2Ref: 2,
+    	color1Ref: 10,
+    	color2Ref: 1,
 	    toneBackground: "dark",
-	    tone1: "light",
+	    tone1: "dark",
 	    tone2: "light",
 	    clash: "clash",
 	    clash2: "clash2",
@@ -770,6 +771,21 @@ duplicateButton() //run deleteButton function on page load
 function duplicateGarment(e) {
 	let selectedDesign = e.target.getAttribute("ref"); //identify the ref of the garment clicked
 	let refNumber = customisedGarments.length;
+
+	let duplicateMainFront1 = String(customisedGarments[selectedDesign].mainfront[0]);
+	let duplicateMainFront2 = String(customisedGarments[selectedDesign].mainfront[1]);
+	let duplicateMainFront = [duplicateMainFront1, duplicateMainFront2]
+
+	function cloneValue(element) { // make values mutable
+
+		let position = customisedGarments[selectedDesign][element];
+		let duplicate1 = String(position[0]);
+		let duplicate2 = String(position[1]);
+		let duplicate = [duplicate1, duplicate2];
+
+		return(duplicate);
+	}
+
 	customisedGarments.push(
 		{
 	    ref: refNumber,
@@ -800,21 +816,21 @@ function duplicateGarment(e) {
 	    clash: "clash",
 	    clash2: "clash2",
 
-	    rhchest: customisedGarments[selectedDesign].rhchest,
-	    lhchest: customisedGarments[selectedDesign].lhchest,
-	    centrechest: customisedGarments[selectedDesign].centrechest,
-	    mainfront: customisedGarments[selectedDesign].mainfront,
-	    rhcollar: customisedGarments[selectedDesign].rhcollar,
-	    lhcollar: customisedGarments[selectedDesign].lhcollar,
-	    backtop1: customisedGarments[selectedDesign].backtop1,
-	    backtop2: customisedGarments[selectedDesign].backtop2,
-	    backbottom1: customisedGarments[selectedDesign].backbottom1,
-	    backbottom2: customisedGarments[selectedDesign].backbottom2,
-	    rhsleeveupper: customisedGarments[selectedDesign].rhsleeveupper,
-	    rhsleevelower: customisedGarments[selectedDesign].rhsleevelower,
-	    lhsleeveupper: customisedGarments[selectedDesign].lhsleeveupper,
-	    lhsleevelower: customisedGarments[selectedDesign].lhsleevelower,
-	    numberbox: customisedGarments[selectedDesign].numberbox,
+	    rhchest: cloneValue("rhchest"),
+	    lhchest: cloneValue("lhchest"),
+	    centrechest: cloneValue("centrechest"),
+	    mainfront: cloneValue("mainfront"),
+	    rhcollar: cloneValue("rhcollar"),
+	    lhcollar: cloneValue("lhcollar"),
+	    backtop1: cloneValue("backtop1"),
+	    backtop2: cloneValue("backtop2"),
+	    backbottom1: cloneValue("backbottom1"),
+	    backbottom2: cloneValue("backbottom2"),
+	    rhsleeveupper: cloneValue("rhsleeveupper"),
+	    rhsleevelower: cloneValue("rhsleevelower"),
+	    lhsleeveupper: cloneValue("lhsleeveupper"),
+	    lhsleevelower: cloneValue("lhsleevelower"),
+	    numberbox: cloneValue("numberbox"),
 		});
 
 	determineClubLogo();

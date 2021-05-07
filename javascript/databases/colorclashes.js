@@ -72,6 +72,7 @@ if (lbsPosition != "") {
 }
 
 
+
 if (clashChange === "leedsrhinos") {
 
 	if (lbsBackgroundColor === "6" || lbsBackgroundColor === "7" || lbsBackgroundColor === "16" || lbsBackgroundColor === "24" ) {
