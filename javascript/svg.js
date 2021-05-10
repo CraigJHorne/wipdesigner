@@ -583,14 +583,17 @@ function changeSponsors(e) {
 
 
 	let selectedClub = customisedGarments[selectedDesignRef].club; //set club selected
+	let selectedClubIndex = customisedGarments[selectedDesignRef].clubIndex; //set club selected
 	let noClub = "noclub"; //set no club
 
 	if (chosenOption === "none") {
 		customisedGarments[selectedDesignRef].club = noClub;
+		customisedGarments[selectedDesignRef].clubIndex = 0;
 		chosenOption = "logos";
 		customisedGarments[selectedDesignRef].sponsorsVersion = chosenOption;
 	} else {
 		customisedGarments[selectedDesignRef].club = selectedClub;
+		customisedGarments[selectedDesignRef].clubIndex = selectedClubIndex;
 	}
 
 
@@ -1296,6 +1299,8 @@ function activeClass() {
 	let designOptions = document.getElementsByClassName("design-button");
 	let patternOptions = document.getElementsByClassName("pattern-button");
 	let colorOptions = document.getElementsByClassName("color-button");
+
+	console.log(activeClub)
 
 	for (let i = 0; i < clubOptions.length; i++) {
 	clubOptions[i].classList.remove("active"); //remove active class from all logo elements
