@@ -230,21 +230,21 @@ function mapTechPack(selectedDesign) {
 				<div class="tech-main">
 					<section>
 	    				<aside id="svg2">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhchest" + "/" + mappedGarment.rhchest[0] + "rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + mappedGarment.lhchest[0] + "lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "centrechest" + "/" + mappedGarment.centrechest[0] + "centrechest" + mappedGarment[mappedGarment.centrechest[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "mainfront" + "/" + mappedGarment.mainfront[0] + "mainfront" + mappedGarment[mappedGarment.mainfront[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhcollar" + "/" + mappedGarment.rhcollar[0] + "rhcollar" + mappedGarment[mappedGarment.rhcollar[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhcollar" + "/" + mappedGarment.lhcollar[0] + "lhcollar" + mappedGarment[mappedGarment.lhcollar[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop1" + "/" + mappedGarment.backtop1[0] + "backtop1" + mappedGarment[mappedGarment.backtop1[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop2" + "/" + mappedGarment.backtop2[0] + "backtop2" + mappedGarment[mappedGarment.backtop2[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom1" + "/" + mappedGarment.backbottom1[0] + "backbottom1" + mappedGarment[mappedGarment.backbottom1[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom2" + "/" + mappedGarment.backbottom2[0] + "backbottom2" + mappedGarment[mappedGarment.backbottom2[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleeveupper" + "/" + mappedGarment.rhsleeveupper[0] + "rhsleeveupper" + mappedGarment[mappedGarment.rhsleeveupper[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleevelower" + "/" + mappedGarment.rhsleevelower[0] + "rhsleevelower" + mappedGarment[mappedGarment.rhsleevelower[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleeveupper" + "/" + mappedGarment.lhsleeveupper[0]+ "lhsleeveupper" + mappedGarment[mappedGarment.lhsleeveupper[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleevelower" + "/" + mappedGarment.lhsleevelower[0] + "lhsleevelower" + mappedGarment[mappedGarment.lhsleevelower[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "numberbox" + "/" + mappedGarment.numberbox[0] + "numberbox" + mappedGarment[mappedGarment.numberbox[1]] + ".svg")}">	
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhchest" + "/" + mappedGarment.rhchest[0] + "rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + mappedGarment.lhchest[0] + "lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "centrechest" + "/" + mappedGarment.centrechest[0] + "centrechest" + mappedGarment[mappedGarment.centrechest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "mainfront" + "/" + mappedGarment.mainfront[0] + "mainfront" + mappedGarment[mappedGarment.mainfront[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhcollar" + "/" + mappedGarment.rhcollar[0] + "rhcollar" + mappedGarment[mappedGarment.rhcollar[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhcollar" + "/" + mappedGarment.lhcollar[0] + "lhcollar" + mappedGarment[mappedGarment.lhcollar[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backtop1" + "/" + mappedGarment.backtop1[0] + "backtop1" + mappedGarment[mappedGarment.backtop1[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backtop2" + "/" + mappedGarment.backtop2[0] + "backtop2" + mappedGarment[mappedGarment.backtop2[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backbottom1" + "/" + mappedGarment.backbottom1[0] + "backbottom1" + mappedGarment[mappedGarment.backbottom1[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backbottom2" + "/" + mappedGarment.backbottom2[0] + "backbottom2" + mappedGarment[mappedGarment.backbottom2[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhsleeveupper" + "/" + mappedGarment.rhsleeveupper[0] + "rhsleeveupper" + mappedGarment[mappedGarment.rhsleeveupper[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhsleevelower" + "/" + mappedGarment.rhsleevelower[0] + "rhsleevelower" + mappedGarment[mappedGarment.rhsleevelower[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhsleeveupper" + "/" + mappedGarment.lhsleeveupper[0]+ "lhsleeveupper" + mappedGarment[mappedGarment.lhsleeveupper[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhsleevelower" + "/" + mappedGarment.lhsleevelower[0] + "lhsleevelower" + mappedGarment[mappedGarment.lhsleevelower[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "numberbox" + "/" + mappedGarment.numberbox[0] + "numberbox" + mappedGarment[mappedGarment.numberbox[1]] + ".svg")}">	
 							<svg class="svg2__design" viewBox="0 0 750 400">
 								<path id="path-1" d="${customisedGarments[selectedDesign].path1}" style="fill:${customisedGarments[selectedDesign].color1}"/>
 								<path id="path-2" d="${customisedGarments[selectedDesign].path2}" style="fill:${customisedGarments[selectedDesign].color2}"/>
@@ -277,21 +277,21 @@ function mapTechPack(selectedDesign) {
 				<div class="tech-construction">
 	    			<section>
 	    				<aside id="svg2">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhchest" + "/" + mappedGarment.rhchest[0] + "rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + mappedGarment.lhchest[0] + "lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "centrechest" + "/" + mappedGarment.centrechest[0] + "centrechest" + mappedGarment[mappedGarment.centrechest[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "mainfront" + "/" + mappedGarment.mainfront[0] + "mainfront" + mappedGarment[mappedGarment.mainfront[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhcollar" + "/" + mappedGarment.rhcollar[0] + "rhcollar" + mappedGarment[mappedGarment.rhcollar[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhcollar" + "/" + mappedGarment.lhcollar[0] + "lhcollar" + mappedGarment[mappedGarment.lhcollar[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop1" + "/" + mappedGarment.backtop1[0] + "backtop1" + mappedGarment[mappedGarment.backtop1[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop2" + "/" + mappedGarment.backtop2[0] + "backtop2" + mappedGarment[mappedGarment.backtop2[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom1" + "/" + mappedGarment.backbottom1[0] + "backbottom1" + mappedGarment[mappedGarment.backbottom1[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom2" + "/" + mappedGarment.backbottom2[0] + "backbottom2" + mappedGarment[mappedGarment.backbottom2[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleeveupper" + "/" + mappedGarment.rhsleeveupper[0] + "rhsleeveupper" + mappedGarment[mappedGarment.rhsleeveupper[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleevelower" + "/" + mappedGarment.rhsleevelower[0] + "rhsleevelower" + mappedGarment[mappedGarment.rhsleevelower[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleeveupper" + "/" + mappedGarment.lhsleeveupper[0]+ "lhsleeveupper" + mappedGarment[mappedGarment.lhsleeveupper[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleevelower" + "/" + mappedGarment.lhsleevelower[0] + "lhsleevelower" + mappedGarment[mappedGarment.lhsleevelower[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "numberbox" + "/" + mappedGarment.numberbox[0] + "numberbox" + mappedGarment[mappedGarment.numberbox[1]] + ".svg")}">	
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhchest" + "/" + mappedGarment.rhchest[0] + "rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + mappedGarment.lhchest[0] + "lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "centrechest" + "/" + mappedGarment.centrechest[0] + "centrechest" + mappedGarment[mappedGarment.centrechest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "mainfront" + "/" + mappedGarment.mainfront[0] + "mainfront" + mappedGarment[mappedGarment.mainfront[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhcollar" + "/" + mappedGarment.rhcollar[0] + "rhcollar" + mappedGarment[mappedGarment.rhcollar[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhcollar" + "/" + mappedGarment.lhcollar[0] + "lhcollar" + mappedGarment[mappedGarment.lhcollar[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backtop1" + "/" + mappedGarment.backtop1[0] + "backtop1" + mappedGarment[mappedGarment.backtop1[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backtop2" + "/" + mappedGarment.backtop2[0] + "backtop2" + mappedGarment[mappedGarment.backtop2[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backbottom1" + "/" + mappedGarment.backbottom1[0] + "backbottom1" + mappedGarment[mappedGarment.backbottom1[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backbottom2" + "/" + mappedGarment.backbottom2[0] + "backbottom2" + mappedGarment[mappedGarment.backbottom2[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhsleeveupper" + "/" + mappedGarment.rhsleeveupper[0] + "rhsleeveupper" + mappedGarment[mappedGarment.rhsleeveupper[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhsleevelower" + "/" + mappedGarment.rhsleevelower[0] + "rhsleevelower" + mappedGarment[mappedGarment.rhsleevelower[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhsleeveupper" + "/" + mappedGarment.lhsleeveupper[0]+ "lhsleeveupper" + mappedGarment[mappedGarment.lhsleeveupper[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhsleevelower" + "/" + mappedGarment.lhsleevelower[0] + "lhsleevelower" + mappedGarment[mappedGarment.lhsleevelower[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "numberbox" + "/" + mappedGarment.numberbox[0] + "numberbox" + mappedGarment[mappedGarment.numberbox[1]] + ".svg")}">	
 							<svg class="svg2__design" viewBox="0 0 750 400">
 								<path id="path-1" d="${customisedGarments[selectedDesign].path1}" style="fill:${customisedGarments[selectedDesign].color1}"/>
 								<path id="path-2" d="${customisedGarments[selectedDesign].path2}" style="fill:${customisedGarments[selectedDesign].color2}"/>
@@ -316,107 +316,107 @@ function mapTechPack(selectedDesign) {
 				<div class="tech-sponsors">
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type" ref="0">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-lhchest" style="background-color:${chosenColorLhChestHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + "1lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-lhchest" style="background-color:${chosenColorLhChestHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhchest" + "/" + "1lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">LH CHEST</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + "pantones" + "/" + "1lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + "pantones" + "/" + "1lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="9" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-lhchest")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type" ref="1">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-rhchest" style="background-color:${chosenColorRhChestHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhchest" + "/" + "1rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-rhchest" style="background-color:${chosenColorRhChestHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhchest" + "/" + "1rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">RH CHEST</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhchest" + "/" + "pantones" + "/" + "1rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhchest" + "/" + "pantones" + "/" + "1rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="10" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-rhchest")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type" ref="2">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-centrechest" style="background-color:${chosenColorCentreChestHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "centrechest" + "/" + "1centrechest" + mappedGarment[mappedGarment.centrechest[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-centrechest" style="background-color:${chosenColorCentreChestHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "centrechest" + "/" + "1centrechest" + mappedGarment[mappedGarment.centrechest[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">CENTRE CHEST</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "centrechest" + "/" + "pantones" + "/" + "1centrechest" + mappedGarment[mappedGarment.centrechest[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "centrechest" + "/" + "pantones" + "/" + "1centrechest" + mappedGarment[mappedGarment.centrechest[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="11" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-centrechest")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type" ref="3">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-mainfront" style="background-color:${chosenColorMainFrontHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "mainfront" + "/" + "1mainfront" + mappedGarment[mappedGarment.mainfront[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-mainfront" style="background-color:${chosenColorMainFrontHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "mainfront" + "/" + "1mainfront" + mappedGarment[mappedGarment.mainfront[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">MAIN FRONT</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "mainfront" + "/" + "pantones" + "/" + "1mainfront" + mappedGarment[mappedGarment.mainfront[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "mainfront" + "/" + "pantones" + "/" + "1mainfront" + mappedGarment[mappedGarment.mainfront[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="12" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-mainfront")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type"  ref="4">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-lhcollar" style="background-color:${chosenColorLhCollarHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhcollar" + "/" + "1lhcollar" + mappedGarment[mappedGarment.lhcollar[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-lhcollar" style="background-color:${chosenColorLhCollarHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhcollar" + "/" + "1lhcollar" + mappedGarment[mappedGarment.lhcollar[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">LH COLLAR</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhcollar" + "/" + "pantones" + "/" + "1lhcollar" + mappedGarment[mappedGarment.lhcollar[1]] + ".svg")}">						
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhcollar" + "/" + "pantones" + "/" + "1lhcollar" + mappedGarment[mappedGarment.lhcollar[1]] + ".svg")}">						
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="13" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-lhcollar")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type"  ref="5">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-rhcollar" style="background-color:${chosenColorRhCollarHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhcollar" + "/" + "1rhcollar" + mappedGarment[mappedGarment.rhcollar[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-rhcollar" style="background-color:${chosenColorRhCollarHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhcollar" + "/" + "1rhcollar" + mappedGarment[mappedGarment.rhcollar[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">RH COLLAR</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhcollar" + "/" + "pantones" + "/" + "1rhcollar" + mappedGarment[mappedGarment.rhcollar[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhcollar" + "/" + "pantones" + "/" + "1rhcollar" + mappedGarment[mappedGarment.rhcollar[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="14" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-rhcollar")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type"  ref="6">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-backtop1" style="background-color:${chosenColorBackTop1Hex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop1" + "/" + "1backtop1" + mappedGarment[mappedGarment.backtop1[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-backtop1" style="background-color:${chosenColorBackTop1Hex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backtop1" + "/" + "1backtop1" + mappedGarment[mappedGarment.backtop1[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">BACK TOP 1</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop1" + "/" + "pantones" + "/" + "1backtop1" + mappedGarment[mappedGarment.backtop1[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backtop1" + "/" + "pantones" + "/" + "1backtop1" + mappedGarment[mappedGarment.backtop1[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="15" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-backtop1")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type"  ref="7">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-backtop2" style="background-color:${chosenColorBackTop2Hex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop2" + "/" + "1backtop2" + mappedGarment[mappedGarment.backtop2[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-backtop2" style="background-color:${chosenColorBackTop2Hex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backtop2" + "/" + "1backtop2" + mappedGarment[mappedGarment.backtop2[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">BACK TOP 2</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop2" + "/" + "pantones" + "/" + "1backtop2" + mappedGarment[mappedGarment.backtop2[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backtop2" + "/" + "pantones" + "/" + "1backtop2" + mappedGarment[mappedGarment.backtop2[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="16" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-backtop2")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type"  ref="8">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-backbottom1" style="background-color:${chosenColorBackBottom1Hex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom1" + "/" + "1backbottom1" + mappedGarment[mappedGarment.backbottom1[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-backbottom1" style="background-color:${chosenColorBackBottom1Hex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backbottom1" + "/" + "1backbottom1" + mappedGarment[mappedGarment.backbottom1[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">BACK BOTTOM 1</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom1" + "/" + "pantones" + "/" + "1backbottom1" + mappedGarment[mappedGarment.backbottom1[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backbottom1" + "/" + "pantones" + "/" + "1backbottom1" + mappedGarment[mappedGarment.backbottom1[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="17" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-backbottom1")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type"  ref="9">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-backbottom2" style="background-color:${chosenColorBackBottom2Hex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom2" + "/" + "1backbottom2" + mappedGarment[mappedGarment.backbottom2[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-backbottom2" style="background-color:${chosenColorBackBottom2Hex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backbottom2" + "/" + "1backbottom2" + mappedGarment[mappedGarment.backbottom2[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">BACK BOTTOM 2</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom2" + "/" + "pantones" + "/" + "1backbottom2" + mappedGarment[mappedGarment.backbottom2[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backbottom2" + "/" + "pantones" + "/" + "1backbottom2" + mappedGarment[mappedGarment.backbottom2[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="18" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-backbottom2")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type"  ref="10">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-lhsleeveupper" style="background-color:${chosenColorLhSleeveUpperHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleeveupper" + "/" + "1lhsleeveupper" + mappedGarment[mappedGarment.lhsleeveupper[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-lhsleeveupper" style="background-color:${chosenColorLhSleeveUpperHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhsleeveupper" + "/" + "1lhsleeveupper" + mappedGarment[mappedGarment.lhsleeveupper[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">LH SLEEVE UPPER</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleeveupper" + "/" + "pantones" + "/" + "1lhsleeveupper" + mappedGarment[mappedGarment.lhsleeveupper[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhsleeveupper" + "/" + "pantones" + "/" + "1lhsleeveupper" + mappedGarment[mappedGarment.lhsleeveupper[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="19" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-lhsleeveupper")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type"  ref="11">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-lhsleevelower" style="background-color:${chosenColorLhSleeveLowerHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleevelower" + "/" + "1lhsleevelower" + mappedGarment[mappedGarment.lhsleevelower[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-lhsleevelower" style="background-color:${chosenColorLhSleeveLowerHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhsleevelower" + "/" + "1lhsleevelower" + mappedGarment[mappedGarment.lhsleevelower[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">LH SLEEVE LOWER</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleevelower" + "/" + "pantones" + "/" + "1lhsleevelower" + mappedGarment[mappedGarment.lhsleevelower[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhsleevelower" + "/" + "pantones" + "/" + "1lhsleevelower" + mappedGarment[mappedGarment.lhsleevelower[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="20" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-lhsleevelower")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type"  ref="12">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-rhsleeveupper" style="background-color:${chosenColorRhSleeveUpperHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleeveupper" + "/" + "1rhsleeveupper" + mappedGarment[mappedGarment.rhsleeveupper[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-rhsleeveupper" style="background-color:${chosenColorRhSleeveUpperHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhsleeveupper" + "/" + "1rhsleeveupper" + mappedGarment[mappedGarment.rhsleeveupper[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">RH SLEEVE UPPER</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleeveupper" + "/" + "pantones" + "/" + "1rhsleeveupper" + mappedGarment[mappedGarment.rhsleeveupper[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhsleeveupper" + "/" + "pantones" + "/" + "1rhsleeveupper" + mappedGarment[mappedGarment.rhsleeveupper[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="21" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-rhsleeveupper")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type"  ref="13">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-rhsleevelower" style="background-color:${chosenColorRhSleeveLowerHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleevelower" + "/" + "1rhsleevelower" + mappedGarment[mappedGarment.rhsleevelower[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-rhsleevelower" style="background-color:${chosenColorRhSleeveLowerHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhsleevelower" + "/" + "1rhsleevelower" + mappedGarment[mappedGarment.rhsleevelower[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">RH SLEEVE LOWER</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleevelower" + "/" + "pantones" + "/" + "1rhsleevelower" + mappedGarment[mappedGarment.rhsleevelower[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhsleevelower" + "/" + "pantones" + "/" + "1rhsleevelower" + mappedGarment[mappedGarment.rhsleevelower[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="22" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-rhsleevelower")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type"  ref="14">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-numberbox" style="background-color:${chosenColorNumberBoxHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "numberbox" + "/" + "1numberbox" + mappedGarment[mappedGarment.numberbox[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-numberbox" style="background-color:${chosenColorNumberBoxHex};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "numberbox" + "/" + "1numberbox" + mappedGarment[mappedGarment.numberbox[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">NUMBER BOX</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "numberbox" + "/" + "pantones" + "/" + "1numberbox" + mappedGarment[mappedGarment.numberbox[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "numberbox" + "/" + "pantones" + "/" + "1numberbox" + mappedGarment[mappedGarment.numberbox[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="23" contenteditable="true">${clubs[chosenClubIndex][String(logoAccessGarment + "-numberbox")]}</h5>
 					</aside>
 				</div>
@@ -474,8 +474,8 @@ function mapTechPack(selectedDesign) {
 				<div class="tech-main">
 					<section>
 	    				<aside id="svg2">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhchest" + "/" + mappedGarment.rhchest[0] + "rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + mappedGarment.lhchest[0] + "lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhchest" + "/" + mappedGarment.rhchest[0] + "rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + mappedGarment.lhchest[0] + "lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
 							<svg class="svg2__design" viewBox="0 0 750 400">
 								<path id="path-1" d="${customisedGarments[selectedDesign].path1}" style="fill:${customisedGarments[selectedDesign].color1}"/>
 								<path id="path-2" d="${customisedGarments[selectedDesign].path2}" style="fill:${customisedGarments[selectedDesign].color2}"/>
@@ -508,21 +508,21 @@ function mapTechPack(selectedDesign) {
 				<div class="tech-construction">
 	    			<section>
 	    				<aside id="svg2">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhchest" + "/" + mappedGarment.rhchest[0] + "rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + mappedGarment.lhchest[0] + "lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "centrechest" + "/" + mappedGarment.centrechest[0] + "centrechest" + mappedGarment[mappedGarment.centrechest[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "mainfront" + "/" + mappedGarment.mainfront[0] + "mainfront" + mappedGarment[mappedGarment.mainfront[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhcollar" + "/" + mappedGarment.rhcollar[0] + "rhcollar" + mappedGarment[mappedGarment.rhcollar[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhcollar" + "/" + mappedGarment.lhcollar[0] + "lhcollar" + mappedGarment[mappedGarment.lhcollar[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop1" + "/" + mappedGarment.backtop1[0] + "backtop1" + mappedGarment[mappedGarment.backtop1[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop2" + "/" + mappedGarment.backtop2[0] + "backtop2" + mappedGarment[mappedGarment.backtop2[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom1" + "/" + mappedGarment.backbottom1[0] + "backbottom1" + mappedGarment[mappedGarment.backbottom1[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom2" + "/" + mappedGarment.backbottom2[0] + "backbottom2" + mappedGarment[mappedGarment.backbottom2[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleeveupper" + "/" + mappedGarment.rhsleeveupper[0] + "rhsleeveupper" + mappedGarment[mappedGarment.rhsleeveupper[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleevelower" + "/" + mappedGarment.rhsleevelower[0] + "rhsleevelower" + mappedGarment[mappedGarment.rhsleevelower[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleeveupper" + "/" + mappedGarment.lhsleeveupper[0]+ "lhsleeveupper" + mappedGarment[mappedGarment.lhsleeveupper[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleevelower" + "/" + mappedGarment.lhsleevelower[0] + "lhsleevelower" + mappedGarment[mappedGarment.lhsleevelower[1]] + ".svg")}">
-							<img id="svg2__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "numberbox" + "/" + mappedGarment.numberbox[0] + "numberbox" + mappedGarment[mappedGarment.numberbox[1]] + ".svg")}">	
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhchest" + "/" + mappedGarment.rhchest[0] + "rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + mappedGarment.lhchest[0] + "lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "centrechest" + "/" + mappedGarment.centrechest[0] + "centrechest" + mappedGarment[mappedGarment.centrechest[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "mainfront" + "/" + mappedGarment.mainfront[0] + "mainfront" + mappedGarment[mappedGarment.mainfront[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhcollar" + "/" + mappedGarment.rhcollar[0] + "rhcollar" + mappedGarment[mappedGarment.rhcollar[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhcollar" + "/" + mappedGarment.lhcollar[0] + "lhcollar" + mappedGarment[mappedGarment.lhcollar[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backtop1" + "/" + mappedGarment.backtop1[0] + "backtop1" + mappedGarment[mappedGarment.backtop1[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backtop2" + "/" + mappedGarment.backtop2[0] + "backtop2" + mappedGarment[mappedGarment.backtop2[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backbottom1" + "/" + mappedGarment.backbottom1[0] + "backbottom1" + mappedGarment[mappedGarment.backbottom1[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backbottom2" + "/" + mappedGarment.backbottom2[0] + "backbottom2" + mappedGarment[mappedGarment.backbottom2[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhsleeveupper" + "/" + mappedGarment.rhsleeveupper[0] + "rhsleeveupper" + mappedGarment[mappedGarment.rhsleeveupper[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhsleevelower" + "/" + mappedGarment.rhsleevelower[0] + "rhsleevelower" + mappedGarment[mappedGarment.rhsleevelower[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhsleeveupper" + "/" + mappedGarment.lhsleeveupper[0]+ "lhsleeveupper" + mappedGarment[mappedGarment.lhsleeveupper[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhsleevelower" + "/" + mappedGarment.lhsleevelower[0] + "lhsleevelower" + mappedGarment[mappedGarment.lhsleevelower[1]] + ".svg")}">
+							<img id="svg2__sponsors" src="${("assets/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "numberbox" + "/" + mappedGarment.numberbox[0] + "numberbox" + mappedGarment[mappedGarment.numberbox[1]] + ".svg")}">	
 							<svg class="svg2__design" viewBox="0 0 750 400">
 								<path id="path-1" d="${customisedGarments[selectedDesign].path1}" style="fill:${customisedGarments[selectedDesign].color1}"/>
 								<path id="path-2" d="${customisedGarments[selectedDesign].path2}" style="fill:${customisedGarments[selectedDesign].color2}"/>
@@ -547,16 +547,16 @@ function mapTechPack(selectedDesign) {
 				<div class="tech-sponsors">
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type" ref="0">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-lhchest" style="background-color:${eval("chosenColor" + mappedGarment.lhchest[1].substr(4,1) + mappedGarment.lhchest[1].substr(8,1)  + "Hex")};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + "1lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-lhchest" style="background-color:${eval("chosenColor" + mappedGarment.lhchest[1].substr(4,1) + mappedGarment.lhchest[1].substr(8,1)  + "Hex")};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + "1lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">LH CHEST</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + "pantones" + "/" + "1lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + "pantones" + "/" + "1lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="9" contenteditable="true">${clubs[chosenClubIndex][String("logos-lhchest")]}</h5>
 					</aside>
 					<aside class="tech-logosize">
 						<h3 class="tech-logosize-type" ref="1">${logoApplication}</h3>
-						<img class="tech-logosize-logo tech-logo-rhchest" style="background-color:${eval("chosenColor" + mappedGarment.rhchest[1].substr(4,1) + mappedGarment.rhchest[1].substr(8,1)  + "Hex")};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhchest" + "/" + "1rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
+						<img class="tech-logosize-logo tech-logo-rhchest" style="background-color:${eval("chosenColor" + mappedGarment.rhchest[1].substr(4,1) + mappedGarment.rhchest[1].substr(8,1)  + "Hex")};" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhchest" + "/" + "1rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
 						<h3 class="tech-logosize-position">RH CHEST</h3>
-						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhchest" + "/" + "pantones" + "/" + "1rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
+						<img class="tech-logosize-colours" src="${("assets/" + "techpack" + "/" + "logosizes" + "/" + "sponsors"+ "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhchest" + "/" + "pantones" + "/" + "1rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
 						<h5 id="size-text" class="tech-logosize-size edit-text" ref="10" contenteditable="true">${clubs[chosenClubIndex][String("logos-rhchest")]}</h5>
 					</aside>
 				</div>
