@@ -5,6 +5,8 @@ let numberNeeded = Math.ceil(customisedGarments.length/2);
  	numberNeeded = Math.ceil(customisedGarments.length/2);
 	let leedsrhinos = 0;
 	let gloucester = 0;
+	let hullkr = 0;
+	let castleford = 0;
 	let noclub = 0;
 	let club = "noclub"
 	for (let i = 0; i < customisedGarments.length; i++) {
@@ -14,10 +16,14 @@ let numberNeeded = Math.ceil(customisedGarments.length/2);
        		leedsrhinos++
         }  else if (customisedGarments[i].club === "gloucester") {
        		gloucester++
+        } else if (customisedGarments[i].club === "hullkr") {
+       		hullkr++
+        } else if (customisedGarments[i].club === "castleford") {
+       		castleford++
         }
 	}
 
-	if (leedsrhinos > 0 && gloucester === 0){
+	if (leedsrhinos > gloucester && leedsrhinos > hullkr && leedsrhinos > castleford){
 		document.getElementById("pack-titles").innerHTML = 
 
 		`<div id="title-info" class="title-info">
@@ -27,7 +33,7 @@ let numberNeeded = Math.ceil(customisedGarments.length/2);
 		club = "leedsrhinos"
 
 
-	} else if (gloucester > 0 && leedsrhinos === 0){
+	} else if (gloucester > leedsrhinos && gloucester > hullkr && gloucester > castleford){
 		document.getElementById("pack-titles").innerHTML = 
 
 		`<div id="title-info" class="title-info">
@@ -35,6 +41,26 @@ let numberNeeded = Math.ceil(customisedGarments.length/2);
 		</div>`;
 
 		club = "gloucester"
+
+
+	} else if (hullkr > leedsrhinos && hullkr > gloucester && hullkr > castleford){
+		document.getElementById("pack-titles").innerHTML = 
+
+		`<div id="title-info" class="title-info">
+			<div class="club-logo"><img src="assets/clublogos/hullkr.svg"></div>
+		</div>`;
+
+		club = "hullkr"
+
+
+	} else if (castleford > leedsrhinos && castleford > hullkr && castleford > gloucester){
+		document.getElementById("pack-titles").innerHTML = 
+
+		`<div id="title-info" class="title-info">
+			<div class="club-logo"><img src="assets/clublogos/castleford.svg"></div>
+		</div>`;
+
+		club = "castleford"
 
 
 	} else { 

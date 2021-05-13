@@ -692,7 +692,7 @@ for (let i = 0; i < addButton.length; i++) { //workout which add-button was sele
 function addGarment(e) {
 	let refNumber = customisedGarments.length;
 	let newDesign = designs[0].designs[0];
-	let club = "noclublogos";
+	let club = 0;
 
 	customisedGarments.push(
 		{
@@ -702,6 +702,7 @@ function addGarment(e) {
 	    garmentType: designs[0].garment,
 	    clubIndex: 0,
 	    club: "noclub",
+	    sponsorsClub: "noclub",
 	    sponsorsVersion:"logos",
 	    designRef: 0,
 	    design: designs[0].designs[0].design,
@@ -819,6 +820,7 @@ function duplicateGarment(e) {
 	    garmentType: customisedGarments[selectedDesign].garmentType,
 	    clubIndex: customisedGarments[selectedDesign].clubIndex,
 	    club: customisedGarments[selectedDesign].club,
+	    sponsorsClub: customisedGarments[selectedDesign].sponsorsClub,
 	    sponsorsVersion: customisedGarments[selectedDesign].sponsorsVersion,
 	    designRef: customisedGarments[selectedDesign].designRef,
 	    design: customisedGarments[selectedDesign].design,
