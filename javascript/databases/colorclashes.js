@@ -19,21 +19,15 @@ let oldClashNumberBox = "";
 
 function colorClash(selectedDesignRef) {
 
-let designsCopy = [...designs];
-
 
 let clashClub = customisedGarments[selectedDesignRef].club;
 let clashSponsorsVersion = customisedGarments[selectedDesignRef].sponsorsVersion;
 let clashGarmentTypeRef = customisedGarments[selectedDesignRef].garmentTypeRef;
 let clashGarmentType = customisedGarments[selectedDesignRef].garmentType;
 let clashDesignRef = customisedGarments[selectedDesignRef].designRef;
-let clashSponsor = designs[clashGarmentTypeRef].designs[clashDesignRef][clashClub];
 
 let lbsPosition = "";
 let lbsBackgroundColor = "";
-
-let gloucesterPosition = "";
-let gloucesterBackgroundColor = "";
 
 let hartpuryUniPosition = "";
 let hartpuryCollegePosition = "";
@@ -42,77 +36,25 @@ let hartpuryBackgroundColor = "";
 let olbas1Position = "";
 let olbas2Position = "";
 let olbas3Position = "";
-let olbas1BackgroundColor = "";
-let olbas3BackgroundColor = "";
+let olbasBackgroundColor = "";
 
 let karcherPosition = "";
 let karcherBackgroundColor = "";
 
 let clashChange = "";
 
+if (clashClub === "noclub") {
 
-if (oldClashLhChest != "") {
-	customisedGarments[selectedDesignRef].lhchest[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].lhchest[1];
-	oldClashLhChest = "";
-}
-
-if (oldClashRhChest != "") {
-	customisedGarments[selectedDesignRef].rhchest[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].rhchest[1];
-	oldClashRhChest = "";
-}
-if (oldClashCentreChest != "") {
-	customisedGarments[selectedDesignRef].centrechest[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].centrechest[1];
-	oldClashRhCollar = "";
+	customisedGarments[selectedDesignRef].mainfront[1] = "toneBackground";
+	customisedGarments[selectedDesignRef].rhchest[1] = "toneBackground";
+	customisedGarments[selectedDesignRef].rhcollar[1] = "toneBackground";
+	customisedGarments[selectedDesignRef].lhcollar[1] = "toneBackground";
+	customisedGarments[selectedDesignRef].backbottom2[1] = "toneBackground";
+	customisedGarments[selectedDesignRef].backtop1[1] = "toneBackground";
+	customisedGarments[selectedDesignRef].backtop2[1] = "toneBackground";
+	customisedGarments[selectedDesignRef].backbottom1[1] = "toneBackground";
 }
 
-if (oldClashRhCollar != "") {
-	customisedGarments[selectedDesignRef].rhcollar[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].rhcollar[1];
-	oldClashRhCollar = "";
-}
-if (oldClashLhCollar != "") {
-	customisedGarments[selectedDesignRef].lhcollar[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].lhcollar[1];
-	oldClashLhCollar = "";
-}
-if (oldClashMainFront != "") {
-	customisedGarments[selectedDesignRef].mainfront[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].mainfront[1];
-	oldClashMainFront= "";
-}
-if (oldClashBackTop1!= "") {
-	customisedGarments[selectedDesignRef].backtop1[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].backtop1[1];
-	oldClashBackTop1 = "";
-}
-if (oldClashBackTop2 != "") {
-	customisedGarments[selectedDesignRef].backtop2[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].backtop2[1];
-	oldClashBackTop2 = "";
-}
-if (oldClashBackBottom1!= "") {
-	customisedGarments[selectedDesignRef].backbottom1[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].backbottom1[1];
-	oldClashBackBottom1 = "";
-}
-if (oldClashBackBottom2 != "") {
-	customisedGarments[selectedDesignRef].backbottom2[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].backbottom2[1];
-	oldClashBackBottom2= "";
-}
-if (oldClashLhSleeveLower != "") {
-	customisedGarments[selectedDesignRef].lhsleevelower[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].lhsleevelower[1];
-	oldClashLhSLeeveLower = "";
-}
-if (oldClashLhSleeveUpper!= "") {
-	customisedGarments[selectedDesignRef].lhsleeveupper[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].lhsleeveupper[1];
-	oldClashLhSleeveUpper = "";
-}
-if (oldClashRhSleeveLower != "") {
-	customisedGarments[selectedDesignRef].rhsleevelower[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].rhsleevelower[1];
-	oldClashRhSleeveLower = "";
-}
-if (oldClashRhSleeveUpper != "") {
-	customisedGarments[selectedDesignRef].rhsleeveupper[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].rhsleeveupper[1];
-	oldClashRhSleeveUpper = "";
-}
-if (oldClashNumberBox != "") {
-	customisedGarments[selectedDesignRef].numberbox[1] = designsCopy[clashGarmentTypeRef].designs[clashDesignRef][clashSponsor].numberbox[1];
-	oldClashNumberBox = "";
-}
 
 
 if (clashClub === "leedsrhinos" && clashSponsorsVersion === "sponsors") {
@@ -125,6 +67,13 @@ if (clashClub === "leedsrhinos" && clashSponsorsVersion === "sponsors") {
 
 if (lbsPosition != "") {
 
+	if (customisedGarments[selectedDesignRef][lbsPosition][1] === "clash" || customisedGarments[selectedDesignRef][lbsPosition][1] === "clash2") {
+		if (lbsPosition === "mainfront") {
+			customisedGarments[selectedDesignRef][lbsPosition][1] = oldClashMainFront;
+		} else if (lbsPosition === "rhchest") {
+			customisedGarments[selectedDesignRef][lbsPosition][1] = oldClashRhChest;
+		}
+	}
 
 
 	lbsBackgroundColor = customisedGarments[selectedDesignRef][lbsPosition][1].replace("tone","color") + "Ref";
@@ -133,7 +82,6 @@ if (lbsPosition != "") {
 	clashChange = "leedsrhinos";
 
 }
-
 
 
 if (clashChange === "leedsrhinos") {
@@ -163,7 +111,7 @@ if (clashChange === "leedsrhinos") {
 			}
 		} 
 
-	 }
+	} 
 	
 }
 
@@ -176,45 +124,33 @@ if (clashClub === "gloucester" && clashSponsorsVersion === "sponsors") {
 		olbas2Position = "backtop2";
 		olbas3Position = "backbottom1";
 		karcherPosition = "backbottom2";
-		gloucesterPosition = "lhchest";
-	} else if (clashGarmentType === "trainingtshirt" || clashGarmentType === "poloshirt" || clashGarmentType === "ohhoodie") {
-		gloucesterPosition = "lhchest";
-	}
+	} 
 }
 
-if (gloucesterPosition != "") {
+if (hartpuryUniPosition != "") {
 
-	if (clashGarmentType === "prorugbyshirt" || clashGarmentType === "replicarugbyshirt") {
-
-
-
-
-		hartpuryBackgroundColor = customisedGarments[selectedDesignRef][hartpuryUniPosition][1].replace("tone","color") + "Ref";
-		hartpuryBackgroundColor = customisedGarments[selectedDesignRef][hartpuryBackgroundColor];
-
-		olbas1BackgroundColor = customisedGarments[selectedDesignRef][olbas1Position][1].replace("tone","color") + "Ref";
-		olbas1BackgroundColor = customisedGarments[selectedDesignRef][olbas1BackgroundColor];
-
-		olbas3BackgroundColor = customisedGarments[selectedDesignRef][olbas3Position][1].replace("tone","color") + "Ref";
-		olbas3BackgroundColor = customisedGarments[selectedDesignRef][olbas3BackgroundColor];
-
-		karcherBackgroundColor = customisedGarments[selectedDesignRef][karcherPosition][1].replace("tone","color") + "Ref";
-		karcherBackgroundColor = customisedGarments[selectedDesignRef][karcherBackgroundColor];
-
-		gloucesterBackgroundColor = customisedGarments[selectedDesignRef][gloucesterPosition][1].replace("tone","color") + "Ref";
-		gloucesterBackgroundColor = customisedGarments[selectedDesignRef][gloucesterBackgroundColor];
-
-		clashChange = "gloucester";
-
-	} else if (clashGarmentType === "trainingtshirt" || clashGarmentType === "poloshirt" || clashGarmentType === "ohhoodie")  {
-
-
-
-		gloucesterBackgroundColor = customisedGarments[selectedDesignRef][gloucesterPosition][1].replace("tone","color") + "Ref";
-		gloucesterBackgroundColor = customisedGarments[selectedDesignRef][gloucesterBackgroundColor];
-
-		clashChange = "gloucester";
+	if (customisedGarments[selectedDesignRef][hartpuryUniPosition][1] === "clash") {
+		customisedGarments[selectedDesignRef][hartpuryUniPosition][1] = oldClashRhCollar;
+		customisedGarments[selectedDesignRef][hartpuryCollegePosition][1] = oldClashLhCollar;
+	} else if (customisedGarments[selectedDesignRef][olbas1Position][1] === "clash") {
+		customisedGarments[selectedDesignRef][olbas1Position][1] = oldClashBackTop1;
+		customisedGarments[selectedDesignRef][olbas2Position][1] = oldClashBackTop2;
+		customisedGarments[selectedDesignRef][olbas3Position][1] = oldClashBackBottom1;
+	} else if (customisedGarments[selectedDesignRef][karcherPosition][1] === "clash") {
+		customisedGarments[selectedDesignRef][karcherPosition][1] = oldClashBackBottom2;
 	}
+
+
+	hartpuryBackgroundColor = customisedGarments[selectedDesignRef][hartpuryUniPosition][1].replace("tone","color") + "Ref";
+	hartpuryBackgroundColor = customisedGarments[selectedDesignRef][hartpuryBackgroundColor];
+
+	olbasBackgroundColor = customisedGarments[selectedDesignRef][olbas1Position][1].replace("tone","color") + "Ref";
+	olbasBackgroundColor = customisedGarments[selectedDesignRef][olbasBackgroundColor];
+
+	karcherBackgroundColor = customisedGarments[selectedDesignRef][karcherPosition][1].replace("tone","color") + "Ref";
+	karcherBackgroundColor = customisedGarments[selectedDesignRef][karcherBackgroundColor];
+
+	clashChange = "gloucester";
 
 }
 
@@ -228,35 +164,22 @@ if (clashChange === "gloucester") {
 			oldClashLhCollar = customisedGarments[selectedDesignRef][hartpuryCollegePosition][1];
 			customisedGarments[selectedDesignRef][hartpuryUniPosition][1] = "clash";
 			customisedGarments[selectedDesignRef][hartpuryCollegePosition][1] = "clash";
-
-			console.log("yes");
 		}
 
 	} 
 
-	if (olbas1BackgroundColor === "0" ) {
+	if (olbasBackgroundColor === "0" ) {
 
 		if (customisedGarments[selectedDesignRef][olbas1Position][1] != "clash") {
 			oldClashBackTop1 = customisedGarments[selectedDesignRef][olbas1Position][1];
 			oldClashBackTop2 = customisedGarments[selectedDesignRef][olbas2Position][1];
+			oldClashBackBottom1 = customisedGarments[selectedDesignRef][olbas3Position][1];
 			customisedGarments[selectedDesignRef][olbas1Position][1] = "clash";
 			customisedGarments[selectedDesignRef][olbas2Position][1] = "clash";
-		}
-
-	} 
-
-
-	if (olbas3BackgroundColor === "0" ) {
-
-
-		if (customisedGarments[selectedDesignRef][olbas3Position][1] != "clash") {
-			oldClashBackBottom1 = customisedGarments[selectedDesignRef][olbas3Position][1];
 			customisedGarments[selectedDesignRef][olbas3Position][1] = "clash";
 		}
 
-
 	} 
-
 
 
 	if (karcherBackgroundColor === "6" || karcherBackgroundColor === "7" || karcherBackgroundColor === "16" || karcherBackgroundColor === "24" ) {
@@ -266,21 +189,94 @@ if (clashChange === "gloucester") {
 			customisedGarments[selectedDesignRef][karcherPosition][1] = "clash";
 		}
 	
-	}
-
-	if (gloucesterBackgroundColor === "10" || gloucesterBackgroundColor === "11") {
-
-		if (customisedGarments[selectedDesignRef][gloucesterPosition][1] != "clash") {
-			oldClashLhChest = customisedGarments[selectedDesignRef][gloucesterPosition][1];
-			customisedGarments[selectedDesignRef][gloucesterPosition][1] = "clash";
-		}
-	
-	}
+}
 	
 }
 
 
 }
+
+
+
+
+
+
+
+
+
+/* Edit sponsor colour if theres a colour clash */
+
+
+/* function colorClash(selectedDesignRef) {
+
+
+  let lbsPosition = "mainfront";	
+
+clashDesignRef = customisedGarments[selectedDesignRef].designRef;
+clashGarmentTypeRef = customisedGarments[selectedDesignRef].garmentTypeRef;
+clashClub = customisedGarments[selectedDesignRef].club;
+clashDesign = designs[clashGarmentTypeRef].designs[clashDesignRef][clashClub + "logos"];
+
+customisedGarments[selectedDesignRef][lbsPosition][1] = clashDesign[lbsPosition][1];	
+
+
+	if (customisedGarments[selectedDesignRef].club === "leedsrhinos" && customisedGarments[selectedDesignRef].sponsorsVersion  === "sponsors") {
+
+			if (customisedGarments[selectedDesignRef].garmentType === "prorugbyshirt" || customisedGarments[selectedDesignRef].garmentType === "replicarugbyshirt" || customisedGarments[selectedDesignRef].garmentType === "trainingtshirt") {
+				
+
+				lbsPosition = "mainfront";
+
+			} else if (customisedGarments[selectedDesignRef].garmentType === "poloshirt" || customisedGarments[selectedDesignRef].garmentType === "ohhoodie") {
+
+
+				lbsPosition = "rhchest";
+
+			} else {
+
+				lbsPosition = "";
+
+			}
+
+
+	} else {
+
+
+		lbsPosition = "";
+
+	}
+
+
+	let clashColor = customisedGarments[selectedDesignRef][lbsPosition][1].replace("tone","color") + "Ref";
+	clashColor = customisedGarments[selectedDesignRef][clashColor];
+			
+
+	if (clashColor === "6" || clashColor === "7" || clashColor === "16" || clashColor === "4") {
+
+		customisedGarments[selectedDesignRef][lbsPosition][1] = "clash";
+		console.log(customisedGarments)
+
+	} else {
+
+
+		customisedGarments[selectedDesignRef][lbsPosition][1] = clashDesign[lbsPosition][1];	
+
+	console.log(customisedGarments)
+
+	}
+
+
+
+
+} */
+
+
+
+
+
+
+
+
 
 
 

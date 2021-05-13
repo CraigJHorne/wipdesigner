@@ -7,7 +7,6 @@ let customisedGarments = [
     clubIndex: clubs[1].index,
     club: clubs[1].ref,
     sponsorsVersion:"sponsors",
-    sponsorsClub: clubs[1].ref,
     designRef: 0,
     design: designs[0].designs[0].design,
 	path1: designs[0].designs[0].path1,

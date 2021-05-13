@@ -104,21 +104,21 @@ function mapCustomisedGarments() {
     <button class="edit-garment select-button" ref="${i}" ${customisedGarments.ref = i} ${i++}>EDIT GARMENT</button><button class="delete select-button" ref="${customisedGarments.ref}">DELETE GARMENT</button><button class="duplicate select-button" ref="${customisedGarments.ref}">DUPLICATE GARMENT</button><button class="rearrange-up select-button" ref="${customisedGarments.ref}">MOVE UP</button><button class="rearrange-down select-button" ref="${customisedGarments.ref}">MOVE DOWN</button><button class="tech-garment select-button" ref="${customisedGarments.ref}">TECH PACK</button>
     <section>
 	    <aside id="svg">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.sponsorsClub + "/" + "rhchest" + "/" + customisedGarments.rhchest[0] + "rhchest" + customisedGarments[customisedGarments.rhchest[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "lhchest" + "/" + customisedGarments.lhchest[0] + "lhchest" + customisedGarments[customisedGarments.lhchest[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.sponsorsClub + "/" + "centrechest" + "/" + customisedGarments.centrechest[0] + "centrechest" + customisedGarments[customisedGarments.centrechest[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.sponsorsClub + "/" + "mainfront" + "/" + customisedGarments.mainfront[0] + "mainfront" + customisedGarments[customisedGarments.mainfront[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.sponsorsClub + "/" + "rhcollar" + "/" + customisedGarments.rhcollar[0] + "rhcollar" + customisedGarments[customisedGarments.rhcollar[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.sponsorsClub + "/" + "lhcollar" + "/" + customisedGarments.lhcollar[0] + "lhcollar" + customisedGarments[customisedGarments.lhcollar[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.sponsorsClub + "/" + "backtop1" + "/" + customisedGarments.backtop1[0] + "backtop1" + customisedGarments[customisedGarments.backtop1[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.sponsorsClub + "/" + "backtop2" + "/" + customisedGarments.backtop2[0] + "backtop2" + customisedGarments[customisedGarments.backtop2[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.sponsorsClub + "/" + "backbottom1" + "/" + customisedGarments.backbottom1[0] + "backbottom1" + customisedGarments[customisedGarments.backbottom1[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.sponsorsClub + "/" + "backbottom2" + "/" + customisedGarments.backbottom2[0] + "backbottom2" + customisedGarments[customisedGarments.backbottom2[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.sponsorsClub + "/" + "rhsleeveupper" + "/" + customisedGarments.rhsleeveupper[0] + "rhsleeveupper" + customisedGarments[customisedGarments.rhsleeveupper[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.sponsorsClub + "/" + "rhsleevelower" + "/" + customisedGarments.rhsleevelower[0] + "rhsleevelower" + customisedGarments[customisedGarments.rhsleevelower[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.sponsorsClub + "/" + "lhsleeveupper" + "/" + customisedGarments.lhsleeveupper[0] + "lhsleeveupper" + customisedGarments[customisedGarments.lhsleeveupper[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.sponsorsClub + "/" + "lhsleevelower" + "/" + customisedGarments.lhsleevelower[0] + "lhsleevelower" + customisedGarments[customisedGarments.lhsleevelower[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + customisedGarments.garmentType + "/" + customisedGarments.sponsorsClub + "/" + "numberbox" + "/" + customisedGarments.numberbox[0] + "numberbox" + customisedGarments[customisedGarments.numberbox[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "rhchest" + "/" + customisedGarments.rhchest[0] + "rhchest" + customisedGarments[customisedGarments.rhchest[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "lhchest" + "/" + customisedGarments.lhchest[0] + "lhchest" + customisedGarments[customisedGarments.lhchest[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "centrechest" + "/" + customisedGarments.centrechest[0] + "centrechest" + customisedGarments[customisedGarments.centrechest[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "mainfront" + "/" + customisedGarments.mainfront[0] + "mainfront" + customisedGarments[customisedGarments.mainfront[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "rhcollar" + "/" + customisedGarments.rhcollar[0] + "rhcollar" + customisedGarments[customisedGarments.rhcollar[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "lhcollar" + "/" + customisedGarments.lhcollar[0] + "lhcollar" + customisedGarments[customisedGarments.lhcollar[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "backtop1" + "/" + customisedGarments.backtop1[0] + "backtop1" + customisedGarments[customisedGarments.backtop1[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "backtop2" + "/" + customisedGarments.backtop2[0] + "backtop2" + customisedGarments[customisedGarments.backtop2[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "backbottom1" + "/" + customisedGarments.backbottom1[0] + "backbottom1" + customisedGarments[customisedGarments.backbottom1[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "backbottom2" + "/" + customisedGarments.backbottom2[0] + "backbottom2" + customisedGarments[customisedGarments.backbottom2[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "rhsleeveupper" + "/" + customisedGarments.rhsleeveupper[0] + "rhsleeveupper" + customisedGarments[customisedGarments.rhsleeveupper[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "rhsleevelower" + "/" + customisedGarments.rhsleevelower[0] + "rhsleevelower" + customisedGarments[customisedGarments.rhsleevelower[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "lhsleeveupper" + "/" + customisedGarments.lhsleeveupper[0] + "lhsleeveupper" + customisedGarments[customisedGarments.lhsleeveupper[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "lhsleevelower" + "/" + customisedGarments.lhsleevelower[0] + "lhsleevelower" + customisedGarments[customisedGarments.lhsleevelower[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + customisedGarments.sponsorsVersion + "/" + customisedGarments.garmentType + "/" + customisedGarments.club + "/" + "numberbox" + "/" + customisedGarments.numberbox[0] + "numberbox" + customisedGarments[customisedGarments.numberbox[1]] + ".svg")}">
 			<svg class="svg__design" viewBox="0 0 750 400">
 				<path id="path-1" d="${customisedGarments.path1}" style="fill:${customisedGarments.color1}"/>
 				<path id="path-2" d="${customisedGarments.path2}" style="fill:${customisedGarments.color2}"/>
@@ -148,21 +148,21 @@ function mapEdit(selectedDesign) {
 	document.getElementById("design-edit").innerHTML = 
     `<section>
 	    <aside id="svg">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhchest" + "/" + mappedGarment.rhchest[0] + "rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + mappedGarment.lhchest[0] + "lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "centrechest" + "/" + mappedGarment.centrechest[0] + "centrechest" + mappedGarment[mappedGarment.centrechest[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "mainfront" + "/" + mappedGarment.mainfront[0] + "mainfront" + mappedGarment[mappedGarment.mainfront[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhcollar" + "/" + mappedGarment.rhcollar[0] + "rhcollar" + mappedGarment[mappedGarment.rhcollar[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhcollar" + "/" + mappedGarment.lhcollar[0] + "lhcollar" + mappedGarment[mappedGarment.lhcollar[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backtop1" + "/" + mappedGarment.backtop1[0] + "backtop1" + mappedGarment[mappedGarment.backtop1[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backtop2" + "/" + mappedGarment.backtop2[0] + "backtop2" + mappedGarment[mappedGarment.backtop2[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backbottom1" + "/" + mappedGarment.backbottom1[0] + "backbottom1" + mappedGarment[mappedGarment.backbottom1[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "backbottom2" + "/" + mappedGarment.backbottom2[0] + "backbottom2" + mappedGarment[mappedGarment.backbottom2[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhsleeveupper" + "/" + mappedGarment.rhsleeveupper[0] + "rhsleeveupper" + mappedGarment[mappedGarment.rhsleeveupper[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "rhsleevelower" + "/" + mappedGarment.rhsleevelower[0] + "rhsleevelower" + mappedGarment[mappedGarment.rhsleevelower[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhsleeveupper" + "/" + mappedGarment.lhsleeveupper[0]+ "lhsleeveupper" + mappedGarment[mappedGarment.lhsleeveupper[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "lhsleevelower" + "/" + mappedGarment.lhsleevelower[0] + "lhsleevelower" + mappedGarment[mappedGarment.lhsleevelower[1]] + ".svg")}">
-			<img id="svg__sponsors" src="${("assets/" + "sponsors" + "/" + mappedGarment.garmentType + "/" + mappedGarment.sponsorsClub + "/" + "numberbox" + "/" + mappedGarment.numberbox[0] + "numberbox" + mappedGarment[mappedGarment.numberbox[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhchest" + "/" + mappedGarment.rhchest[0] + "rhchest" + mappedGarment[mappedGarment.rhchest[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhchest" + "/" + mappedGarment.lhchest[0] + "lhchest" + mappedGarment[mappedGarment.lhchest[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "centrechest" + "/" + mappedGarment.centrechest[0] + "centrechest" + mappedGarment[mappedGarment.centrechest[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "mainfront" + "/" + mappedGarment.mainfront[0] + "mainfront" + mappedGarment[mappedGarment.mainfront[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhcollar" + "/" + mappedGarment.rhcollar[0] + "rhcollar" + mappedGarment[mappedGarment.rhcollar[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhcollar" + "/" + mappedGarment.lhcollar[0] + "lhcollar" + mappedGarment[mappedGarment.lhcollar[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop1" + "/" + mappedGarment.backtop1[0] + "backtop1" + mappedGarment[mappedGarment.backtop1[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backtop2" + "/" + mappedGarment.backtop2[0] + "backtop2" + mappedGarment[mappedGarment.backtop2[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom1" + "/" + mappedGarment.backbottom1[0] + "backbottom1" + mappedGarment[mappedGarment.backbottom1[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "backbottom2" + "/" + mappedGarment.backbottom2[0] + "backbottom2" + mappedGarment[mappedGarment.backbottom2[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleeveupper" + "/" + mappedGarment.rhsleeveupper[0] + "rhsleeveupper" + mappedGarment[mappedGarment.rhsleeveupper[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "rhsleevelower" + "/" + mappedGarment.rhsleevelower[0] + "rhsleevelower" + mappedGarment[mappedGarment.rhsleevelower[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleeveupper" + "/" + mappedGarment.lhsleeveupper[0]+ "lhsleeveupper" + mappedGarment[mappedGarment.lhsleeveupper[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "lhsleevelower" + "/" + mappedGarment.lhsleevelower[0] + "lhsleevelower" + mappedGarment[mappedGarment.lhsleevelower[1]] + ".svg")}">
+			<img id="svg__sponsors" src="${("assets/" + mappedGarment.sponsorsVersion + "/" + mappedGarment.garmentType + "/" + mappedGarment.club + "/" + "numberbox" + "/" + mappedGarment.numberbox[0] + "numberbox" + mappedGarment[mappedGarment.numberbox[1]] + ".svg")}">
 			<svg class="svg__design" viewBox="0 0 750 400">
 				<path id="path-1" d="${mappedGarment.path1}" style="fill:${mappedGarment.color1}"/>
 				<path id="path-2" d="${mappedGarment.path2}" style="fill:${mappedGarment.color2}"/>
@@ -361,26 +361,24 @@ function changeGarment(e) {
 	customisedGarments[selectedDesignRef].sponsorsVersion = currentSettings.sponsorsVersion // keep existing sponsor version
 
 	let mappedGarment = customisedGarments[selectedDesignRef];
-	let designsCopy = [...designs];
-	let designSelector = designsCopy[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended];
-	let breakSelector = designsCopy[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended][mappedGarment.club];
-
+	let clubSelector = String(mappedGarment.club) + "logos";
+	let designSelector = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended];
 	
-	customisedGarments[selectedDesignRef].rhchest = designSelector[breakSelector].rhchest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhchest = designSelector[breakSelector].lhchest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].centrechest = designSelector[breakSelector].centrechest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].mainfront = designSelector[breakSelector].mainfront //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhcollar = designSelector[breakSelector].rhcollar //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhcollar = designSelector[breakSelector].lhcollar //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backtop1 = designSelector[breakSelector].backtop1 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backtop2 = designSelector[breakSelector].backtop2 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backbottom1 = designSelector[breakSelector].backbottom1 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backbottom2 = designSelector[breakSelector].backbottom2 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhsleeveupper = designSelector[breakSelector].rhsleeveupper //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhsleevelower = designSelector[breakSelector].rhsleevelower //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhsleeveupper = designSelector[breakSelector].lhsleeveupper //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhsleevelower = designSelector[breakSelector].lhsleevelower //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].numberbox = designSelector[breakSelector].numberbox //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhchest = designSelector[clubSelector].rhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhchest = designSelector[clubSelector].lhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].centrechest = designSelector[clubSelector].centrechest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].mainfront = designSelector[clubSelector].mainfront //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhcollar = designSelector[clubSelector].rhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhcollar = designSelector[clubSelector].lhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop1 = designSelector[clubSelector].backtop1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop2 = designSelector[clubSelector].backtop2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom1 = designSelector[clubSelector].backbottom1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom2 = designSelector[clubSelector].backbottom2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleeveupper = designSelector[clubSelector].rhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleevelower = designSelector[clubSelector].rhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleeveupper = designSelector[clubSelector].lhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleevelower = designSelector[clubSelector].lhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].numberbox = designSelector[clubSelector].numberbox //change logo info to the one from the new design
 
 
 	customisedGarments[selectedDesignRef].design = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended].design; // Change design to the equivalent for this garment but same design
@@ -404,14 +402,13 @@ function changeGarment(e) {
 	mapDesignOptions();
 	editDesignOptions();
 	colorClash(selectedDesignRef);
-	activeClass()
+	activeClass();
 	mapEdit(selectedDesignRef);
 }
 
 /* Function to Operate when design Button is clicked  */
 
 function changeDesign(e) {
-
 	let chosenDesign = e.target.getAttribute("ref"); //identify the ref of the design-button clicked
 	let selectedDesign = document.getElementById("edit-ref"); //identify the design loaded
 	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the design clicked
@@ -426,26 +423,24 @@ function changeDesign(e) {
 	customisedGarments[selectedDesignRef].sublimatedPattern = designs[garmentTypeRef].designs[chosenDesign].sublimatedPattern; //change sublimatedPattern to the one from the selected design	
 
 	let mappedGarment = customisedGarments[selectedDesignRef];
-	let designsCopy = [...designs];
-	let designSelector = designsCopy[garmentTypeRef].designs[chosenDesign];
-	let breakSelector = designsCopy[garmentTypeRef].designs[chosenDesign][mappedGarment.club];
-
+	let clubSelector = String(mappedGarment.club) + "logos";
+	let designSelector = designs[garmentTypeRef].designs[chosenDesign];
 	
-	customisedGarments[selectedDesignRef].rhchest = designSelector[breakSelector].rhchest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhchest = designSelector[breakSelector].lhchest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].centrechest = designSelector[breakSelector].centrechest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].mainfront = designSelector[breakSelector].mainfront //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhcollar = designSelector[breakSelector].rhcollar //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhcollar = designSelector[breakSelector].lhcollar //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backtop1 = designSelector[breakSelector].backtop1 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backtop2 = designSelector[breakSelector].backtop2 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backbottom1 = designSelector[breakSelector].backbottom1 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backbottom2 = designSelector[breakSelector].backbottom2 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhsleeveupper = designSelector[breakSelector].rhsleeveupper //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhsleevelower = designSelector[breakSelector].rhsleevelower //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhsleeveupper = designSelector[breakSelector].lhsleeveupper //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhsleevelower = designSelector[breakSelector].lhsleevelower //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].numberbox = designSelector[breakSelector].numberbox //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhchest = designSelector[clubSelector].rhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhchest = designSelector[clubSelector].lhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].centrechest = designSelector[clubSelector].centrechest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].mainfront = designSelector[clubSelector].mainfront //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhcollar = designSelector[clubSelector].rhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhcollar = designSelector[clubSelector].lhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop1 = designSelector[clubSelector].backtop1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop2 = designSelector[clubSelector].backtop2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom1 = designSelector[clubSelector].backbottom1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom2 = designSelector[clubSelector].backbottom2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleeveupper = designSelector[clubSelector].rhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleevelower = designSelector[clubSelector].rhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleeveupper = designSelector[clubSelector].lhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleevelower = designSelector[clubSelector].lhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].numberbox = designSelector[clubSelector].numberbox //change logo info to the one from the new design
 
 
 	currentPattern = customisedGarments[selectedDesignRef].patternRef; // identify current selected pattern for this design
@@ -459,7 +454,7 @@ function changeDesign(e) {
 	subimatedPatternFunction (selectedDesignRef);
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	colorClash(selectedDesignRef);
-	activeClass()
+	activeClass();
 	mapEdit(selectedDesignRef);
 }
 
@@ -483,10 +478,9 @@ function changeColor(e) {
 	customisedGarments[selectedDesignRef][chosenTone] = colors[chosenColor].tone; //change hex to the one from the selected color
 	customisedGarments[selectedDesignRef][chosenOptionRef] = chosenColor; //change hex to the one from the selected color
 
-
 	subimatedPatternFunction (selectedDesignRef);
 	colorClash(selectedDesignRef);
-	activeClass()
+	activeClass();
 	mapEdit(selectedDesignRef);
 }
 
@@ -509,41 +503,34 @@ function changeClub(e) {
 	customisedGarments[selectedDesignRef].clubIndex = chosenClub; //change club to the one from the selected club
 
 	let garmentTypeRef = customisedGarments[selectedDesignRef].garmentTypeRef; //identify the garment ref for the type of garment we are editing
-	let chosenDesignRef = customisedGarments[selectedDesignRef].designRef;
-
-
 	let mappedGarment = customisedGarments[selectedDesignRef];
-	let designsCopy = [...designs];
-	let designSelector = designsCopy[garmentTypeRef].designs[chosenDesignRef];
-	let breakSelector = designsCopy[garmentTypeRef].designs[chosenDesignRef][mappedGarment.club];
+	let clubSelector = String(mappedGarment.club) + "logos";
+	let chosenDesignRef = customisedGarments[selectedDesignRef].designRef;
+	let designSelector = designs[garmentTypeRef].designs[chosenDesignRef];
 
 	
-	customisedGarments[selectedDesignRef].rhchest = designSelector[breakSelector].rhchest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhchest = designSelector[breakSelector].lhchest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].centrechest = designSelector[breakSelector].centrechest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].mainfront = designSelector[breakSelector].mainfront //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhcollar = designSelector[breakSelector].rhcollar //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhcollar = designSelector[breakSelector].lhcollar //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backtop1 = designSelector[breakSelector].backtop1 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backtop2 = designSelector[breakSelector].backtop2 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backbottom1 = designSelector[breakSelector].backbottom1 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backbottom2 = designSelector[breakSelector].backbottom2 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhsleeveupper = designSelector[breakSelector].rhsleeveupper //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhsleevelower = designSelector[breakSelector].rhsleevelower //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhsleeveupper = designSelector[breakSelector].lhsleeveupper //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhsleevelower = designSelector[breakSelector].lhsleevelower //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].numberbox = designSelector[breakSelector].numberbox //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhchest = designSelector[clubSelector].rhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhchest = designSelector[clubSelector].lhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].centrechest = designSelector[clubSelector].centrechest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].mainfront = designSelector[clubSelector].mainfront //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhcollar = designSelector[clubSelector].rhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhcollar = designSelector[clubSelector].lhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop1 = designSelector[clubSelector].backtop1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop2 = designSelector[clubSelector].backtop2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom1 = designSelector[clubSelector].backbottom1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom2 = designSelector[clubSelector].backbottom2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleeveupper = designSelector[clubSelector].rhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleevelower = designSelector[clubSelector].rhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleeveupper = designSelector[clubSelector].lhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleevelower = designSelector[clubSelector].lhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].numberbox = designSelector[clubSelector].numberbox //change logo info to the one from the new design
 
 	let chosenOption = customisedGarments[selectedDesignRef].sponsorsVersion; //make the sponsorVersion used in the sponsorPathUpdate function the current one
-
-	if (customisedGarments[selectedDesignRef].sponsorsVersion != "logos") {
-		customisedGarments[selectedDesignRef].sponsorsClub = customisedGarments[selectedDesignRef].club;
-	} 
 
 	determineClubLogo();
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	colorClash(selectedDesignRef);
-	activeClass()
+	activeClass();
 	mapEdit(selectedDesignRef);
 }
 
@@ -573,7 +560,7 @@ function changePattern(e) {
 	customisedGarments[selectedDesignRef].pattern = chosenPatternSrc; //change src to the one from the selected pattern
 	customisedGarments[selectedDesignRef].patternRef = chosenPattern; //change pattern ref to the one from the selected pattern
 
-	activeClass()
+	activeClass();
 	mapEdit(selectedDesignRef);
 }
 
@@ -603,6 +590,30 @@ function changeSponsors(e) {
 		customisedGarments[selectedDesignRef].clubIndex = 0;
 		chosenOption = "logos";
 		customisedGarments[selectedDesignRef].sponsorsVersion = chosenOption;
+
+		let noneDesign = customisedGarments[selectedDesignRef].designRef;
+		let noneGarment = customisedGarments[selectedDesignRef].garmentTypeRef;
+
+		let designsCopy = [...designs];
+
+		customisedGarments[selectedDesignRef].rhchest = designsCopy[noneGarment].designs[noneDesign].noclublogos.rhchest;
+		customisedGarments[selectedDesignRef].lhchest = designsCopy[noneGarment].designs[noneDesign].noclublogos.lhchest;
+		customisedGarments[selectedDesignRef].centrechest = designsCopy[noneGarment].designs[noneDesign].noclublogos.centrechest;
+		customisedGarments[selectedDesignRef].mainfront = designsCopy[noneGarment].designs[noneDesign].noclublogos.mainfront;
+		customisedGarments[selectedDesignRef].rhcollar = designsCopy[noneGarment].designs[noneDesign].noclublogos.rhcollar;
+		customisedGarments[selectedDesignRef].lhcollar = designsCopy[noneGarment].designs[noneDesign].noclublogos.lhcollar;
+		customisedGarments[selectedDesignRef].backtop1 = designsCopy[noneGarment].designs[noneDesign].noclublogos.backtop1;
+		customisedGarments[selectedDesignRef].backtop2 = designsCopy[noneGarment].designs[noneDesign].noclublogos.backtop2;
+		customisedGarments[selectedDesignRef].backbottom1 = designsCopy[noneGarment].designs[noneDesign].noclublogos.backbottom1;
+		customisedGarments[selectedDesignRef].backbottom2 = designsCopy[noneGarment].designs[noneDesign].noclublogos.backbottom2;
+		customisedGarments[selectedDesignRef].rhsleeveupper = designsCopy[noneGarment].designs[noneDesign].noclublogos.rhsleeveupper;
+		customisedGarments[selectedDesignRef].rhsleevelower = designsCopy[noneGarment].designs[noneDesign].noclublogos.rhsleevelower;
+		customisedGarments[selectedDesignRef].lhsleeveupper = designsCopy[noneGarment].designs[noneDesign].noclublogos.lhsleeveupper;
+		customisedGarments[selectedDesignRef].lhsleevelower = designsCopy[noneGarment].designs[noneDesign].noclublogos.lhsleevelower;
+		customisedGarments[selectedDesignRef].numberbox = designsCopy[noneGarment].designs[noneDesign].noclublogos.numberbox;
+
+		designsCopy = [...designs];
+
 	} else {
 		customisedGarments[selectedDesignRef].club = selectedClub;
 		customisedGarments[selectedDesignRef].clubIndex = selectedClubIndex;
@@ -696,7 +707,7 @@ for (let i = 0; i < addButton.length; i++) { //workout which add-button was sele
 function addGarment(e) {
 	let refNumber = customisedGarments.length;
 	let newDesign = designs[0].designs[0];
-	let club = 0;
+	let club = "noclublogos";
 
 	customisedGarments.push(
 		{
@@ -706,7 +717,6 @@ function addGarment(e) {
 	    garmentType: designs[0].garment,
 	    clubIndex: 0,
 	    club: "noclub",
-	    sponsorsClub: "noclub",
 	    sponsorsVersion:"logos",
 	    designRef: 0,
 	    design: designs[0].designs[0].design,
@@ -718,13 +728,13 @@ function addGarment(e) {
 	    pathBackground: designs[0].pathBackground[0],
 	    baseImage: designs[0].baseImage[0],
 	    colorBackground: "#000000",
-	    color1: "#414344",
-	    color2: "#FFFFFF",
+	    color1: "#FFFFFF",
+	    color2: "#004a98",
 	    colorBackgroundRef: 0,
-    	color1Ref: 10,
-    	color2Ref: 1,
+    	color1Ref: 1,
+    	color2Ref: 2,
 	    toneBackground: "dark",
-	    tone1: "dark",
+	    tone1: "light",
 	    tone2: "light",
 	    clash: "clash",
 	    clash2: "clash2",
@@ -801,21 +811,6 @@ duplicateButton() //run deleteButton function on page load
 function duplicateGarment(e) {
 	let selectedDesign = e.target.getAttribute("ref"); //identify the ref of the garment clicked
 	let refNumber = customisedGarments.length;
-
-	let duplicateMainFront1 = String(customisedGarments[selectedDesign].mainfront[0]);
-	let duplicateMainFront2 = String(customisedGarments[selectedDesign].mainfront[1]);
-	let duplicateMainFront = [duplicateMainFront1, duplicateMainFront2]
-
-	function cloneValue(element) { // make values mutable
-
-		let position = customisedGarments[selectedDesign][element];
-		let duplicate1 = String(position[0]);
-		let duplicate2 = String(position[1]);
-		let duplicate = [duplicate1, duplicate2];
-
-		return(duplicate);
-	}
-
 	customisedGarments.push(
 		{
 	    ref: refNumber,
@@ -824,7 +819,6 @@ function duplicateGarment(e) {
 	    garmentType: customisedGarments[selectedDesign].garmentType,
 	    clubIndex: customisedGarments[selectedDesign].clubIndex,
 	    club: customisedGarments[selectedDesign].club,
-	    sponsorsClub: customisedGarments[selectedDesign].sponsorsClub,
 	    sponsorsVersion: customisedGarments[selectedDesign].sponsorsVersion,
 	    designRef: customisedGarments[selectedDesign].designRef,
 	    design: customisedGarments[selectedDesign].design,
@@ -847,21 +841,21 @@ function duplicateGarment(e) {
 	    clash: "clash",
 	    clash2: "clash2",
 
-	    rhchest: cloneValue("rhchest"),
-	    lhchest: cloneValue("lhchest"),
-	    centrechest: cloneValue("centrechest"),
-	    mainfront: cloneValue("mainfront"),
-	    rhcollar: cloneValue("rhcollar"),
-	    lhcollar: cloneValue("lhcollar"),
-	    backtop1: cloneValue("backtop1"),
-	    backtop2: cloneValue("backtop2"),
-	    backbottom1: cloneValue("backbottom1"),
-	    backbottom2: cloneValue("backbottom2"),
-	    rhsleeveupper: cloneValue("rhsleeveupper"),
-	    rhsleevelower: cloneValue("rhsleevelower"),
-	    lhsleeveupper: cloneValue("lhsleeveupper"),
-	    lhsleevelower: cloneValue("lhsleevelower"),
-	    numberbox: cloneValue("numberbox"),
+	    rhchest: customisedGarments[selectedDesign].rhchest,
+	    lhchest: customisedGarments[selectedDesign].lhchest,
+	    centrechest: customisedGarments[selectedDesign].centrechest,
+	    mainfront: customisedGarments[selectedDesign].mainfront,
+	    rhcollar: customisedGarments[selectedDesign].rhcollar,
+	    lhcollar: customisedGarments[selectedDesign].lhcollar,
+	    backtop1: customisedGarments[selectedDesign].backtop1,
+	    backtop2: customisedGarments[selectedDesign].backtop2,
+	    backbottom1: customisedGarments[selectedDesign].backbottom1,
+	    backbottom2: customisedGarments[selectedDesign].backbottom2,
+	    rhsleeveupper: customisedGarments[selectedDesign].rhsleeveupper,
+	    rhsleevelower: customisedGarments[selectedDesign].rhsleevelower,
+	    lhsleeveupper: customisedGarments[selectedDesign].lhsleeveupper,
+	    lhsleevelower: customisedGarments[selectedDesign].lhsleevelower,
+	    numberbox: customisedGarments[selectedDesign].numberbox,
 		});
 
 	determineClubLogo();
@@ -984,7 +978,7 @@ function randomColors(e) {
 
 	subimatedPatternFunction (selectedDesignRef);
 	colorClash(selectedDesignRef);
-	activeClass()
+	activeClass();
 	mapEdit(selectedDesignRef);
 }
 
@@ -1026,26 +1020,24 @@ function randomDesignChosen(e) {
 
 
 	let mappedGarment = customisedGarments[selectedDesignRef];
-	let designsCopy = [...designs];
-	let designSelector = designsCopy[garmentTypeRef].designs[chosenDesign];
-	let breakSelector = designsCopy[garmentTypeRef].designs[chosenDesign][mappedGarment.club];
-
+	let clubSelector = String(mappedGarment.club) + "logos";
+	let designSelector = designs[garmentTypeRef].designs[chosenDesign];
 	
-	customisedGarments[selectedDesignRef].rhchest = designSelector[breakSelector].rhchest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhchest = designSelector[breakSelector].lhchest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].centrechest = designSelector[breakSelector].centrechest //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].mainfront = designSelector[breakSelector].mainfront //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhcollar = designSelector[breakSelector].rhcollar //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhcollar = designSelector[breakSelector].lhcollar //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backtop1 = designSelector[breakSelector].backtop1 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backtop2 = designSelector[breakSelector].backtop2 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backbottom1 = designSelector[breakSelector].backbottom1 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].backbottom2 = designSelector[breakSelector].backbottom2 //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhsleeveupper = designSelector[breakSelector].rhsleeveupper //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].rhsleevelower = designSelector[breakSelector].rhsleevelower //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhsleeveupper = designSelector[breakSelector].lhsleeveupper //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].lhsleevelower = designSelector[breakSelector].lhsleevelower //change logo info to the one from the new design
-	customisedGarments[selectedDesignRef].numberbox = designSelector[breakSelector].numberbox //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhchest = designSelector[clubSelector].rhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhchest = designSelector[clubSelector].lhchest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].centrechest = designSelector[clubSelector].centrechest //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].mainfront = designSelector[clubSelector].mainfront //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhcollar = designSelector[clubSelector].rhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhcollar = designSelector[clubSelector].lhcollar //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop1 = designSelector[clubSelector].backtop1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backtop2 = designSelector[clubSelector].backtop2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom1 = designSelector[clubSelector].backbottom1 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].backbottom2 = designSelector[clubSelector].backbottom2 //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleeveupper = designSelector[clubSelector].rhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].rhsleevelower = designSelector[clubSelector].rhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleeveupper = designSelector[clubSelector].lhsleeveupper //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].lhsleevelower = designSelector[clubSelector].lhsleevelower //change logo info to the one from the new design
+	customisedGarments[selectedDesignRef].numberbox = designSelector[clubSelector].numberbox //change logo info to the one from the new design
 
 
 	currentPattern = customisedGarments[selectedDesignRef].patternRef; // identify current selected pattern for this design
@@ -1059,21 +1051,17 @@ function randomDesignChosen(e) {
 	sponsorsPathUpdate(chosenOption, selectedDesignRef);
 	subimatedPatternFunction (selectedDesignRef);
 	colorClash(selectedDesignRef);
-	activeClass()
+	activeClass();
 	mapEdit(selectedDesignRef);
 };
 
 randomDesignButton(); //run randomColorsButton function on page load
-
 
 function subimatedPatternFunction(selectedDesignRef) {
 
 	let selectedDesign = customisedGarments[selectedDesignRef];
 
 	if (selectedDesign.sublimatedPattern === "yes") {
-
-		var editColor1 = document.getElementById("edit-color1"); //access edit-color1 element
-		editColor1.style.display = "none"; //make color 1 buttons invisible
 
 
 		if (selectedDesign.colorBackgroundRef === "0") {
@@ -1277,11 +1265,7 @@ function subimatedPatternFunction(selectedDesignRef) {
 			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
 
 		} 
-	} else {
-
-		var editColor1 = document.getElementById("edit-color1"); //access edit-color1 element
-		editColor1.style.display = "block"; //make color 1 buttons invisible
-	}
+	} 
 } 
 	
 
@@ -1301,6 +1285,7 @@ function removeOrAddPatternOptions(selectedDesignRef) {
 
 } 
 	
+
 function activeClass() {
 
 	let selectedDesign = document.getElementById("edit-ref"); //identify the design loaded
