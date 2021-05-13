@@ -150,23 +150,6 @@ function mapTechPack(selectedDesign) {
 	}
 
 
-	chosenColorRhChestHex = removeClash("rhchest", oldClashRhChest, chosenColorRhChestHex);
-	chosenColorLhChestHex = removeClash("lhchest", oldClashLhChest, chosenColorLhChestHex);
-	chosenColorCentreChestHex = removeClash("centrechest", oldClashCentreChest, chosenColorCentreChestHex);
-	chosenColorMainFrontHex = removeClash("mainfront", oldClashMainFront, chosenColorMainFrontHex);
-	chosenColorRhCollarHex = removeClash("rhcollar", oldClashRhCollar, chosenColorRhCollarHex);
-	chosenColorLhCollarHex = removeClash("lhcollar", oldClashLhCollar, chosenColorLhCollarHex);
-	chosenColorBackTop1Hex = removeClash("backtop1", oldClashBackTop1, chosenColorBackTop1Hex);
-	chosenColorBackTop2Hex = removeClash("backtop2", oldClashBackTop2, chosenColorBackTop2Hex);
-	chosenColorBackBottom1Hex = removeClash("backbottom1", oldClashBackBottom1, chosenColorBackBottom1Hex);
-	chosenColorBackBottom2Hex = removeClash("backbottom2", oldClashBackBottom2, chosenColorBackBottom2Hex);
-	chosenColorRhSleeveUpperHex = removeClash("rhsleeveupper", oldClashRhSleeveUpper, chosenColorRhSleeveUpperHex);
-	chosenColorRhSleeveLowerHex = removeClash("rhsleevelower", oldClashRhSleeveLower, chosenColorRhSleeveLowerHex);
-	chosenColorLhSleeveUpperHex = removeClash("lhsleeveupper", oldClashLhSleeveUpper, chosenColorLhSleeveUpperHex);
-	chosenColorLhSleeveLowerHex = removeClash("lhsleevelower", oldClashLhSleeveLower, chosenColorLhSleeveLowerHex);
-	chosenColorNumberBoxHex =  removeClash("numberbox", oldClashNumberBox, chosenColorNumberBoxHex);
-
-
 	let logoApplication = "EMBROIDERED";
 
 	if (chosenGarment === "3" || chosenGarment === "4") {

@@ -361,8 +361,9 @@ function changeGarment(e) {
 	customisedGarments[selectedDesignRef].sponsorsVersion = currentSettings.sponsorsVersion // keep existing sponsor version
 
 	let mappedGarment = customisedGarments[selectedDesignRef];
-	let designSelector = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended];
-	let breakSelector = designs[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended][mappedGarment.club];
+	let designsCopy = [...designs];
+	let designSelector = designsCopy[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended];
+	let breakSelector = designsCopy[chosenGarmentTypeRef].designs[currentSettingsDesignRefAmended][mappedGarment.club];
 
 	
 	customisedGarments[selectedDesignRef].rhchest = designSelector[breakSelector].rhchest //change logo info to the one from the new design
@@ -410,6 +411,7 @@ function changeGarment(e) {
 /* Function to Operate when design Button is clicked  */
 
 function changeDesign(e) {
+
 	let chosenDesign = e.target.getAttribute("ref"); //identify the ref of the design-button clicked
 	let selectedDesign = document.getElementById("edit-ref"); //identify the design loaded
 	let selectedDesignRef = selectedDesign.getAttribute("ref"); //identify the ref of the design clicked
@@ -424,8 +426,9 @@ function changeDesign(e) {
 	customisedGarments[selectedDesignRef].sublimatedPattern = designs[garmentTypeRef].designs[chosenDesign].sublimatedPattern; //change sublimatedPattern to the one from the selected design	
 
 	let mappedGarment = customisedGarments[selectedDesignRef];
-	let designSelector = designs[garmentTypeRef].designs[chosenDesign];
-	let breakSelector = designs[garmentTypeRef].designs[chosenDesign][mappedGarment.club];
+	let designsCopy = [...designs];
+	let designSelector = designsCopy[garmentTypeRef].designs[chosenDesign];
+	let breakSelector = designsCopy[garmentTypeRef].designs[chosenDesign][mappedGarment.club];
 
 	
 	customisedGarments[selectedDesignRef].rhchest = designSelector[breakSelector].rhchest //change logo info to the one from the new design
@@ -510,8 +513,9 @@ function changeClub(e) {
 
 
 	let mappedGarment = customisedGarments[selectedDesignRef];
-	let designSelector = designs[garmentTypeRef].designs[chosenDesignRef];
-	let breakSelector = designs[garmentTypeRef].designs[chosenDesignRef][mappedGarment.club];
+	let designsCopy = [...designs];
+	let designSelector = designsCopy[garmentTypeRef].designs[chosenDesignRef];
+	let breakSelector = designsCopy[garmentTypeRef].designs[chosenDesignRef][mappedGarment.club];
 
 	
 	customisedGarments[selectedDesignRef].rhchest = designSelector[breakSelector].rhchest //change logo info to the one from the new design
@@ -1022,8 +1026,9 @@ function randomDesignChosen(e) {
 
 
 	let mappedGarment = customisedGarments[selectedDesignRef];
-	let designSelector = designs[garmentTypeRef].designs[chosenDesign];
-	let breakSelector = designs[garmentTypeRef].designs[chosenDesign][mappedGarment.club];
+	let designsCopy = [...designs];
+	let designSelector = designsCopy[garmentTypeRef].designs[chosenDesign];
+	let breakSelector = designsCopy[garmentTypeRef].designs[chosenDesign][mappedGarment.club];
 
 	
 	customisedGarments[selectedDesignRef].rhchest = designSelector[breakSelector].rhchest //change logo info to the one from the new design
