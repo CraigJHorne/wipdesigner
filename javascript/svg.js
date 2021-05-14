@@ -1063,6 +1063,9 @@ function subimatedPatternFunction(selectedDesignRef) {
 
 	if (selectedDesign.sublimatedPattern === "yes") {
 
+		var editColor1 = document.getElementById("edit-color1"); //access edit-color1 element
+		editColor1.style.display = "none"; //make color 1 buttons invisible
+
 
 		if (selectedDesign.colorBackgroundRef === "0") {
 
@@ -1265,7 +1268,11 @@ function subimatedPatternFunction(selectedDesignRef) {
 			customisedGarments[selectedDesignRef].tone1 = colors[sublimatedColorRef].tone;
 
 		} 
-	} 
+	} else {
+
+		var editColor1 = document.getElementById("edit-color1"); //access edit-color1 element
+		editColor1.style.display = "block"; //make color 1 buttons invisible
+	}
 } 
 	
 
